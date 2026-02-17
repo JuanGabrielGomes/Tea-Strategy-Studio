@@ -47,8 +47,7 @@ export default function AnimatedHero({ locale = "pt" }: AnimatedHeroProps) {
           initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          className="hero-title-lock inline-block max-w-full text-[clamp(1.72rem,8.8vw,6.3rem)] leading-[0.93] font-semibold tracking-[-0.03em] text-[var(--tea-cream)]"
-          style={{ width: "max-content" }}
+          className="hero-title-lock block w-full max-w-full text-[clamp(1.38rem,8vw,6.3rem)] leading-[0.93] font-semibold tracking-[-0.03em] text-[var(--tea-cream)]"
         >
           <span className="hero-line">{content.lineOne}</span>
           <span className="hero-line">{content.lineTwo}</span>

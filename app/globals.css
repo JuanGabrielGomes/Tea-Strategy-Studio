@@ -86,7 +86,13 @@ html[data-theme="dark"] body.tea-body {
 .hero-line {
   display: block;
   width: 100%;
-  white-space: nowrap;
+  white-space: normal;
+}
+
+@media (min-width: 768px) {
+  .hero-line {
+    white-space: nowrap;
+  }
 }
 
 h1,
