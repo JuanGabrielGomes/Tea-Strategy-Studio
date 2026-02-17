@@ -47,7 +47,7 @@ export default function AnimatedHero({ locale = "pt" }: AnimatedHeroProps) {
           initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          className="hero-title-lock inline-block max-w-full text-[clamp(2rem,10vw,6.3rem)] leading-[0.93] font-semibold tracking-[-0.03em] text-[var(--tea-cream)]"
+          className="hero-title-lock inline-block max-w-full text-[clamp(1.72rem,8.8vw,6.3rem)] leading-[0.93] font-semibold tracking-[-0.03em] text-[var(--tea-cream)]"
           style={{ width: "max-content" }}
         >
           <span className="hero-line">{content.lineOne}</span>
@@ -63,8 +63,8 @@ export default function AnimatedHero({ locale = "pt" }: AnimatedHeroProps) {
         >
           <div className="lg:col-span-8">
             <p className="text-xs uppercase tracking-[0.32em] mb-4 text-[var(--tea-cream)]/72">{content.eyebrow}</p>
-            <p className="text-[0.82rem] sm:text-sm lg:text-xl leading-relaxed text-[var(--tea-cream)] mb-3">{content.kicker}</p>
-            <p className="text-[0.72rem] sm:text-xs lg:text-base leading-relaxed text-[var(--tea-cream)]/90 max-w-none">{content.description}</p>
+            <p className="text-sm sm:text-base lg:text-xl leading-relaxed text-[var(--tea-cream)] mb-3">{content.kicker}</p>
+            <p className="text-xs sm:text-sm lg:text-base leading-relaxed text-[var(--tea-cream)]/90 max-w-none">{content.description}</p>
           </div>
 
           <div className="lg:col-span-4 lg:justify-self-end w-full lg:w-auto">

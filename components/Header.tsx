@@ -132,10 +132,10 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-700">
-      <div className="absolute top-0 left-0 right-0 h-20 bg-[var(--tea-bg)]" />
-      <div className="absolute top-0 left-0 right-0 h-20 bg-[var(--tea-green)] opacity-[0.06]" />
+      <div className="absolute inset-0 bg-[var(--tea-bg)]" />
+      <div className="absolute inset-0 bg-[var(--tea-green)] opacity-[0.06]" />
 
-      {scrolled && <div className="absolute top-0 left-0 right-0 h-20 backdrop-blur-md bg-[var(--tea-bg)]/86" />}
+      {scrolled && <div className="absolute inset-0 backdrop-blur-md bg-[var(--tea-bg)]/86" />}
 
       <div className="relative section-padding flex items-center justify-between h-20 border-b border-[var(--tea-brown)]/15">
         <Link href={homeHref} className="flex items-center" aria-label={labels.logoAria}>
@@ -185,7 +185,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div id="mobile-nav" className="md:hidden tea-mobile-nav-panel relative section-padding py-7 border-b border-[var(--tea-brown)]/20 shadow-[0_18px_45px_rgba(0,0,0,0.12)]">
+        <div id="mobile-nav" className="md:hidden relative section-padding py-7 bg-[var(--tea-bg)] border-b border-[var(--tea-brown)]/20">
           <nav className="flex flex-col gap-5 text-lg text-[var(--tea-brown)]" aria-label="Mobile navigation">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href} onClick={() => setMenuOpen(false)} className="hover:text-[var(--tea-hover)] transition-colors">
