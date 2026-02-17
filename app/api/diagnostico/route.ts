@@ -112,23 +112,35 @@ export async function POST(request: Request) {
       source: "site-tea",
     }
 
-    const dataFolder = path.join(process.cwd(), "data")
-    const filePath = path.join(dataFolder, "diagnostico-leads.ndjson")
-
-    await mkdir(dataFolder, { recursive: true })
-    await appendFile(filePath, `${JSON.stringify(lead)}\n`, "utf8")
+    // Local file persistence is optional and must never break submissions
+    // in serverless environments (e.g. Vercel).
+    const shouldPersistLocally = process.env.TEA_PERSIST_LOCAL_LEADS === "true"
+    if (shouldPersistLocally) {
+      try {
+        const dataFolder = path.join(process.cwd(), "data")
+        const filePath = path.join(dataFolder, "diagnostico-leads.ndjson")
+        await mkdir(dataFolder, { recursive: true })
+        await appendFile(filePath, `${JSON.stringify(lead)}\n`, "utf8")
+      } catch (error) {
+        console.error("Failed to persist local lead log:", error)
+      }
+    }
 
     const webhookUrl = process.env.TEA_LEADS_WEBHOOK_URL
     if (webhookUrl) {
-      const webhookResponse = await fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(lead),
-      })
+      try {
+        const webhookResponse = await fetch(webhookUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(lead),
+        })
 
-      if (!webhookResponse.ok) {
+        if (!webhookResponse.ok) {
+          return NextResponse.json({ ok: false, error: t.webhookError }, { status: 502 })
+        }
+      } catch {
         return NextResponse.json({ ok: false, error: t.webhookError }, { status: 502 })
       }
     }
