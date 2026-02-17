@@ -10,10 +10,15 @@ export const metadata: Metadata = {
     default: "Tea Strategy Studio",
     template: "%s | Tea Strategy Studio",
   },
-  description: "Criação estratégica de conteúdo para empresas que querem crescer com coerência.",
+  description: "Criacao estrategica de conteudo para empresas que querem crescer com coerencia.",
+  icons: {
+    icon: [{ url: "/favicon-tea.png", type: "image/png" }],
+    shortcut: ["/favicon-tea.png"],
+    apple: [{ url: "/favicon-tea.png" }],
+  },
   openGraph: {
     title: "Tea Strategy Studio",
-    description: "Criação estratégica de conteúdo para empresas que querem crescer com coerência.",
+    description: "Criacao estrategica de conteudo para empresas que querem crescer com coerencia.",
     type: "website",
     locale: "pt_BR",
   },
@@ -29,7 +34,8 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var s=localStorage.getItem("tea-theme");var t=(s==="dark"||s==="light")?s:((window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light");document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t;}catch(e){}})();`,
+            __html:
+              '(function(){try{var s=localStorage.getItem("tea-theme");var t=(s==="dark"||s==="light")?s:((window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light");document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t;}catch(e){}})();',
           }}
         />
       </head>
