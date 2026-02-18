@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import Header from "@/components/Header"
 import SiteFooter from "@/components/SiteFooter"
 import CustomCursor from "@/components/CustomCursor"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://teastrategystudio.com"),
@@ -44,6 +45,7 @@ export default function RootLayout({
         <Header />
         <div className="pt-20 pb-28 md:pb-32">{children}</div>
         <SiteFooter />
+        <SpeedInsights />
       </body>
     </html>
   )
