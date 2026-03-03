@@ -36,9 +36,18 @@ export default function AnimatedHero({ locale = "pt" }: AnimatedHeroProps) {
 
   return (
     <section className="relative min-h-[84vh] md:min-h-[92vh] flex items-center section-padding overflow-hidden">
-      <div className="absolute inset-0 bg-[var(--tea-green)]" />
-      <div className="absolute inset-0 hero-gradient-shift" />
-      <div className="absolute inset-0 hero-grain opacity-65" />
+      <video
+        className="absolute inset-0 h-full w-full object-cover pointer-events-none"
+        autoPlay={!reduceMotion}
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      >
+        <source src="/video-home.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-[var(--tea-green)]/56" />
+      <div className="absolute inset-0 hero-grain opacity-35" />
 
       <div className="relative w-full max-w-[1280px]">
         <motion.h1
@@ -49,7 +58,7 @@ export default function AnimatedHero({ locale = "pt" }: AnimatedHeroProps) {
         >
           <span className="hero-line">{content.lineOne}</span>
           <span className="hero-line">{content.lineTwo}</span>
-          <span className="hero-line hero-impact tea-serif-accent not-italic text-[var(--tea-cream)]">{content.impact}</span>
+          <span className="hero-line tea-serif-accent not-italic text-[var(--tea-cream)]">{content.impact}</span>
         </motion.h1>
 
         <motion.div
