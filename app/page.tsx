@@ -97,7 +97,7 @@ export default function Home() {
 
       <AnimatedSection id="servicos-home" className="py-20 md:py-32 section-padding">
         <div className="grid lg:grid-cols-12 gap-10 items-start">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-7 space-y-6">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">O que fazemos</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight text-[var(--tea-brown)] mb-6">
               Quatro frentes, uma direção.
@@ -106,17 +106,6 @@ export default function Home() {
               Cuidamos da presença da sua marca do processo à entrega, integrando estratégia, criatividade e execução
               para gerar consistência, conexão e resultado.
             </p>
-          </div>
-
-          <div className="lg:col-span-7 w-full space-y-6">
-            <Image
-              src={visuals.notesDesk}
-              alt="Mesa com planejamento criativo e anotações"
-              width={1400}
-              height={900}
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="w-full rounded-2xl object-cover min-h-[280px] md:min-h-[340px]"
-            />
 
             <ol className="tea-service-list" aria-label="Frentes de serviço da Tea Studio">
               {services.map((service, index) => (
@@ -126,6 +115,17 @@ export default function Home() {
                 </li>
               ))}
             </ol>
+          </div>
+
+          <div className="lg:col-span-5 w-full">
+            <Image
+              src={visuals.notesDesk}
+              alt="Mesa com planejamento criativo e anotações"
+              width={1400}
+              height={900}
+              sizes="(min-width: 1024px) 38vw, 100vw"
+              className="w-full rounded-2xl object-cover min-h-[360px] md:min-h-[440px] lg:min-h-[520px]"
+            />
           </div>
         </div>
       </AnimatedSection>

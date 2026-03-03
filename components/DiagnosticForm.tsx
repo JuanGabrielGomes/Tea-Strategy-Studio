@@ -144,72 +144,72 @@ export default function DiagnosticForm({ locale = "pt" }: DiagnosticFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-5 tea-card p-6 md:p-8">
-      <label className="flex flex-col gap-2 text-sm text-[var(--tea-brown)]">
+    <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-4 tea-card rounded-2xl p-5 md:p-6">
+      <label className="diagnostic-label">
         {content.labels.name}
         <input
           name="name"
           required
           placeholder={content.placeholders.name}
-          className="w-full border border-[var(--tea-brown)]/25 bg-[var(--tea-cream)] px-4 py-3 text-base"
+          className="diagnostic-input"
         />
       </label>
 
-      <label className="flex flex-col gap-2 text-sm text-[var(--tea-brown)]">
+      <label className="diagnostic-label">
         {content.labels.email}
         <input
           type="email"
           name="email"
           required
           placeholder={content.placeholders.email}
-          className="w-full border border-[var(--tea-brown)]/25 bg-[var(--tea-cream)] px-4 py-3 text-base"
+          className="diagnostic-input"
         />
       </label>
 
-      <label className="flex flex-col gap-2 text-sm text-[var(--tea-brown)]">
+      <label className="diagnostic-label">
         {content.labels.company}
         <input
           name="company"
           required
           placeholder={content.placeholders.company}
-          className="w-full border border-[var(--tea-brown)]/25 bg-[var(--tea-cream)] px-4 py-3 text-base"
+          className="diagnostic-input"
         />
       </label>
 
-      <label className="flex flex-col gap-2 text-sm text-[var(--tea-brown)]">
+      <label className="diagnostic-label">
         {content.labels.website}
         <input
           name="website"
           placeholder={content.placeholders.website}
-          className="w-full border border-[var(--tea-brown)]/25 bg-[var(--tea-cream)] px-4 py-3 text-base"
+          className="diagnostic-input"
         />
       </label>
 
-      <label className="md:col-span-2 flex flex-col gap-2 text-sm text-[var(--tea-brown)]">
+      <label className="diagnostic-label md:col-span-2">
         {content.labels.challenge}
         <textarea
           name="challenge"
           required
-          rows={4}
+          rows={3}
           placeholder={content.placeholders.challenge}
-          className="w-full border border-[var(--tea-brown)]/25 bg-[var(--tea-cream)] px-4 py-3 text-base"
+          className="diagnostic-input"
         />
       </label>
 
-      <label className="md:col-span-2 flex flex-col gap-2 text-sm text-[var(--tea-brown)]">
+      <label className="diagnostic-label md:col-span-2">
         {content.labels.objective}
         <textarea
           name="objective"
           required
-          rows={3}
+          rows={2}
           placeholder={content.placeholders.objective}
-          className="w-full border border-[var(--tea-brown)]/25 bg-[var(--tea-cream)] px-4 py-3 text-base"
+          className="diagnostic-input"
         />
       </label>
 
-      <label className="flex flex-col gap-2 text-sm text-[var(--tea-brown)]">
+      <label className="diagnostic-label">
         {content.labels.urgency}
-        <select name="urgency" required className="w-full border border-[var(--tea-brown)]/25 bg-[var(--tea-cream)] px-4 py-3 text-base">
+        <select name="urgency" required className="diagnostic-input">
           <option value="">{content.options.select}</option>
           <option value="imediata">{content.options.urgencyImmediate}</option>
           <option value="curto-prazo">{content.options.urgencyShort}</option>
@@ -217,9 +217,9 @@ export default function DiagnosticForm({ locale = "pt" }: DiagnosticFormProps) {
         </select>
       </label>
 
-      <label className="flex flex-col gap-2 text-sm text-[var(--tea-brown)]">
+      <label className="diagnostic-label">
         {content.labels.budget}
-        <select name="budget" required className="w-full border border-[var(--tea-brown)]/25 bg-[var(--tea-cream)] px-4 py-3 text-base">
+        <select name="budget" required className="diagnostic-input">
           <option value="">{content.options.select}</option>
           <option value="ate-5k">{content.options.budgetA}</option>
           <option value="5k-15k">{content.options.budgetB}</option>
@@ -235,11 +235,11 @@ export default function DiagnosticForm({ locale = "pt" }: DiagnosticFormProps) {
         </label>
       </div>
 
-      <div className="md:col-span-2 flex flex-col md:flex-row items-start md:items-center gap-4 pt-2">
+      <div className="md:col-span-2 flex flex-col md:flex-row items-start md:items-center gap-3 pt-2">
         <button
           type="submit"
           disabled={status === "loading"}
-          className="bg-[var(--tea-green)] text-[var(--tea-cream)] border border-[var(--tea-green)] px-8 py-4 text-sm uppercase tracking-[0.14em] hover:bg-transparent hover:text-[var(--tea-green)] transition-colors disabled:opacity-60"
+          className="bg-[var(--tea-green)] text-[var(--tea-cream)] border border-[var(--tea-green)] px-6 py-3 text-xs uppercase tracking-[0.14em] hover:bg-transparent hover:text-[var(--tea-green)] transition-colors disabled:opacity-60"
         >
           {status === "loading" ? content.button.loading : content.button.idle}
         </button>
