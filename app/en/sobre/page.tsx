@@ -69,6 +69,7 @@ export default function AboutEn() {
             alt="Tea being prepared in a glass teapot"
             width={1100}
             height={900}
+            sizes="(min-width: 1024px) 38vw, 100vw"
             className="rounded-2xl object-cover object-bottom w-full h-[360px] md:h-[460px] lg:h-[520px]"
           />
         </div>

@@ -114,6 +114,7 @@ export default function Home() {
               alt="Mesa com planejamento criativo e anotações"
               width={1400}
               height={900}
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="w-full rounded-2xl object-cover min-h-[280px] md:min-h-[340px]"
             />
 
@@ -157,6 +158,7 @@ export default function Home() {
                 alt="Profissional trabalhando no processo de criação"
                 width={1200}
                 height={1500}
+                sizes="(min-width: 1024px) 34vw, 100vw"
                 className="w-full rounded-xl object-cover"
               />
             </div>

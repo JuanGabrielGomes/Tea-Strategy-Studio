@@ -202,6 +202,8 @@ html[data-theme="dark"] .tea-service-text {
   white-space: nowrap;
   width: max-content;
   animation: teaMarquee 30s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .tea-marquee-item {
@@ -224,6 +226,7 @@ html[data-theme="dark"] .tea-service-text {
     radial-gradient(circle at 85% 15%, rgba(155, 87, 30, 0.16), transparent 45%),
     radial-gradient(circle at 20% 85%, rgba(47, 58, 48, 0.14), transparent 48%),
     linear-gradient(135deg, rgba(247, 242, 234, 0.66), rgba(230, 221, 208, 0.82));
+  contain: layout paint;
 }
 
 .tea-cup-quote {
@@ -295,6 +298,7 @@ html[data-theme="dark"] .tea-service-text {
   width: 190px;
   height: 210px;
   z-index: 1;
+  will-change: transform;
 }
 
 .tea-steam {
@@ -304,6 +308,7 @@ html[data-theme="dark"] .tea-service-text {
   border-radius: 999px;
   background: linear-gradient(to top, rgba(122, 107, 95, 0.55), transparent);
   animation: teaSteam 3.2s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 .tea-steam-1 {
@@ -618,6 +623,16 @@ html[data-theme="dark"] .tea-cursor-dot {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .tea-marquee-track {
+    animation: none;
+    transform: none;
+  }
+
+  .tea-steam {
+    animation: none;
+    opacity: 0.2;
+  }
+
   html {
     scroll-behavior: auto;
   }

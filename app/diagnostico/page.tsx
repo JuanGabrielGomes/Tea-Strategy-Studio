@@ -42,6 +42,7 @@ export default function Diagnostico() {
             alt="Profissional em sessão de trabalho"
             width={1000}
             height={1200}
+            sizes="(min-width: 1024px) 34vw, 100vw"
             className="rounded-2xl object-cover w-full"
           />
         </div>

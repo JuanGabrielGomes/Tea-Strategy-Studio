@@ -47,6 +47,7 @@ export default function MethodEn() {
             alt="Desk with laptop and planning notes"
             width={1200}
             height={900}
+            sizes="(min-width: 1024px) 38vw, 100vw"
             className="rounded-2xl object-cover w-full"
           />
         </div>

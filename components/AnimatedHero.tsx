@@ -2,9 +2,17 @@
 
 import Link from "next/link"
 import { motion, useReducedMotion } from "framer-motion"
+import { useEffect, useState } from "react"
 
 type AnimatedHeroProps = {
   locale?: "pt" | "en"
+}
+
+type NavigatorWithConnection = Navigator & {
+  connection?: {
+    saveData?: boolean
+    effectiveType?: string
+  }
 }
 
 const copy = {
@@ -30,22 +38,54 @@ const copy = {
   },
 } as const
 
+function shouldPlayHeroVideo(reduceMotion: boolean) {
+  if (reduceMotion || typeof window === "undefined") return false
+
+  const onSmallScreen = window.matchMedia("(max-width: 900px)").matches
+  if (onSmallScreen) return false
+
+  const nav = navigator as NavigatorWithConnection
+  const saveData = Boolean(nav.connection?.saveData)
+  const effectiveType = nav.connection?.effectiveType ?? ""
+  const slowNetwork = effectiveType === "slow-2g" || effectiveType === "2g" || effectiveType === "3g"
+
+  return !saveData && !slowNetwork
+}
+
 export default function AnimatedHero({ locale = "pt" }: AnimatedHeroProps) {
   const reduceMotion = useReducedMotion()
   const content = copy[locale]
+  const [showVideo, setShowVideo] = useState(false)
+  const [videoReady, setVideoReady] = useState(false)
+  const allowVideo = shouldPlayHeroVideo(Boolean(reduceMotion))
+
+  useEffect(() => {
+    if (!allowVideo) return
+
+    const timer = window.setTimeout(() => setShowVideo(true), 140)
+    return () => window.clearTimeout(timer)
+  }, [allowVideo])
 
   return (
     <section className="relative min-h-[84vh] md:min-h-[92vh] flex items-center section-padding overflow-hidden">
-      <video
-        className="absolute inset-0 h-full w-full object-cover pointer-events-none"
-        autoPlay={!reduceMotion}
-        muted
-        loop
-        playsInline
-        preload="metadata"
-      >
-        <source src="/video-home.mp4" type="video/mp4" />
-      </video>
+      <div className="absolute inset-0 bg-[var(--tea-green)]" />
+      <div className="absolute inset-0 hero-gradient-shift opacity-70" />
+
+      {allowVideo && showVideo && (
+        <video
+          className={`absolute inset-0 h-full w-full object-cover pointer-events-none transition-opacity duration-500 ${videoReady ? "opacity-100" : "opacity-0"}`}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+          onLoadedData={() => setVideoReady(true)}
+        >
+          <source src="/video-home.mp4" type="video/mp4" />
+        </video>
+      )}
+
       <div className="absolute inset-0 bg-[var(--tea-green)]/56" />
       <div className="absolute inset-0 hero-grain opacity-35" />
 
