@@ -10,25 +10,25 @@ type Theme = "light" | "dark"
 
 const navLabels = {
   pt: {
-    method: "Método",
-    about: "Sobre",
-    projects: "Projetos",
-    diagnostic: "Diagnóstico",
-    mobileDiagnostic: "Reorganização de conteúdo",
+    method: "Processo",
+    about: "Nossa história",
+    projects: "Portfólio",
+    diagnostic: "Iniciar processo",
+    mobileDiagnostic: "Iniciar o processo",
     menu: "Menu",
-    logoAria: "Ir para a página inicial da Tea Strategy Studio",
-    theme: "Light/Dark",
+    logoAria: "Ir para a página inicial da Tea Studio Criativo",
+    theme: "Tema",
     themeAria: "Alternar entre modo claro e escuro",
   },
   en: {
-    method: "Method",
-    about: "About",
-    projects: "Projects",
-    diagnostic: "Diagnostic",
-    mobileDiagnostic: "Content reorganization",
+    method: "Process",
+    about: "Our story",
+    projects: "Portfolio",
+    diagnostic: "Start process",
+    mobileDiagnostic: "Start the process",
     menu: "Menu",
-    logoAria: "Go to Tea Strategy Studio homepage",
-    theme: "Light/Dark",
+    logoAria: "Go to Tea Studio Criativo homepage",
+    theme: "Theme",
     themeAria: "Toggle light and dark mode",
   },
 } as const
@@ -139,7 +139,7 @@ export default function Header() {
 
       <div className="relative section-padding flex items-center justify-between h-20 border-b border-[var(--tea-brown)]/15">
         <Link href={homeHref} className="flex items-center" aria-label={labels.logoAria}>
-          <Image src="/logo-tea.PNG" alt="Tea Strategy Studio" width={100} height={40} priority className="object-contain" />
+          <Image src="/logo-tea.PNG" alt="Tea Studio Criativo" width={100} height={40} priority className="object-contain" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm tracking-[0.08em] text-[var(--tea-brown)]" aria-label="Main navigation">

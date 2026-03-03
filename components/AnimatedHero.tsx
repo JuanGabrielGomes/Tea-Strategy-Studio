@@ -9,25 +9,23 @@ type AnimatedHeroProps = {
 
 const copy = {
   pt: {
-    lineOne: "Estratégia organiza.",
-    lineTwo: "Criatividade expressa.",
-    impact: "A Tea estrutura as duas.",
-    eyebrow: "Conteúdo Estratégico",
-    kicker: "Estratégia sem estrutura vira intenção.",
-    description:
-      "Criamos estratégias de conteúdo para empresas que precisam transformar posicionamento em presença editorial consistente e relevante.",
-    cta: "Aplicar para reorganização de conteúdo",
+    lineOne: "Toda marca precisa",
+    lineTwo: "do seu tempo de",
+    impact: "infusão.",
+    eyebrow: "Tea Studio Criativo - Strategy Studio",
+    kicker: "Somos uma agência de marketing criativo que cuida da sua marca do processo à entrega.",
+    description: "Com intenção, estratégia e propósito em cada etapa do processo.",
+    cta: "Nossos serviços",
     ctaHref: "/diagnostico",
   },
   en: {
-    lineOne: "Strategy organizes.",
-    lineTwo: "Creativity expresses.",
-    impact: "Tea structures both.",
-    eyebrow: "Strategic Content",
-    kicker: "Strategy without structure stays intention.",
-    description:
-      "We build content strategies for companies that need to turn positioning into consistent and relevant editorial presence.",
-    cta: "Apply for content reorganization",
+    lineOne: "Every brand needs",
+    lineTwo: "its own time to",
+    impact: "infuse.",
+    eyebrow: "Tea Studio Criativo - Strategy Studio",
+    kicker: "We are a creative marketing agency that nurtures your brand from process to delivery.",
+    description: "With intention, strategy and purpose in every stage of the process.",
+    cta: "Our services",
     ctaHref: "/en/diagnostico",
   },
 } as const

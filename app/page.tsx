@@ -1,14 +1,14 @@
-﻿import Image from "next/image"
+import Image from "next/image"
 import Link from "next/link"
 import AnimatedHero from "@/components/AnimatedHero"
 import AnimatedSection from "@/components/AnimatedSection"
 
 const services = [
-  "Estratégia editorial para redes e canais proprietários",
-  "Pilares narrativos e linhas editoriais por público",
-  "Planejamento de conteúdo orientado por objetivo de negócio",
-  "Roteiros, formatos e distribuição multicanal",
-  "Operação de conteúdo com método e consistência",
+  "Gestão de Redes Sociais com planejamento, produção e publicação.",
+  "Identidade Visual e Branding do conceito ao manual de marca.",
+  "Estratégia de Conteúdo para converter, conectar e posicionar.",
+  "Tráfego Pago com campanhas orientadas por intenção e resultado.",
+  "Do processo à entrega com consistência, beleza e propósito.",
 ]
 
 const visuals = {
@@ -30,24 +30,24 @@ export default function Home() {
 
         <div className="relative grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           <div className="lg:col-span-6 xl:col-span-7">
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-8">Tensão</p>
+            <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-8">Nossa história</p>
 
             <p className="text-3xl sm:text-4xl md:text-6xl leading-[1.03] font-semibold mb-8 text-[var(--tea-brown)]">
-              Nem toda marca que comunica, se posiciona.
+              Nascemos de um
               <br />
-              Nem todo crescimento é sustentável.
+              processo intencional.
             </p>
 
             <p className="max-w-2xl text-lg leading-relaxed text-[var(--tea-brown-soft)]">
-              Se a estratégia não está clara, o conteúdo vira volume sem direção. A Tea estrutura narrativa, formato e
-              cadência para transformar conteúdo em percepção de marca e avanço de negócio.
+              A Tea Studio nasceu de uma jornada de construção no tempo certo, com o propósito certo. Assim como o chá
+              tem suas etapas de preparo e infusão, guiamos marcas do início ao florescimento com estratégia e cuidado.
             </p>
           </div>
 
           <div className="lg:col-span-6 xl:col-span-5 lg:justify-self-end w-full">
             <Image
               src={visuals.workingSession}
-              alt="Profissional trabalhando com laptop"
+              alt="Equipe em sessão de planejamento de marca"
               width={1000}
               height={1200}
               className="w-full rounded-2xl object-cover min-h-[320px] md:min-h-[420px]"
@@ -61,11 +61,11 @@ export default function Home() {
           <div className="lg:col-span-5">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">O que fazemos</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight text-[var(--tea-brown)] mb-6">
-              Criação estratégica de conteúdo para empresas.
+              Serviços com propósito para marcas que querem florescer.
             </h2>
             <p className="text-lg text-[var(--tea-brown-soft)] leading-relaxed max-w-2xl">
-              Não vendemos estética isolada. Construímos direção editorial para que cada conteúdo sustente posicionamento
-              e gere valor real.
+              Cuidamos da presença da sua marca do processo à entrega, integrando estratégia, criatividade e execução
+              para gerar consistência, conexão e resultado.
             </p>
           </div>
 
@@ -80,7 +80,7 @@ export default function Home() {
 
             <Image
               src={visuals.notesDesk}
-              alt="Mesa com notebook e bloco de notas"
+              alt="Mesa com planejamento criativo e anotações"
               width={1200}
               height={1000}
               className="w-full h-full rounded-2xl object-cover min-h-[300px] md:min-h-[360px]"
@@ -94,26 +94,27 @@ export default function Home() {
           <div className="absolute inset-0 tea-grid-texture opacity-30" />
           <div className="relative bg-[var(--tea-green)] px-8 py-10 md:px-12 md:py-14 grid lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7">
-              <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-cream)]/70 mb-5">Direção</p>
+              <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-cream)]/70 mb-5">Vamos começar</p>
               <h2 className="text-2xl sm:text-3xl md:text-5xl leading-[1.03] text-[var(--tea-cream)] mb-6">
-                Crescer com coerência é mais difícil que crescer rápido, e mais valioso.
+                Sua marca está pronta para infundir?
               </h2>
               <p className="text-[var(--tea-cream)]/85 max-w-2xl leading-relaxed mb-8">
-                Planejamos conteúdo para construir autoridade contínua, não picos passageiros de alcance.
+                Cada marca tem o seu tempo. Nosso trabalho é garantir que, quando chegar a hora, ela chegue com força,
+                identidade e propósito à mesa do cliente.
               </p>
 
               <Link
                 href="/diagnostico"
                 className="inline-block text-center border border-[var(--tea-cream)]/70 text-[var(--tea-cream)] px-6 py-3 text-sm uppercase tracking-[0.14em] hover:bg-[var(--tea-cream)] hover:text-[var(--tea-green)] transition-colors"
               >
-                Quero reorganizar meu conteúdo
+                Iniciar o processo
               </Link>
             </div>
 
             <div className="lg:col-span-5 w-full">
               <Image
                 src={visuals.laptopLight}
-                alt="Mãos digitando em um notebook"
+                alt="Profissional trabalhando no processo de criação"
                 width={1200}
                 height={1500}
                 className="w-full rounded-xl object-cover"

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 
 type CasePalette = {
   panelBg: string
@@ -21,9 +21,9 @@ const cases: Case[] = [
   {
     id: "delivery",
     brand: "Delivery Much",
-    headline: "Uma marca que não fala com um público, fala com uma comunidade.",
+    headline: "Uma comunidade construída com linguagem, ritmo e presença.",
     body:
-      "Mais do que divulgar ofertas, a estratégia foi transformar o Instagram em um espaço de pertencimento. A comunicação tem linguagem jovem, dinâmica e próxima, fazendo com que o usuário se sentisse parte do dia a dia da marca, não apenas consumidor, mas participante ativo daquela experiência.",
+      "A estratégia foi além da divulgação: transformamos o Instagram em espaço de pertencimento. Da linha editorial à execução, cada conteúdo foi pensado para aproximar a marca das pessoas e gerar conexão real no dia a dia.",
     palette: {
       panelBg: "bg-[#9b571e]",
       panelText: "text-[var(--tea-cream)]",
@@ -36,9 +36,9 @@ const cases: Case[] = [
   {
     id: "sirley",
     brand: "Sirley Malhas",
-    headline: "Um legado de mais de 30 anos traduzido para uma nova geração.",
+    headline: "Um legado reposicionado com cuidado para uma nova geração.",
     body:
-      "A partir de uma história sólida, construímos um reposicionamento voltado ao público infantil, sem perder a essência da marca. Campanhas, narrativa e identidade passaram a comunicar cuidado, afeto e confiança, fortalecendo os laços e impulsionando um crescimento consistente, que hoje se reflete até na expansão física da marca.",
+      "Partimos de uma história sólida para construir um novo momento de marca. Narrativa, campanhas e identidade passaram a comunicar afeto e confiança com consistência, fortalecendo vínculos e sustentando crescimento contínuo.",
     palette: {
       panelBg: "bg-[#d7d0c5]",
       panelText: "text-[#3f3024]",
@@ -51,9 +51,9 @@ const cases: Case[] = [
   {
     id: "donna",
     brand: "Donna K",
-    headline: "Originalidade construída com propósito, não com tendências.",
+    headline: "Originalidade construída com intenção, não com tendência.",
     body:
-      "Desde o início, a estratégia foi clara: criar uma marca sólida, autoral e com identidade própria. Nada de fórmulas prontas ou tendências passageiras. Cada decisão foi pensada para construir uma comunicação firme, elegante e alinhada ao propósito da marca. Esse case comunica maturidade e critério, mesmo sendo início.",
+      "Desde o início, o direcionamento foi claro: criar uma marca autoral, elegante e coerente com o próprio propósito. Cada escolha foi feita com critério para construir uma presença forte e memorável.",
     palette: {
       panelBg: "bg-[#f0ebe2]",
       panelText: "text-[#3f3024]",
@@ -67,7 +67,7 @@ const cases: Case[] = [
 
 export const metadata: Metadata = {
   title: "Projetos",
-  description: "Casos e projetos de criação estratégica de conteúdo da Tea.",
+  description: "Marcas que floresceram com estratégia, criatividade e propósito.",
 }
 
 function CaseLogo({ id }: { id: Case["id"] }) {
@@ -104,13 +104,13 @@ export default function Projetos() {
   return (
     <main className="section-padding py-24 md:py-28">
       <section className="mb-14">
-        <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-5">Projetos</p>
+        <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-5">Portfólio</p>
         <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-6">
-          Casos reais de criação estratégica de conteúdo.
+          Marcas que floresceram.
         </h1>
         <p className="text-lg leading-relaxed text-[var(--tea-brown-soft)] max-w-3xl">
-          Cada projeto abaixo foi construído com foco em narrativa, posicionamento editorial e consistência de presença
-          para empresas em estágios diferentes de crescimento.
+          Cada projeto nasce de um processo intencional. Do posicionamento à presença editorial, estruturamos marcas
+          para chegar ao público com consistência, identidade e resultado.
         </p>
       </section>
 

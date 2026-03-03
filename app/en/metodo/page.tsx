@@ -3,22 +3,22 @@ import type { Metadata } from "next"
 
 const pillars = [
   {
-    title: "Editorial clarity",
-    description: "We define what the brand needs to say, to whom, from which angle and with what narrative promise.",
+    title: "Harvest - Immersion",
+    description: "We map brand, audience and goals to define a creative direction based on real strategy.",
   },
   {
-    title: "Production system",
-    description: "We turn direction into operation: themes, formats, calendar, scripts and quality criteria.",
+    title: "Infusion - Strategy",
+    description: "We turn intention into a plan: narrative, formats, calendar and execution with purpose.",
   },
   {
-    title: "Strategic consistency",
-    description: "We adjust cadence and messaging so every content piece reinforces positioning and business objectives.",
+    title: "Served - Delivery",
+    description: "Your brand reaches people with consistency, beauty and results, without losing its essence.",
   },
 ]
 
 export const metadata: Metadata = {
   title: "Method",
-  description: "Tea's strategic content creation method.",
+  description: "Tea Studio's method: from process to delivery with intention, strategy and purpose.",
 }
 
 export default function MethodEn() {
@@ -27,11 +27,13 @@ export default function MethodEn() {
       <div className="grid lg:grid-cols-12 gap-10 items-start mb-12">
         <div className="lg:col-span-7">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-5">Tea Method</p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-6">Content with direction, not improvisation.</h1>
-          <p className="text-sm uppercase tracking-[0.22em] text-[var(--tea-accent)] mb-6">Positioning is a choice. Consistency is discipline.</p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-6">
+            From process to delivery, with direction.
+          </h1>
+          <p className="text-sm uppercase tracking-[0.22em] text-[var(--tea-accent)] mb-6">Every brand has its ritual.</p>
           <p className="max-w-3xl text-lg leading-relaxed text-[var(--tea-brown-soft)]">
-            We apply a method so content stops being a reactive demand and becomes a continuous authority-building
-            engine for the company.
+            Our job is to lead each stage with intention so strategy, creativity and execution move at the same pace
+            and with the same purpose.
           </p>
         </div>
 

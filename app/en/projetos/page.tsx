@@ -21,9 +21,9 @@ const cases: Case[] = [
   {
     id: "delivery",
     brand: "Delivery Much",
-    headline: "A brand that does not speak to an audience, but to a community.",
+    headline: "A community built through language, rhythm and presence.",
     body:
-      "Beyond promoting offers, the strategy transformed Instagram into a place of belonging. The communication uses a young, dynamic and close tone, making users feel part of the brand's daily life, not only as consumers, but as active participants in the experience.",
+      "The strategy went beyond promotion: we turned Instagram into a place of belonging. From editorial direction to execution, each piece was designed to bring people closer to the brand and create real daily connection.",
     palette: {
       panelBg: "bg-[#9b571e]",
       panelText: "text-[var(--tea-cream)]",
@@ -36,9 +36,9 @@ const cases: Case[] = [
   {
     id: "sirley",
     brand: "Sirley Malhas",
-    headline: "A 30+ year legacy translated for a new generation.",
+    headline: "A legacy repositioned with care for a new generation.",
     body:
-      "Built on a solid history, we designed a repositioning aimed at children and families without losing the brand's essence. Campaigns, narrative and identity started to communicate care, affection and trust, strengthening bonds and driving consistent growth, now visible even in the brand's physical expansion.",
+      "We started from a solid history to build a new brand moment. Narrative, campaigns and identity began communicating care and trust with consistency, strengthening bonds and sustaining continuous growth.",
     palette: {
       panelBg: "bg-[#d7d0c5]",
       panelText: "text-[#3f3024]",
@@ -51,9 +51,9 @@ const cases: Case[] = [
   {
     id: "donna",
     brand: "Donna K",
-    headline: "Originality built with purpose, not trends.",
+    headline: "Originality built with intention, not trends.",
     body:
-      "From the beginning, the strategy was clear: build a solid, authorial brand with its own identity. No ready-made formulas or temporary trends. Every decision was made to craft a firm, elegant communication aligned with the brand's purpose. This case communicates maturity and criteria from day one.",
+      "From day one, the direction was clear: build an authorial and elegant brand aligned with its own purpose. Every decision was made with criteria to create a strong and memorable presence.",
     palette: {
       panelBg: "bg-[#f0ebe2]",
       panelText: "text-[#3f3024]",
@@ -67,7 +67,7 @@ const cases: Case[] = [
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Tea's strategic content creation projects and case studies.",
+  description: "Brands that bloomed with strategy, creativity and purpose.",
 }
 
 function CaseLogo({ id }: { id: Case["id"] }) {
@@ -104,13 +104,13 @@ export default function ProjectsEn() {
   return (
     <main className="section-padding py-24 md:py-28">
       <section className="mb-14">
-        <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-5">Projects</p>
+        <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-5">Portfolio</p>
         <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-6">
-          Real cases of strategic content creation.
+          Brands that bloomed.
         </h1>
         <p className="text-lg leading-relaxed text-[var(--tea-brown-soft)] max-w-3xl">
-          Each project below was built around narrative, editorial positioning and consistency of presence for companies
-          at different growth stages.
+          Each project starts from an intentional process. From positioning to editorial presence, we structure brands
+          to reach people with consistency, identity and results.
         </p>
       </section>
 

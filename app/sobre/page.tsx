@@ -3,21 +3,21 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Sobre",
-  description: "A Tea cria estratégia de conteúdo com método, direção e consistência.",
+  description: "Tea Studio: do processo à entrega, com intenção, estratégia e propósito.",
 }
 
 const teaSteps = [
   {
-    title: "Temperatura",
-    description: "Antes de publicar, definimos contexto: objetivo de negócio, público e território editorial.",
+    title: "Colheita - Imersão",
+    description: "Entendemos sua marca, seu público e seus objetivos com profundidade.",
   },
   {
-    title: "Infusão",
-    description: "Conteúdo bom precisa de tempo e método. Estruturamos narrativas, formatos e recorrência.",
+    title: "Infusão - Estratégia",
+    description: "Desenvolvemos o plano criativo e estratégico com intenção e propósito.",
   },
   {
-    title: "Serviço",
-    description: "A entrega final é presença consistente: conteúdo que posiciona, conecta e gera ação.",
+    title: "À Mesa - Entrega",
+    description: "Sua marca chega ao cliente final com consistência, beleza e resultado.",
   },
 ]
 
@@ -26,21 +26,23 @@ export default function Sobre() {
     <main className="section-padding py-24 md:py-28">
       <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
         <div className="lg:col-span-7">
-          <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">Sobre</p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-8">Estratégia de conteúdo com calma, método e precisão.</h1>
+          <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">Nossa história</p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-8">
+            Nascemos de um processo intencional.
+          </h1>
 
           <div className="space-y-6 text-lg leading-relaxed text-[var(--tea-brown-soft)] max-w-3xl">
             <p>
-              O nome Tea nasce do próprio processo do chá: não é pressa, é preparo. Há temperatura certa, tempo de
-              infusão e intenção em cada etapa.
+              A Tea Studio não surgiu do acaso. Nasceu de uma jornada de construção moldada no tempo certo, com o
+              propósito certo.
             </p>
             <p>
-              Nosso trabalho segue a mesma lógica. Não somos consultoria de imagem de marca. Somos um estúdio de
-              criação estratégica de conteúdo para empresas que precisam organizar presença, narrativa e consistência.
+              Assim como o chá passa por etapas de colheita, infusão e entrega, toda marca também tem seu ritual. Nós
+              guiamos esse processo do início ao florescimento.
             </p>
             <p>
-              Quando o processo é bem conduzido, cada conteúdo reforça posicionamento e constrói autoridade com
-              continuidade.
+              Cada decisão criativa é feita com intenção para que sua marca chegue ao público com consistência,
+              identidade e resultado.
             </p>
           </div>
 
