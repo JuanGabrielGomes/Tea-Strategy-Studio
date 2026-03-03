@@ -3,22 +3,27 @@ import type { Metadata } from "next"
 
 const pillars = [
   {
-    title: "Harvest - Immersion",
-    description: "We map brand, audience and goals to define a creative direction based on real strategy.",
+    title: "01 - Harvest - Immersion",
+    description: "We map brand, audience and goals to define a creative direction with a real strategic foundation.",
   },
   {
-    title: "Infusion - Strategy",
-    description: "We turn intention into a plan: narrative, formats, calendar and execution with purpose.",
+    title: "02 - Infusion - Strategy",
+    description: "We develop the creative and strategic plan for what your brand truly is.",
   },
   {
-    title: "Served - Delivery",
-    description: "Your brand reaches people with consistency, beauty and results, without losing its essence.",
+    title: "03 - Served - Delivery",
+    description: "Your brand reaches the audience with consistency, beauty and results - without losing its essence along the way.",
+  },
+  {
+    title: "04 - Favorite Tea - Remembrance",
+    description:
+      "Delivery is the beginning of remembrance. Brands that last are those built to be felt. Like a favorite tea, your brand becomes the first choice - not by chance, but by design.",
   },
 ]
 
 export const metadata: Metadata = {
   title: "Method",
-  description: "Tea Studio's method: from process to delivery with intention, strategy and purpose.",
+  description: "From process to delivery, with direction and strategic method.",
 }
 
 export default function MethodEn() {
@@ -30,10 +35,9 @@ export default function MethodEn() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-6">
             From process to delivery, with direction.
           </h1>
-          <p className="text-sm uppercase tracking-[0.22em] text-[var(--tea-accent)] mb-6">Every brand has its ritual.</p>
           <p className="max-w-3xl text-lg leading-relaxed text-[var(--tea-brown-soft)]">
-            Our job is to lead each stage with intention so strategy, creativity and execution move at the same pace
-            and with the same purpose.
+            Every brand has its method. Our work is to guide each step with listening and precision - so that strategy,
+            creativity and execution move at the same pace, for what your brand truly is.
           </p>
         </div>
 
@@ -48,7 +52,7 @@ export default function MethodEn() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 gap-6">
         {pillars.map((pillar) => (
           <section key={pillar.title} className="tea-card p-7 md:p-8">
             <h2 className="text-2xl md:text-3xl mb-4 text-[var(--tea-brown)]">{pillar.title}</h2>

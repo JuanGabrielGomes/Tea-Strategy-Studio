@@ -12,6 +12,7 @@ type CasePalette = {
 type Case = {
   id: "delivery" | "sirley" | "donna"
   brand: string
+  category: string
   headline: string
   body: string
   palette: CasePalette
@@ -21,6 +22,7 @@ const cases: Case[] = [
   {
     id: "delivery",
     brand: "Delivery Much",
+    category: "Social Media",
     headline: "Uma comunidade construída com linguagem, ritmo e presença.",
     body:
       "A estratégia foi além da divulgação: transformamos o Instagram em espaço de pertencimento. Da linha editorial à execução, cada conteúdo foi pensado para aproximar a marca das pessoas e gerar conexão real no dia a dia.",
@@ -36,6 +38,7 @@ const cases: Case[] = [
   {
     id: "sirley",
     brand: "Sirley Malhas",
+    category: "Branding + Social Media",
     headline: "Um legado reposicionado com cuidado para uma nova geração.",
     body:
       "Partimos de uma história sólida para construir um novo momento de marca. Narrativa, campanhas e identidade passaram a comunicar afeto e confiança com consistência, fortalecendo vínculos e sustentando crescimento contínuo.",
@@ -51,6 +54,7 @@ const cases: Case[] = [
   {
     id: "donna",
     brand: "Donna K",
+    category: "Branding",
     headline: "Originalidade construída com intenção, não com tendência.",
     body:
       "Desde o início, o direcionamento foi claro: criar uma marca autoral, elegante e coerente com o próprio propósito. Cada escolha foi feita com critério para construir uma presença forte e memorável.",
@@ -67,7 +71,7 @@ const cases: Case[] = [
 
 export const metadata: Metadata = {
   title: "Projetos",
-  description: "Marcas que floresceram com estratégia, criatividade e propósito.",
+  description: "Marcas que floresceram.",
 }
 
 function CaseLogo({ id }: { id: Case["id"] }) {
@@ -122,6 +126,7 @@ export default function Projetos() {
             </div>
 
             <div className={`px-6 md:px-7 py-8 border-t flex-1 ${item.palette.border} ${item.palette.bodyBg} ${item.palette.bodyText}`}>
+              <p className={`text-xs uppercase tracking-[0.22em] mb-2 ${item.palette.accent}`}>{item.category}</p>
               <p className={`text-xs uppercase tracking-[0.22em] mb-4 ${item.palette.accent}`}>{item.brand}</p>
               <h2 className="text-2xl sm:text-3xl leading-tight mb-6">{item.headline}</h2>
               <p className="text-base sm:text-lg leading-relaxed">{item.body}</p>

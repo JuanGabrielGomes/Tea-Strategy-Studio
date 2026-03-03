@@ -13,7 +13,7 @@ const copy = {
   pt: {
     labels: {
       name: "Nome",
-      email: "Email",
+      email: "E-mail",
       company: "Empresa",
       website: "Site ou Instagram",
       challenge: "Principal desafio hoje",
@@ -53,7 +53,7 @@ const copy = {
   en: {
     labels: {
       name: "Name",
-      email: "Email",
+      email: "E-mail",
       company: "Company",
       website: "Website or Instagram",
       challenge: "Main challenge today",
@@ -74,7 +74,7 @@ const copy = {
       select: "Select",
       urgencyImmediate: "Immediate (0-30 days)",
       urgencyShort: "Short term (1-3 months)",
-      urgencyMedium: "Mid term (3-6 months)",
+      urgencyMedium: "Medium term (3-6 months)",
       budgetA: "Up to R$ 5k",
       budgetB: "R$ 5k - R$ 15k",
       budgetC: "R$ 15k - R$ 30k",

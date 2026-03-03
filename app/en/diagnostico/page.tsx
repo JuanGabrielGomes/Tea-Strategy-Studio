@@ -3,13 +3,13 @@ import type { Metadata } from "next"
 import DiagnosticForm from "@/components/DiagnosticForm"
 
 export const metadata: Metadata = {
-  title: "Content Diagnostic",
-  description: "Apply for Tea's strategic content diagnostic.",
+  title: "Diagnostic",
+  description: "Tea Studio strategic content diagnostic.",
 }
 
 const outcomes = [
-  "Gap assessment between brand positioning and current content.",
-  "Initial editorial direction based on business objectives.",
+  "Reading the gaps between positioning and current content.",
+  "Initial editorial direction by business objective.",
   "Practical priorities for the next 90 days.",
 ]
 
@@ -19,12 +19,14 @@ export default function DiagnosticEn() {
       <div className="grid lg:grid-cols-12 gap-10 items-start">
         <div className="lg:col-span-5">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-5">Diagnostic</p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-7">Strategic content diagnostic</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-7">
+            Strategic content diagnostic.
+          </h1>
           <p className="text-sm uppercase tracking-[0.22em] text-[var(--tea-accent)] mb-7">Direction before presence.</p>
 
           <p className="text-lg leading-relaxed text-[var(--tea-brown-soft)] mb-7 max-w-2xl">
-            This is the first step to leave reactive production behind and build a content operation guided by strategy,
-            consistency and real business impact.
+            This is the first step to move away from reactive production and build a content operation driven by
+            strategy, consistency and real impact.
           </p>
 
           <ul className="space-y-3 mb-8 max-w-2xl">

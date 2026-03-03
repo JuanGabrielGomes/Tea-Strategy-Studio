@@ -3,21 +3,26 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Sobre",
-  description: "Tea Studio: do processo à entrega, com intenção, estratégia e propósito.",
+  description: "Nossa história: construção intencional, do processo à entrega.",
 }
 
 const teaSteps = [
   {
-    title: "Colheita - Imersão",
+    title: "01 - Colheita - Imersão",
     description: "Entendemos sua marca, seu público e seus objetivos com profundidade.",
   },
   {
-    title: "Infusão - Estratégia",
-    description: "Desenvolvemos o plano criativo e estratégico com intenção e propósito.",
+    title: "02 - Infusão - Estratégia",
+    description: "Desenvolvemos o plano criativo e estratégico para o que a sua marca realmente é.",
   },
   {
-    title: "À Mesa - Entrega",
+    title: "03 - À Mesa - Entrega",
     description: "Sua marca chega ao cliente final com consistência, beleza e resultado.",
+  },
+  {
+    title: "04 - O Chá Preferido - Lembrança",
+    description:
+      "A entrega é o começo da lembrança. Marcas que ficam são as que foram construídas para ser sentidas. Como um chá preferido, a sua marca passa a ser a primeira escolha - não por acaso, mas por construção.",
   },
 ]
 
@@ -33,16 +38,17 @@ export default function Sobre() {
 
           <div className="space-y-6 text-lg leading-relaxed text-[var(--tea-brown-soft)] max-w-3xl">
             <p>
-              A Tea Studio não surgiu do acaso. Nasceu de uma jornada de construção moldada no tempo certo, com o
-              propósito certo.
+              A Tea Studio não surgiu do acaso. Nasceu de uma jornada de construção - moldada no tempo certo, com o
+              propósito certo. Como toda boa história, foi preciso passar pelo processo antes de chegar à entrega.
             </p>
             <p>
-              Assim como o chá passa por etapas de colheita, infusão e entrega, toda marca também tem seu ritual. Nós
-              guiamos esse processo do início ao florescimento.
+              Acreditamos que assim como o chá tem suas etapas - colheita, infusão, entrega - toda marca também tem
+              seu método. Nós somos esse processo: guiamos sua marca do início ao florescimento, com estratégia e
+              atenção a cada detalhe.
             </p>
             <p>
-              Cada decisão criativa é feita com intenção para que sua marca chegue ao público com consistência,
-              identidade e resultado.
+              Cada decisão criativa é tomada com escuta e precisão - para que a sua marca chegue ao público com
+              consistência, identidade e resultado.
             </p>
           </div>
 

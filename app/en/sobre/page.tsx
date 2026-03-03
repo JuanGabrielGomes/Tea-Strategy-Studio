@@ -3,21 +3,26 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Tea Studio: from process to delivery, with intention, strategy and purpose.",
+  description: "Our story: intentional construction, from process to delivery.",
 }
 
 const teaSteps = [
   {
-    title: "Harvest - Immersion",
-    description: "We deeply understand your brand, your audience and your business goals.",
+    title: "01 - Harvest - Immersion",
+    description: "We deeply understand your brand, your audience and your goals.",
   },
   {
-    title: "Infusion - Strategy",
-    description: "We develop the creative and strategic plan with intention and purpose.",
+    title: "02 - Infusion - Strategy",
+    description: "We develop the creative and strategic plan for what your brand truly is.",
   },
   {
-    title: "Served - Delivery",
+    title: "03 - Served - Delivery",
     description: "Your brand reaches the end client with consistency, beauty and results.",
+  },
+  {
+    title: "04 - Favorite Tea - Remembrance",
+    description:
+      "Delivery is the beginning of remembrance. Brands that last are those built to be felt. Like a favorite tea, your brand becomes the first choice - not by chance, but by design.",
   },
 ]
 
@@ -33,16 +38,18 @@ export default function AboutEn() {
 
           <div className="space-y-6 text-lg leading-relaxed text-[var(--tea-brown-soft)] max-w-3xl">
             <p>
-              Tea Studio did not come from chance. It was born from a journey shaped at the right time, with the right
-              purpose.
+              Tea Studio didn&apos;t come from chance. It was born from a journey of construction - shaped at the right
+              time, with the right purpose. Like every good story, it took going through the process before arriving at
+              the delivery.
             </p>
             <p>
-              Just like tea moves through harvest, infusion and serving, every brand has its own ritual. We guide that
-              process from the beginning to full bloom.
+              We believe that just like tea has its stages - harvest, infusion, serving - every brand has its own
+              method. We are that process: guiding your brand from inception to full bloom, with strategy and care for
+              every detail.
             </p>
             <p>
-              Every creative decision is made with intention so your brand reaches people with consistency, identity
-              and results.
+              Every creative decision is made with listening and precision - so that your brand reaches the audience
+              with consistency, identity and results.
             </p>
           </div>
 

@@ -133,9 +133,51 @@ h4 {
   backdrop-filter: blur(4px);
 }
 
+.tea-service-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(75, 58, 47, 0.16);
+}
+
+.tea-service-item {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 0.9rem;
+  align-items: start;
+  padding: 1.05rem 0;
+  border-bottom: 1px solid rgba(75, 58, 47, 0.16);
+}
+
+.tea-service-number {
+  color: var(--tea-accent);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.tea-service-text {
+  margin: 0;
+  color: var(--tea-brown-soft);
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
 html[data-theme="dark"] .tea-card {
   border: 1px solid rgba(241, 229, 213, 0.18);
   background: linear-gradient(140deg, rgba(34, 47, 39, 0.74), rgba(21, 29, 24, 0.9));
+}
+
+html[data-theme="dark"] .tea-service-list {
+  border-top-color: rgba(241, 229, 213, 0.18);
+}
+
+html[data-theme="dark"] .tea-service-item {
+  border-bottom-color: rgba(241, 229, 213, 0.18);
+}
+
+html[data-theme="dark"] .tea-service-text {
+  color: var(--tea-brown-soft);
 }
 
 .tea-grid-texture {

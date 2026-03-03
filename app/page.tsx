@@ -8,7 +8,6 @@ const services = [
   "Identidade Visual e Branding do conceito ao manual de marca.",
   "Estratégia de Conteúdo para converter, conectar e posicionar.",
   "Tráfego Pago com campanhas orientadas por intenção e resultado.",
-  "Do processo à entrega com consistência, beleza e propósito.",
 ]
 
 const visuals = {
@@ -22,12 +21,11 @@ export default function Home() {
   return (
     <main>
       <AnimatedHero locale="pt" />
+
       <div className="tea-marquee-bar" role="region" aria-label="Faixa de valores da Tea Studio">
         <div className="tea-marquee-track">
-          <span className="tea-marquee-item">Estratégia · Criatividade · Propósito · Do processo à entrega</span>
-          <span className="tea-marquee-item">Cada marca tem seu tempo · Construção com intenção em cada detalhe</span>
-          <span className="tea-marquee-item">Estratégia · Criatividade · Propósito · Do processo à entrega</span>
-          <span className="tea-marquee-item">Cada marca tem seu tempo · Construção com intenção em cada detalhe</span>
+          <span className="tea-marquee-item">Cada xícara, uma história diferente · Infusão lenta, resultado duradouro · Servido no tempo certo · Proximidade que transforma · Estratégia que começa pela escuta</span>
+          <span className="tea-marquee-item">Cada xícara, uma história diferente · Infusão lenta, resultado duradouro · Servido no tempo certo · Proximidade que transforma · Estratégia que começa pela escuta</span>
         </div>
       </div>
 
@@ -44,16 +42,23 @@ export default function Home() {
               processo intencional.
             </p>
 
-            <p className="max-w-2xl text-lg leading-relaxed text-[var(--tea-brown-soft)]">
-              A Tea Studio nasceu de uma jornada de construção no tempo certo, com o propósito certo. Assim como o chá
-              tem suas etapas de preparo e infusão, guiamos marcas do início ao florescimento com estratégia e cuidado.
-            </p>
+            <div className="max-w-2xl text-lg leading-relaxed text-[var(--tea-brown-soft)] space-y-6">
+              <p>
+                A Tea Studio não surgiu do acaso. Nasceu de uma jornada de construção - moldada no tempo certo, com o
+                propósito certo. Como toda boa história, foi preciso passar pelo processo antes de chegar à entrega.
+              </p>
+              <p>
+                Acreditamos que assim como o chá tem suas etapas - colheita, infusão, entrega - toda marca também tem
+                seu método. Nós somos esse processo: guiamos sua marca do início ao florescimento, com estratégia e
+                atenção a cada detalhe.
+              </p>
+            </div>
           </div>
 
           <div className="lg:col-span-6 xl:col-span-5 lg:justify-self-end w-full">
             <div className="tea-cup-stage">
               <div className="tea-cup-quote">
-                <p>&quot;Assim como o chá, cada marca precisa do seu tempo.&quot;</p>
+                <p>&quot;Assim como o chá, cada marca precisa passar pelo seu processo - de preparação, de infusão, de entrega.&quot;</p>
                 <span>Manifesto Tea Studio</span>
               </div>
 
@@ -67,7 +72,7 @@ export default function Home() {
                   <p className="tea-cup-stat-label">Serviços integrados</p>
                 </div>
                 <div className="tea-cup-stat">
-                  <p className="tea-cup-stat-number">∞</p>
+                  <p className="tea-cup-stat-number">&infin;</p>
                   <p className="tea-cup-stat-label">Possibilidades criativas</p>
                 </div>
               </div>
@@ -90,12 +95,12 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="py-20 md:py-32 section-padding">
+      <AnimatedSection id="servicos-home" className="py-20 md:py-32 section-padding">
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-5">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">O que fazemos</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight text-[var(--tea-brown)] mb-6">
-              Serviços com propósito para marcas que querem florescer.
+              Quatro frentes, uma direção.
             </h2>
             <p className="text-lg text-[var(--tea-brown-soft)] leading-relaxed max-w-2xl">
               Cuidamos da presença da sua marca do processo à entrega, integrando estratégia, criatividade e execução
@@ -103,22 +108,23 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="lg:col-span-7 grid md:grid-cols-2 gap-6 w-full">
-            <ul className="space-y-4 text-lg text-[var(--tea-brown-soft)]">
-              {services.map((service) => (
-                <li key={service} className="tea-card px-5 py-4">
-                  {service}
-                </li>
-              ))}
-            </ul>
-
+          <div className="lg:col-span-7 w-full space-y-6">
             <Image
               src={visuals.notesDesk}
               alt="Mesa com planejamento criativo e anotações"
-              width={1200}
-              height={1000}
-              className="w-full h-full rounded-2xl object-cover min-h-[300px] md:min-h-[360px]"
+              width={1400}
+              height={900}
+              className="w-full rounded-2xl object-cover min-h-[280px] md:min-h-[340px]"
             />
+
+            <ol className="tea-service-list" aria-label="Frentes de serviço da Tea Studio">
+              {services.map((service, index) => (
+                <li key={service} className="tea-service-item">
+                  <span className="tea-service-number">{String(index + 1).padStart(2, "0")}</span>
+                  <p className="tea-service-text">{service}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </AnimatedSection>
@@ -134,7 +140,7 @@ export default function Home() {
               </h2>
               <p className="text-[var(--tea-cream)]/85 max-w-2xl leading-relaxed mb-8">
                 Cada marca tem o seu tempo. Nosso trabalho é garantir que, quando chegar a hora, ela chegue com força,
-                identidade e propósito à mesa do cliente.
+                com identidade e com propósito à mesa do cliente.
               </p>
 
               <Link

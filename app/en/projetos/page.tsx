@@ -12,6 +12,7 @@ type CasePalette = {
 type Case = {
   id: "delivery" | "sirley" | "donna"
   brand: string
+  category: string
   headline: string
   body: string
   palette: CasePalette
@@ -21,9 +22,10 @@ const cases: Case[] = [
   {
     id: "delivery",
     brand: "Delivery Much",
-    headline: "A community built through language, rhythm and presence.",
+    category: "Social Media",
+    headline: "A community built with language, rhythm and presence.",
     body:
-      "The strategy went beyond promotion: we turned Instagram into a place of belonging. From editorial direction to execution, each piece was designed to bring people closer to the brand and create real daily connection.",
+      "The strategy went beyond promotion: we transformed Instagram into a space of belonging. From the editorial line to execution, every piece of content was designed to bring the brand closer to people and generate real connection in everyday life.",
     palette: {
       panelBg: "bg-[#9b571e]",
       panelText: "text-[var(--tea-cream)]",
@@ -36,9 +38,10 @@ const cases: Case[] = [
   {
     id: "sirley",
     brand: "Sirley Malhas",
-    headline: "A legacy repositioned with care for a new generation.",
+    category: "Branding + Social Media",
+    headline: "A legacy carefully repositioned for a new generation.",
     body:
-      "We started from a solid history to build a new brand moment. Narrative, campaigns and identity began communicating care and trust with consistency, strengthening bonds and sustaining continuous growth.",
+      "We started from a solid history to build a new brand moment. Narrative, campaigns and identity began to communicate affection and trust consistently, strengthening bonds and sustaining continuous growth.",
     palette: {
       panelBg: "bg-[#d7d0c5]",
       panelText: "text-[#3f3024]",
@@ -51,9 +54,10 @@ const cases: Case[] = [
   {
     id: "donna",
     brand: "Donna K",
-    headline: "Originality built with intention, not trends.",
+    category: "Branding",
+    headline: "Originality built with intention, not with trends.",
     body:
-      "From day one, the direction was clear: build an authorial and elegant brand aligned with its own purpose. Every decision was made with criteria to create a strong and memorable presence.",
+      "From the start, the direction was clear: create an authorial, elegant brand consistent with its own purpose. Every choice was made with criteria to build a strong and memorable presence.",
     palette: {
       panelBg: "bg-[#f0ebe2]",
       panelText: "text-[#3f3024]",
@@ -67,7 +71,7 @@ const cases: Case[] = [
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Brands that bloomed with strategy, creativity and purpose.",
+  description: "Brands that bloomed.",
 }
 
 function CaseLogo({ id }: { id: Case["id"] }) {
@@ -109,8 +113,8 @@ export default function ProjectsEn() {
           Brands that bloomed.
         </h1>
         <p className="text-lg leading-relaxed text-[var(--tea-brown-soft)] max-w-3xl">
-          Each project starts from an intentional process. From positioning to editorial presence, we structure brands
-          to reach people with consistency, identity and results.
+          Every project is born from an intentional process. From positioning to editorial presence, we structure brands
+          to reach their audience with consistency, identity and results.
         </p>
       </section>
 
@@ -122,6 +126,7 @@ export default function ProjectsEn() {
             </div>
 
             <div className={`px-6 md:px-7 py-8 border-t flex-1 ${item.palette.border} ${item.palette.bodyBg} ${item.palette.bodyText}`}>
+              <p className={`text-xs uppercase tracking-[0.22em] mb-2 ${item.palette.accent}`}>{item.category}</p>
               <p className={`text-xs uppercase tracking-[0.22em] mb-4 ${item.palette.accent}`}>{item.brand}</p>
               <h2 className="text-2xl sm:text-3xl leading-tight mb-6">{item.headline}</h2>
               <p className="text-base sm:text-lg leading-relaxed">{item.body}</p>
