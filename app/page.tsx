@@ -57,6 +57,21 @@ export default function Home() {
                 <span>Manifesto Tea Studio</span>
               </div>
 
+              <div className="tea-cup-stats" aria-label="Indicadores da Tea Studio">
+                <div className="tea-cup-stat">
+                  <p className="tea-cup-stat-number">100%</p>
+                  <p className="tea-cup-stat-label">Estratégia personalizada</p>
+                </div>
+                <div className="tea-cup-stat">
+                  <p className="tea-cup-stat-number">4</p>
+                  <p className="tea-cup-stat-label">Serviços integrados</p>
+                </div>
+                <div className="tea-cup-stat">
+                  <p className="tea-cup-stat-number">∞</p>
+                  <p className="tea-cup-stat-label">Possibilidades criativas</p>
+                </div>
+              </div>
+
               <div className="tea-cup-wrap" aria-hidden="true">
                 <div className="tea-steam tea-steam-1" />
                 <div className="tea-steam tea-steam-2" />

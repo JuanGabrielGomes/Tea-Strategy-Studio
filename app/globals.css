@@ -148,7 +148,7 @@ html[data-theme="dark"] .tea-card {
 .tea-marquee-bar {
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(90deg, #2b3a2f 0%, #344638 50%, #2b3a2f 100%);
+  background: linear-gradient(90deg, #6a5548 0%, #9b571e 50%, #6a5548 100%);
   border-top: 1px solid rgba(247, 242, 234, 0.14);
   border-bottom: 1px solid rgba(247, 242, 234, 0.14);
   padding: 0.9rem 0;
@@ -206,6 +206,40 @@ html[data-theme="dark"] .tea-card {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.17em;
+}
+
+.tea-cup-stats {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 1.35rem;
+  margin-right: 8.6rem;
+}
+
+.tea-cup-stat {
+  border: 1px solid rgba(75, 58, 47, 0.14);
+  border-radius: 0.55rem;
+  background: rgba(247, 242, 234, 0.62);
+  padding: 0.65rem 0.5rem 0.6rem;
+}
+
+.tea-cup-stat-number {
+  margin: 0;
+  color: var(--tea-brown);
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.tea-cup-stat-label {
+  margin: 0.3rem 0 0;
+  color: var(--tea-brown-soft);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  line-height: 1.35;
 }
 
 .tea-cup-wrap {
@@ -332,7 +366,7 @@ html[data-theme="dark"] .tea-grid-texture {
 }
 
 html[data-theme="dark"] .tea-marquee-bar {
-  background: linear-gradient(90deg, #121b15 0%, #1b2a20 50%, #121b15 100%);
+  background: linear-gradient(90deg, #3d2a20 0%, #6f3f1e 50%, #3d2a20 100%);
   border-top-color: rgba(243, 232, 217, 0.15);
   border-bottom-color: rgba(243, 232, 217, 0.15);
 }
@@ -351,6 +385,27 @@ html[data-theme="dark"] .tea-cup-quote p {
 
 html[data-theme="dark"] .tea-cup-quote span {
   color: rgba(243, 232, 217, 0.74);
+}
+
+html[data-theme="dark"] .tea-cup-stat {
+  border-color: rgba(243, 232, 217, 0.17);
+  background: rgba(15, 24, 18, 0.52);
+}
+
+html[data-theme="dark"] .tea-cup-stat-number {
+  color: var(--tea-cream);
+}
+
+html[data-theme="dark"] .tea-cup-stat-label {
+  color: rgba(243, 232, 217, 0.78);
+}
+
+@media (max-width: 520px) {
+  .tea-cup-stats {
+    grid-template-columns: 1fr;
+    margin-right: 0;
+    max-width: 12rem;
+  }
 }
 
 a:focus-visible,
