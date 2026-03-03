@@ -139,7 +139,16 @@ export default function Header() {
 
       <div className="relative section-padding flex items-center justify-between h-20 border-b border-[var(--tea-brown)]/15">
         <Link href={homeHref} className="flex items-center" aria-label={labels.logoAria}>
-          <Image src="/logo-tea.PNG" alt="Tea Studio Criativo" width={100} height={40} priority className="object-contain" />
+          <div className="relative h-12 w-12 md:h-14 md:w-14 shrink-0">
+            <Image
+              src="/logo-tea-monograma.png"
+              alt="Tea Studio Criativo"
+              fill
+              priority
+              sizes="(max-width: 768px) 48px, 56px"
+              className="object-contain"
+            />
+          </div>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm tracking-[0.08em] text-[var(--tea-brown)]" aria-label="Main navigation">

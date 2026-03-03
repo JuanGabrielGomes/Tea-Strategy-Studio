@@ -172,7 +172,7 @@ html[data-theme="dark"] .tea-card {
 
 .tea-cup-stage {
   width: 100%;
-  min-height: 320px;
+  min-height: 350px;
   border-radius: 1rem;
   padding: 1.4rem;
   position: relative;
@@ -187,7 +187,7 @@ html[data-theme="dark"] .tea-card {
 .tea-cup-quote {
   position: relative;
   z-index: 2;
-  max-width: 23rem;
+  max-width: calc(100% - 220px);
 }
 
 .tea-cup-quote p {
@@ -212,10 +212,10 @@ html[data-theme="dark"] .tea-card {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.65rem;
   margin-top: 1.35rem;
-  margin-right: 8.6rem;
+  width: min(17rem, calc(100% - 220px));
 }
 
 .tea-cup-stat {
@@ -240,6 +240,10 @@ html[data-theme="dark"] .tea-card {
   text-transform: uppercase;
   letter-spacing: 0.11em;
   line-height: 1.35;
+}
+
+.tea-cup-stat:last-child {
+  grid-column: 1 / -1;
 }
 
 .tea-cup-wrap {
@@ -401,10 +405,27 @@ html[data-theme="dark"] .tea-cup-stat-label {
 }
 
 @media (max-width: 520px) {
+  .tea-cup-stage {
+    min-height: 500px;
+  }
+
+  .tea-cup-quote {
+    max-width: 100%;
+  }
+
   .tea-cup-stats {
     grid-template-columns: 1fr;
-    margin-right: 0;
-    max-width: 12rem;
+    width: min(13rem, 100%);
+  }
+
+  .tea-cup-stat:last-child {
+    grid-column: auto;
+  }
+
+  .tea-cup-wrap {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
   }
 }
 
