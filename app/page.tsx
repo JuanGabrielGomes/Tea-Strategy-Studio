@@ -12,8 +12,6 @@ const services = [
 ]
 
 const visuals = {
-  workingSession:
-    "https://images.unsplash.com/photo-1582848891135-32b749439ad4?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800",
   laptopLight:
     "https://images.pexels.com/photos/4492126/pexels-photo-4492126.jpeg?auto=compress&cs=tinysrgb&w=1400",
   notesDesk:
@@ -24,6 +22,14 @@ export default function Home() {
   return (
     <main>
       <AnimatedHero locale="pt" />
+      <div className="tea-marquee-bar" role="region" aria-label="Faixa de valores da Tea Studio">
+        <div className="tea-marquee-track">
+          <span className="tea-marquee-item">Estratégia · Criatividade · Propósito · Do processo à entrega</span>
+          <span className="tea-marquee-item">Cada marca tem seu tempo · Construção com intenção em cada detalhe</span>
+          <span className="tea-marquee-item">Estratégia · Criatividade · Propósito · Do processo à entrega</span>
+          <span className="tea-marquee-item">Cada marca tem seu tempo · Construção com intenção em cada detalhe</span>
+        </div>
+      </div>
 
       <AnimatedSection className="py-20 md:py-32 section-padding bg-[var(--tea-surface)] relative overflow-hidden">
         <div className="absolute inset-0 bg-[var(--tea-green)] opacity-[0.04]" />
@@ -45,13 +51,26 @@ export default function Home() {
           </div>
 
           <div className="lg:col-span-6 xl:col-span-5 lg:justify-self-end w-full">
-            <Image
-              src={visuals.workingSession}
-              alt="Equipe em sessão de planejamento de marca"
-              width={1000}
-              height={1200}
-              className="w-full rounded-2xl object-cover min-h-[320px] md:min-h-[420px]"
-            />
+            <div className="tea-cup-stage">
+              <div className="tea-cup-quote">
+                <p>&quot;Assim como o chá, cada marca precisa do seu tempo.&quot;</p>
+                <span>Manifesto Tea Studio</span>
+              </div>
+
+              <div className="tea-cup-wrap" aria-hidden="true">
+                <div className="tea-steam tea-steam-1" />
+                <div className="tea-steam tea-steam-2" />
+                <div className="tea-steam tea-steam-3" />
+                <div className="tea-cup-rim" />
+                <div className="tea-cup-body">
+                  <div className="tea-cup-liquid" />
+                  <div className="tea-bag-string" />
+                  <div className="tea-bag" />
+                </div>
+                <div className="tea-cup-handle" />
+                <div className="tea-cup-saucer" />
+              </div>
+            </div>
           </div>
         </div>
       </AnimatedSection>

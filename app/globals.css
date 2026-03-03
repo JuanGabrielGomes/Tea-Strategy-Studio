@@ -145,10 +145,212 @@ html[data-theme="dark"] .tea-card {
   background-size: 28px 28px;
 }
 
+.tea-marquee-bar {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(90deg, #2b3a2f 0%, #344638 50%, #2b3a2f 100%);
+  border-top: 1px solid rgba(247, 242, 234, 0.14);
+  border-bottom: 1px solid rgba(247, 242, 234, 0.14);
+  padding: 0.9rem 0;
+}
+
+.tea-marquee-track {
+  display: flex;
+  gap: 2.2rem;
+  white-space: nowrap;
+  width: max-content;
+  animation: teaMarquee 30s linear infinite;
+}
+
+.tea-marquee-item {
+  color: var(--tea-cream);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.tea-cup-stage {
+  width: 100%;
+  min-height: 320px;
+  border-radius: 1rem;
+  padding: 1.4rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(75, 58, 47, 0.12);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(155, 87, 30, 0.16), transparent 45%),
+    radial-gradient(circle at 20% 85%, rgba(47, 58, 48, 0.14), transparent 48%),
+    linear-gradient(135deg, rgba(247, 242, 234, 0.66), rgba(230, 221, 208, 0.82));
+}
+
+.tea-cup-quote {
+  position: relative;
+  z-index: 2;
+  max-width: 23rem;
+}
+
+.tea-cup-quote p {
+  margin: 0;
+  color: var(--tea-brown);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  line-height: 1.45;
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.tea-cup-quote span {
+  display: inline-block;
+  margin-top: 0.55rem;
+  color: var(--tea-muted);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.17em;
+}
+
+.tea-cup-wrap {
+  position: absolute;
+  right: clamp(0.9rem, 3vw, 1.8rem);
+  bottom: 1rem;
+  width: 190px;
+  height: 210px;
+  z-index: 1;
+}
+
+.tea-steam {
+  position: absolute;
+  bottom: 122px;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(to top, rgba(122, 107, 95, 0.55), transparent);
+  animation: teaSteam 3.2s ease-in-out infinite;
+}
+
+.tea-steam-1 {
+  left: 36%;
+  height: 34px;
+  animation-delay: 0s;
+}
+
+.tea-steam-2 {
+  left: 48%;
+  height: 44px;
+  animation-delay: 0.45s;
+}
+
+.tea-steam-3 {
+  left: 60%;
+  height: 30px;
+  animation-delay: 0.9s;
+}
+
+.tea-cup-rim {
+  position: absolute;
+  bottom: 96px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 12px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(75, 58, 47, 0.24);
+  background: linear-gradient(145deg, #fffaf4, #ddd0bc);
+}
+
+.tea-cup-body {
+  position: absolute;
+  bottom: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 74px;
+  border-radius: 0 0 46% 46% / 0 0 38% 38%;
+  border: 1.5px solid rgba(75, 58, 47, 0.24);
+  background: linear-gradient(145deg, #fffaf4, #e8d9c5);
+  box-shadow: inset -6px 0 16px rgba(0, 0, 0, 0.04), 2px 8px 18px rgba(46, 31, 19, 0.12);
+}
+
+.tea-cup-liquid {
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  transform: translateX(-50%);
+  width: 84px;
+  height: 36px;
+  border-radius: 0 0 46% 46% / 0 0 36% 36%;
+  background: linear-gradient(180deg, rgba(130, 80, 35, 0.36), rgba(85, 50, 20, 0.56));
+}
+
+.tea-bag-string {
+  position: absolute;
+  right: 26px;
+  top: -40px;
+  width: 1px;
+  height: 42px;
+  background: rgba(90, 64, 48, 0.7);
+}
+
+.tea-bag {
+  position: absolute;
+  right: 20px;
+  top: -4px;
+  width: 18px;
+  height: 22px;
+  border-radius: 2px;
+  border: 1px solid rgba(130, 80, 35, 0.3);
+  background: rgba(130, 80, 35, 0.34);
+  transform: rotate(6deg);
+}
+
+.tea-cup-handle {
+  position: absolute;
+  right: calc(50% - 72px);
+  bottom: 80px;
+  width: 24px;
+  height: 38px;
+  border: 2px solid rgba(75, 58, 47, 0.24);
+  border-left: none;
+  border-radius: 0 28px 28px 0;
+}
+
+.tea-cup-saucer {
+  position: absolute;
+  left: 50%;
+  bottom: 46px;
+  transform: translateX(-50%);
+  width: 142px;
+  height: 13px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(75, 58, 47, 0.24);
+  background: linear-gradient(145deg, #fff4e8, #d4c0a5);
+  box-shadow: 0 4px 10px rgba(46, 31, 19, 0.08);
+}
+
 html[data-theme="dark"] .tea-grid-texture {
   background-image:
     linear-gradient(to right, rgba(241, 229, 213, 0.08) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(241, 229, 213, 0.08) 1px, transparent 1px);
+}
+
+html[data-theme="dark"] .tea-marquee-bar {
+  background: linear-gradient(90deg, #121b15 0%, #1b2a20 50%, #121b15 100%);
+  border-top-color: rgba(243, 232, 217, 0.15);
+  border-bottom-color: rgba(243, 232, 217, 0.15);
+}
+
+html[data-theme="dark"] .tea-cup-stage {
+  border-color: rgba(241, 229, 213, 0.18);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(191, 122, 61, 0.22), transparent 45%),
+    radial-gradient(circle at 20% 85%, rgba(65, 80, 68, 0.22), transparent 48%),
+    linear-gradient(135deg, rgba(26, 35, 29, 0.74), rgba(20, 28, 24, 0.9));
+}
+
+html[data-theme="dark"] .tea-cup-quote p {
+  color: var(--tea-cream);
+}
+
+html[data-theme="dark"] .tea-cup-quote span {
+  color: rgba(243, 232, 217, 0.74);
 }
 
 a:focus-visible,
@@ -270,6 +472,30 @@ html[data-theme="dark"] .tea-cursor-dot {
   }
   100% {
     background-position: 0% 0%;
+  }
+}
+
+@keyframes teaSteam {
+  0% {
+    transform: translateX(0) scaleX(1);
+    opacity: 0.56;
+  }
+  50% {
+    transform: translateX(6px) scaleX(1.45);
+    opacity: 0.24;
+  }
+  100% {
+    transform: translateX(-3px) scaleX(0.82);
+    opacity: 0;
+  }
+}
+
+@keyframes teaMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
