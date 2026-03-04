@@ -503,7 +503,8 @@ html[data-theme="dark"] .tea-cup-stat-label {
 
 @media (max-width: 520px) {
   .tea-cup-stage {
-    min-height: 500px;
+    min-height: 560px;
+    padding-bottom: 15.5rem;
   }
 
   .tea-cup-quote {
@@ -511,17 +512,18 @@ html[data-theme="dark"] .tea-cup-stat-label {
   }
 
   .tea-cup-stats {
-    grid-template-columns: 1fr;
-    width: min(13rem, 100%);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(15.5rem, 100%);
   }
 
   .tea-cup-stat:last-child {
-    grid-column: auto;
+    grid-column: 1 / -1;
   }
 
   .tea-cup-wrap {
     left: 50%;
     right: auto;
+    bottom: 0.9rem;
     transform: translateX(-50%);
   }
 }

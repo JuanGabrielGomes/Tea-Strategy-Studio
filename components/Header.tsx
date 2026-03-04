@@ -17,7 +17,6 @@ const navLabels = {
     mobileDiagnostic: "Iniciar o processo",
     menu: "Menu",
     logoAria: "Ir para a página inicial da Tea Studio Criativo",
-    theme: "Tema",
     themeAria: "Alternar entre modo claro e escuro",
   },
   en: {
@@ -28,7 +27,6 @@ const navLabels = {
     mobileDiagnostic: "Start the process",
     menu: "Menu",
     logoAria: "Go to Tea Studio Criativo homepage",
-    theme: "Theme",
     themeAria: "Toggle light and dark mode",
   },
 } as const
@@ -87,15 +85,21 @@ export default function Header() {
 
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window === "undefined") {
+      return "light"
+    }
+
+    return resolveInitialTheme()
+  })
 
   useEffect(() => {
     document.documentElement.lang = locale === "en" ? "en" : "pt-BR"
   }, [locale])
 
   useEffect(() => {
-    const initialTheme = resolveInitialTheme()
-    setThemeOnDocument(initialTheme, false)
-  }, [])
+    setThemeOnDocument(theme)
+  }, [theme])
 
   useEffect(() => {
     let rafId = 0
@@ -125,9 +129,8 @@ export default function Header() {
   }, [menuOpen])
 
   function handleThemeToggle() {
-    const current = document.documentElement.dataset.theme === "dark" ? "dark" : "light"
-    const next = current === "dark" ? "light" : "dark"
-    setThemeOnDocument(next)
+    const next = theme === "dark" ? "light" : "dark"
+    setTheme(next)
   }
 
   return (
@@ -171,7 +174,7 @@ export default function Header() {
             aria-label={labels.themeAria}
             className="border border-[var(--tea-brown)]/35 px-3 py-2 text-xs uppercase tracking-[0.14em] hover:border-[var(--tea-hover)] hover:text-[var(--tea-hover)] transition-colors"
           >
-            {labels.theme}
+            {theme.toUpperCase()}
           </button>
 
           <Link
@@ -204,7 +207,7 @@ export default function Header() {
             <Link
               href={diagnosticHref}
               onClick={() => setMenuOpen(false)}
-              className="mt-2 inline-block bg-[var(--tea-green)] text-[var(--tea-cream)] px-4 py-3 text-base tracking-[0.05em]"
+              className="mt-2 block w-full bg-[var(--tea-green)] text-[var(--tea-cream)] px-4 py-3 text-base tracking-[0.05em] text-left"
             >
               {labels.mobileDiagnostic}
             </Link>
@@ -212,14 +215,14 @@ export default function Header() {
               type="button"
               onClick={handleThemeToggle}
               aria-label={labels.themeAria}
-              className="text-left inline-block border border-[var(--tea-brown)]/35 px-4 py-3 text-sm uppercase tracking-[0.16em]"
+              className="block w-full text-left border border-[var(--tea-brown)]/35 px-4 py-3 text-sm uppercase tracking-[0.16em]"
             >
-              {labels.theme}
+              {theme.toUpperCase()}
             </button>
             <Link
               href={toggleHref}
               onClick={() => setMenuOpen(false)}
-              className="inline-block border border-[var(--tea-brown)]/35 px-4 py-3 text-sm uppercase tracking-[0.16em]"
+              className="block w-full border border-[var(--tea-brown)]/35 px-4 py-3 text-sm uppercase tracking-[0.16em] text-left"
             >
               {toggleLabel}
             </Link>
