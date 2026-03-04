@@ -32,7 +32,7 @@ export default function AboutEn() {
       <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
         <div className="lg:col-span-7">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">Our story</p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-8">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-8">
             Born from an intentional process.
           </h1>
 
@@ -70,7 +70,7 @@ export default function AboutEn() {
             width={1100}
             height={1400}
             sizes="(min-width: 1024px) 38vw, 100vw"
-            className="rounded-2xl object-cover object-bottom w-full h-full min-h-[520px] md:min-h-[660px] lg:min-h-[880px]"
+            className="rounded-2xl object-cover object-bottom w-full h-full min-h-[360px] md:min-h-[620px] lg:min-h-[860px]"
           />
         </div>
       </div>

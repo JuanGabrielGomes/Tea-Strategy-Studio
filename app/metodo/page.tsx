@@ -33,7 +33,7 @@ export default function Metodo() {
         <div className="lg:col-span-7 space-y-8">
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-5">Método Tea</p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-6">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-6">
               Do processo à entrega, com direção.
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-[var(--tea-brown-soft)]">
@@ -45,7 +45,7 @@ export default function Metodo() {
           <div className="grid md:grid-cols-2 gap-6">
             {pillars.map((pillar) => (
               <section key={pillar.title} className="tea-card p-7 md:p-8">
-                <h2 className="text-2xl md:text-3xl mb-4 text-[var(--tea-brown)]">{pillar.title}</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl mb-4 text-[var(--tea-brown)]">{pillar.title}</h2>
                 <p className="text-[var(--tea-brown-soft)] leading-relaxed">{pillar.description}</p>
               </section>
             ))}
@@ -59,7 +59,7 @@ export default function Metodo() {
             width={1200}
             height={1200}
             sizes="(min-width: 1024px) 38vw, 100vw"
-            className="rounded-2xl object-cover w-full h-full min-h-[460px] lg:min-h-[720px]"
+            className="rounded-2xl object-cover w-full h-full min-h-[360px] md:min-h-[560px] lg:min-h-[720px]"
           />
         </div>
       </div>

@@ -109,7 +109,7 @@ export default function Projetos() {
     <main className="section-padding py-24 md:py-28">
       <section className="mb-14">
         <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-5">Portfólio</p>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-6">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-6">
           Marcas que floresceram.
         </h1>
         <p className="text-lg leading-relaxed text-[var(--tea-brown-soft)] max-w-3xl">
@@ -128,7 +128,7 @@ export default function Projetos() {
             <div className={`px-6 md:px-7 py-8 border-t flex-1 ${item.palette.border} ${item.palette.bodyBg} ${item.palette.bodyText}`}>
               <p className={`text-xs uppercase tracking-[0.22em] mb-2 ${item.palette.accent}`}>{item.category}</p>
               <p className={`text-xs uppercase tracking-[0.22em] mb-4 ${item.palette.accent}`}>{item.brand}</p>
-              <h2 className="text-2xl sm:text-3xl leading-tight mb-6">{item.headline}</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl leading-tight mb-6">{item.headline}</h2>
               <p className="text-base sm:text-lg leading-relaxed">{item.body}</p>
             </div>
           </article>

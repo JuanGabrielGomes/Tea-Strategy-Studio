@@ -19,7 +19,7 @@ export default function Diagnostico() {
       <div className="grid lg:grid-cols-12 gap-10 items-start">
         <div className="lg:col-span-5">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-5">Diagnóstico</p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-7">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-7">
             Diagnóstico de conteúdo estratégico.
           </h1>
           <p className="text-sm uppercase tracking-[0.22em] text-[var(--tea-accent)] mb-7">Direção antes de presença.</p>

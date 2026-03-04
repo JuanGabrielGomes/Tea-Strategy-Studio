@@ -41,9 +41,6 @@ const copy = {
 function shouldPlayHeroVideo(reduceMotion: boolean) {
   if (reduceMotion || typeof window === "undefined") return false
 
-  const onSmallScreen = window.matchMedia("(max-width: 900px)").matches
-  if (onSmallScreen) return false
-
   const nav = navigator as NavigatorWithConnection
   const saveData = Boolean(nav.connection?.saveData)
   const effectiveType = nav.connection?.effectiveType ?? ""
@@ -94,7 +91,7 @@ export default function AnimatedHero({ locale = "pt" }: AnimatedHeroProps) {
           initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          className="hero-title-lock block w-full max-w-full text-[clamp(1.38rem,8vw,6.3rem)] leading-[0.93] font-semibold tracking-[-0.03em] text-[var(--tea-cream)]"
+          className="hero-title-lock block w-full max-w-full text-[clamp(2rem,9vw,6.3rem)] leading-[0.93] font-semibold tracking-[-0.03em] text-[var(--tea-cream)]"
         >
           <span className="hero-line">{content.lineOne}</span>
           <span className="hero-line">{content.lineTwo}</span>

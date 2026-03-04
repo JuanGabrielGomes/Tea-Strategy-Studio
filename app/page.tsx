@@ -36,11 +36,11 @@ export default function Home() {
           <div className="lg:col-span-6 xl:col-span-7">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-8">Nossa história</p>
 
-            <p className="text-3xl sm:text-4xl md:text-6xl leading-[1.03] font-semibold mb-8 text-[var(--tea-brown)]">
+            <h2 className="text-2xl sm:text-4xl md:text-6xl leading-[1.03] font-semibold mb-8 text-[var(--tea-brown)]">
               Nascemos de um
               <br />
               processo intencional.
-            </p>
+            </h2>
 
             <div className="max-w-2xl text-lg leading-relaxed text-[var(--tea-brown-soft)] space-y-6">
               <p>
@@ -99,7 +99,7 @@ export default function Home() {
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-7 space-y-6">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">O que fazemos</p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight text-[var(--tea-brown)] mb-6">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl leading-tight text-[var(--tea-brown)] mb-6">
               Quatro frentes, uma direção.
             </h2>
             <p className="text-lg text-[var(--tea-brown-soft)] leading-relaxed max-w-2xl">
@@ -124,7 +124,7 @@ export default function Home() {
               width={1400}
               height={900}
               sizes="(min-width: 1024px) 38vw, 100vw"
-              className="w-full rounded-2xl object-cover min-h-[360px] md:min-h-[440px] lg:min-h-[520px]"
+              className="w-full rounded-2xl object-cover min-h-[320px] md:min-h-[440px] lg:min-h-[520px]"
             />
           </div>
         </div>
@@ -136,7 +136,7 @@ export default function Home() {
           <div className="relative bg-[var(--tea-green)] px-8 py-10 md:px-12 md:py-14 grid lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7">
               <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-cream)]/70 mb-5">Vamos começar</p>
-              <h2 className="text-2xl sm:text-3xl md:text-5xl leading-[1.03] text-[var(--tea-cream)] mb-6">
+              <h2 className="text-xl sm:text-3xl md:text-5xl leading-[1.03] text-[var(--tea-cream)] mb-6">
                 Sua marca está pronta para infundir?
               </h2>
               <p className="text-[var(--tea-cream)]/85 max-w-2xl leading-relaxed mb-8">
