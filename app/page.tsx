@@ -95,7 +95,7 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection id="servicos-home" className="pt-14 pb-10 md:py-32 section-padding">
+      <AnimatedSection id="servicos-home" className="pt-14 pb-10 md:pt-20 md:pb-14 lg:pt-24 lg:pb-16 section-padding">
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-7 space-y-6">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">O que fazemos</p>
@@ -124,13 +124,13 @@ export default function Home() {
               width={1400}
               height={900}
               sizes="(min-width: 1024px) 38vw, 100vw"
-              className="w-full rounded-2xl object-cover min-h-[220px] sm:min-h-[280px] md:min-h-[440px] lg:min-h-[520px]"
+              className="w-full rounded-2xl object-cover min-h-[220px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[380px]"
             />
           </div>
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="section-padding pt-8 pb-16 md:py-24">
+      <AnimatedSection className="section-padding pt-8 pb-16 md:pt-10 md:pb-20 lg:pt-12 lg:pb-24">
         <div className="rounded-2xl overflow-hidden relative">
           <div className="absolute inset-0 tea-grid-texture opacity-30" />
           <div className="relative bg-[var(--tea-green)] px-8 py-10 md:px-12 md:py-14 grid lg:grid-cols-12 gap-10 items-center">
