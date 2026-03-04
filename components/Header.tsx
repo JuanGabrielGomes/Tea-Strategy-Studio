@@ -81,7 +81,7 @@ export default function Header() {
   const homeHref = locale === "en" ? "/en" : "/"
   const diagnosticHref = locale === "en" ? "/en/diagnostico" : "/diagnostico"
   const toggleHref = getToggleHref(pathname, locale)
-  const toggleLabel = locale === "en" ? "PT" : "EN"
+  const toggleLabel = locale === "en" ? "EN" : "PT"
 
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
