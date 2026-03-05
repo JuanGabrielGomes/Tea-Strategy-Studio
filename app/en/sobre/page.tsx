@@ -33,7 +33,7 @@ export default function AboutEn() {
         <div className="lg:col-span-7">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">Our story</p>
           <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-8">
-            Born from an <span className="tea-script text-[var(--tea-accent)] text-[1.04em] align-middle">intentional process</span>.
+            Born from an <span className="tea-script text-[var(--tea-accent)]">intentional process</span>.
           </h1>
 
           <div className="space-y-6 text-lg leading-relaxed text-[var(--tea-brown-soft)]">

@@ -12,19 +12,20 @@ type DiagnosticFormProps = {
 const copy = {
   pt: {
     intro: {
-      step: "Etapa 01",
-      title: "Conte o cenário da sua marca",
-      subtitle: "Com essas respostas, montamos uma direção estratégica inicial para os próximos movimentos.",
+      step: "Primeiro gole.",
+      title: "Agora é com você.",
+      subtitle:
+        "Preencha com cuidado. Cada resposta nos ajuda a entender onde você está e para onde sua marca pode ir.",
     },
     labels: {
       name: "Nome",
       email: "E-mail",
       company: "Empresa",
       website: "Site ou Instagram",
-      challenge: "Principal desafio hoje",
-      objective: "Objetivo estratégico para os próximos 6 meses",
-      urgency: "Urgência",
-      budget: "Faixa de investimento",
+      challenge: "O que mais tem desafiado sua marca hoje?",
+      objective: "Para onde você quer levar sua marca nos próximos meses?",
+      urgency: "Quando você quer começar?",
+      budget: "Faixa de investimento mensal",
       trap: "Não preencha",
     },
     placeholders: {
@@ -46,30 +47,30 @@ const copy = {
       budgetD: "Acima de R$ 30k",
     },
     status: {
-      loading: "Enviando seu diagnóstico...",
-      success: "Diagnóstico enviado com sucesso. Retornaremos em breve.",
+      loading: "Preparando seu primeiro passo...",
+      success: "Recebemos suas respostas. Em breve marcamos nossa primeira conversa.",
       fallbackError: "Falha no envio. Tente novamente em alguns minutos.",
     },
     button: {
-      idle: "Quero meu diagnóstico estratégico",
-      loading: "Enviando diagnóstico...",
+      idle: "Quero iniciar minha jornada \u2192",
+      loading: "Enviando...",
     },
   },
   en: {
     intro: {
-      step: "Step 01",
-      title: "Tell us your brand context",
-      subtitle: "With these answers, we build an initial strategic direction for your next moves.",
+      step: "First sip.",
+      title: "Now it is your turn.",
+      subtitle: "Fill this in with care. Each answer helps us understand where you are and where your brand can go.",
     },
     labels: {
       name: "Name",
       email: "E-mail",
       company: "Company",
       website: "Website or Instagram",
-      challenge: "Main challenge today",
-      objective: "Strategic goal for the next 6 months",
-      urgency: "Urgency",
-      budget: "Investment range",
+      challenge: "What has been your brand's biggest challenge lately?",
+      objective: "Where do you want your brand to go in the next months?",
+      urgency: "When would you like to start?",
+      budget: "Monthly investment range",
       trap: "Do not fill in",
     },
     placeholders: {
@@ -91,13 +92,13 @@ const copy = {
       budgetD: "Above R$ 30k",
     },
     status: {
-      loading: "Sending your diagnostic...",
-      success: "Diagnostic submitted successfully. We will get back to you soon.",
+      loading: "Preparing your first step...",
+      success: "We received your answers. We will soon schedule our first conversation.",
       fallbackError: "Submission failed. Try again in a few minutes.",
     },
     button: {
-      idle: "I want my strategic diagnostic",
-      loading: "Sending diagnostic...",
+      idle: "I want to begin my journey \u2192",
+      loading: "Sending...",
     },
   },
 } as const
@@ -157,10 +158,7 @@ export default function DiagnosticForm({ locale = "pt" }: DiagnosticFormProps) {
     <form onSubmit={handleSubmit} className="diagnostic-shell">
       <div className="diagnostic-head">
         <p className="diagnostic-step">{content.intro.step}</p>
-        <h2 className="diagnostic-title">
-          {content.intro.title.split(" ").slice(0, -1).join(" ")}{" "}
-          <span className="tea-script text-[var(--tea-accent)]">{content.intro.title.split(" ").slice(-1)[0]}</span>
-        </h2>
+        <h2 className="diagnostic-title">{content.intro.title}</h2>
         <p className="diagnostic-subtitle">{content.intro.subtitle}</p>
       </div>
 

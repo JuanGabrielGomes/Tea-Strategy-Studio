@@ -1,14 +1,14 @@
 import "./globals.css"
 import type { Metadata } from "next"
-import { Caveat } from "next/font/google"
+import { Parisienne } from "next/font/google"
 import Header from "@/components/Header"
 import SiteFooter from "@/components/SiteFooter"
 import CustomCursor from "@/components/CustomCursor"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-const caveat = Caveat({
+const parisienne = Parisienne({
   subsets: ["latin"],
-  weight: ["600", "700"],
+  weight: ["400"],
   variable: "--font-script",
 })
 
@@ -47,7 +47,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`tea-body ${caveat.variable}`}>
+      <body className={`tea-body ${parisienne.variable}`}>
         <CustomCursor />
         <Header />
         <div className="pt-20 pb-28 md:pb-32">{children}</div>

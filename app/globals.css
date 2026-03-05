@@ -15,7 +15,7 @@
 
   --font-body: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  --font-script: "Caveat", "Brush Script MT", cursive;
+  --font-script: "Parisienne", "Segoe Script", "Brush Script MT", cursive;
 }
 
 html[data-theme="dark"] {
@@ -118,9 +118,11 @@ h4 {
 
 .tea-script {
   font-family: var(--font-script);
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  line-height: 0.94;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: inherit;
+  vertical-align: baseline;
+  font-size: 1em;
 }
 
 .section-padding {
@@ -220,9 +222,8 @@ h4 {
   flex-direction: column;
   gap: 0.42rem;
   color: var(--tea-brown);
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
 }
 
 .diagnostic-input {
@@ -266,16 +267,15 @@ h4 {
 .diagnostic-step {
   margin: 0;
   color: var(--tea-muted);
-  font-size: 0.64rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
 }
 
 .diagnostic-title {
   margin: 0.45rem 0 0;
   font-size: clamp(1.2rem, 2.4vw, 1.72rem);
   color: var(--tea-brown);
-  line-height: 1.05;
+  line-height: 1.12;
 }
 
 .diagnostic-subtitle {
@@ -305,9 +305,9 @@ h4 {
   background: var(--tea-green);
   color: var(--tea-cream);
   padding: 0.85rem 1.35rem;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.13em;
+  font-size: 0.93rem;
+  font-weight: 500;
+  letter-spacing: 0;
   transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
 }
 
@@ -325,6 +325,70 @@ h4 {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.45;
+}
+
+.tea-mini-cup-wrap {
+  position: relative;
+  width: 62px;
+  height: 44px;
+  margin-bottom: 0.8rem;
+}
+
+.tea-mini-cup {
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 22px;
+  border: 1.5px solid rgba(75, 58, 47, 0.42);
+  border-radius: 0 0 16px 16px;
+  background: linear-gradient(170deg, rgba(247, 242, 234, 0.95), rgba(230, 221, 208, 0.95));
+}
+
+.tea-mini-cup::after {
+  content: "";
+  position: absolute;
+  right: -9px;
+  top: 4px;
+  width: 8px;
+  height: 10px;
+  border: 1.5px solid rgba(75, 58, 47, 0.42);
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+}
+
+.tea-mini-plate {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 52px;
+  height: 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(75, 58, 47, 0.24);
+  background: rgba(247, 242, 234, 0.85);
+}
+
+.tea-mini-steam {
+  position: absolute;
+  bottom: 23px;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(to top, rgba(106, 85, 72, 0.7), transparent);
+  animation: miniSteam 2.8s ease-in-out infinite;
+}
+
+.tea-mini-steam.s1 {
+  left: 24px;
+  height: 16px;
+  animation-delay: 0s;
+}
+
+.tea-mini-steam.s2 {
+  left: 31px;
+  height: 20px;
+  animation-delay: 0.4s;
 }
 
 @media (min-width: 768px) {
@@ -421,6 +485,25 @@ html[data-theme="dark"] .diagnostic-submit:hover {
   background: transparent;
   color: var(--tea-cream);
   border-color: var(--tea-cream);
+}
+
+html[data-theme="dark"] .tea-mini-cup {
+  border-color: rgba(241, 229, 213, 0.46);
+  background: linear-gradient(170deg, rgba(44, 37, 31, 0.92), rgba(29, 24, 20, 0.95));
+}
+
+html[data-theme="dark"] .tea-mini-cup::after {
+  border-color: rgba(241, 229, 213, 0.46);
+  border-left: none;
+}
+
+html[data-theme="dark"] .tea-mini-plate {
+  border-color: rgba(241, 229, 213, 0.24);
+  background: rgba(35, 29, 24, 0.9);
+}
+
+html[data-theme="dark"] .tea-mini-steam {
+  background: linear-gradient(to top, rgba(207, 190, 170, 0.7), transparent);
 }
 
 .tea-grid-texture {
@@ -856,6 +939,21 @@ html[data-theme="dark"] .tea-cursor-dot {
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes miniSteam {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0.52;
+  }
+  60% {
+    transform: translateY(-4px) scaleX(1.5);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-8px) scaleX(0.8);
+    opacity: 0;
   }
 }
 

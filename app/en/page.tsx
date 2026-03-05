@@ -52,7 +52,7 @@ export default function EnglishHome() {
             <h2 className="text-2xl sm:text-4xl md:text-6xl leading-[1.03] font-semibold mb-8 text-[var(--tea-brown)]">
               Born from an
               <br />
-              <span className="tea-script text-[var(--tea-accent)] text-[1.04em] align-middle">intentional process.</span>
+              <span className="tea-script text-[var(--tea-accent)]">intentional process.</span>
             </h2>
 
             <div className="max-w-2xl text-lg leading-relaxed text-[var(--tea-brown-soft)] space-y-6">
@@ -118,7 +118,7 @@ export default function EnglishHome() {
           <div className="lg:col-span-7 space-y-6">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">What we do</p>
             <h2 className="text-2xl sm:text-4xl md:text-5xl leading-tight text-[var(--tea-brown)] mb-6">
-              <span className="tea-script text-[var(--tea-accent)] text-[1.05em] align-middle">Four fronts</span>, one direction.
+              <span className="tea-script text-[var(--tea-accent)]">Four fronts</span>, one direction.
             </h2>
             <p className="text-lg text-[var(--tea-brown-soft)] leading-relaxed max-w-2xl">
               We take care of your brand&apos;s presence from process to delivery, integrating strategy, creativity and
@@ -156,7 +156,7 @@ export default function EnglishHome() {
               <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-cream)]/70 mb-5">Let&apos;s begin</p>
               <h2 className="text-xl sm:text-3xl md:text-5xl leading-[1.03] text-[var(--tea-cream)] mb-6">
                 Is your brand ready to{" "}
-                <span className="tea-script text-[1.05em] align-middle">infuse</span>?
+                <span className="tea-script">infuse</span>?
               </h2>
               <p className="text-[var(--tea-cream)]/85 max-w-2xl leading-relaxed mb-8">
                 Every brand has its time. Our job is to ensure that when the moment comes, it arrives with strength,

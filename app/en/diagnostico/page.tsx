@@ -3,14 +3,14 @@ import type { Metadata } from "next"
 import DiagnosticForm from "@/components/DiagnosticForm"
 
 export const metadata: Metadata = {
-  title: "Diagnostic",
-  description: "Tea Strategy Studio strategic content diagnostic.",
+  title: "First Conversation",
+  description: "Every great brand starts with a good conversation.",
 }
 
 const outcomes = [
-  "Reading the gaps between positioning and current content.",
-  "Initial editorial direction by business objective.",
-  "Practical priorities for the next 90 days.",
+  "We review your answers carefully.",
+  "We contact you to schedule our first conversation.",
+  "You receive clear direction for the next steps.",
 ]
 
 export default function DiagnosticEn() {
@@ -21,23 +21,30 @@ export default function DiagnosticEn() {
 
         <div className="relative grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           <div className="lg:col-span-5">
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-4">Tea Diagnostic</p>
+            <div className="tea-mini-cup-wrap" aria-hidden="true">
+              <span className="tea-mini-steam s1" />
+              <span className="tea-mini-steam s2" />
+              <span className="tea-mini-cup" />
+              <span className="tea-mini-plate" />
+            </div>
+
+            <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-4">The beginning of everything.</p>
             <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.95] text-[var(--tea-brown)] mb-6">
-              Strategic{" "}
-              <span className="tea-script text-[var(--tea-accent)] text-[1.08em] align-middle">diagnostic</span>
-              <br />
-              for growing brands.
+              Every great brand starts with a{" "}
+              <span className="tea-script text-[var(--tea-accent)]">good conversation</span>.
             </h1>
 
-            <p className="text-sm uppercase tracking-[0.22em] text-[var(--tea-accent)] mb-6">
-              Direction before presence.
-            </p>
-
             <p className="text-lg leading-relaxed text-[var(--tea-brown-soft)] mb-6">
-              This is the first conversation to transform scattered presence into clear positioning, with strategy,
-              consistency and commercial intention.
+              This is the moment to pause, listen and understand what your brand truly needs. It is not just a form,
+              it is the first sip.
             </p>
 
+            <p className="text-base leading-relaxed text-[var(--tea-brown-soft)] mb-6">
+              Fill this with care. Each answer helps us understand where you are and where your brand can go. From
+              here, we take care of the rest.
+            </p>
+
+            <p className="text-sm uppercase tracking-[0.2em] text-[var(--tea-accent)] mb-3">What happens next:</p>
             <ul className="space-y-3 mb-6">
               {outcomes.map((outcome) => (
                 <li key={outcome} className="flex items-start gap-3 text-[var(--tea-brown)] leading-relaxed">

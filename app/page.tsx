@@ -46,7 +46,7 @@ export default function Home() {
             <h2 className="text-2xl sm:text-4xl md:text-6xl leading-[1.03] font-semibold mb-8 text-[var(--tea-brown)]">
               Nascemos de um
               <br />
-              <span className="tea-script text-[var(--tea-accent)] text-[1.04em] align-middle">processo intencional.</span>
+              <span className="tea-script text-[var(--tea-accent)]">processo intencional.</span>
             </h2>
 
             <div className="max-w-2xl text-lg leading-relaxed text-[var(--tea-brown-soft)] space-y-6">
@@ -111,7 +111,7 @@ export default function Home() {
           <div className="lg:col-span-7 space-y-6">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">O que fazemos</p>
             <h2 className="text-2xl sm:text-4xl md:text-5xl leading-tight text-[var(--tea-brown)] mb-6">
-              <span className="tea-script text-[var(--tea-accent)] text-[1.05em] align-middle">Quatro frentes</span>, uma direção.
+              <span className="tea-script text-[var(--tea-accent)]">Quatro frentes</span>, uma direção.
             </h2>
             <p className="text-lg text-[var(--tea-brown-soft)] leading-relaxed max-w-2xl">
               Cuidamos da presença da sua marca do processo à entrega, integrando estratégia, criatividade e execução
@@ -149,7 +149,7 @@ export default function Home() {
               <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-cream)]/70 mb-5">Vamos começar</p>
               <h2 className="text-xl sm:text-3xl md:text-5xl leading-[1.03] text-[var(--tea-cream)] mb-6">
                 Sua marca está pronta para{" "}
-                <span className="tea-script text-[1.05em] align-middle">infundir</span>?
+                <span className="tea-script">infundir</span>?
               </h2>
               <p className="text-[var(--tea-cream)]/85 max-w-2xl leading-relaxed mb-8">
                 Cada marca tem o seu tempo. Nosso trabalho é garantir que, quando chegar a hora, ela chegue com força,

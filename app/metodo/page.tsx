@@ -34,7 +34,7 @@ export default function Metodo() {
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-5">Método Tea</p>
             <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-6">
-              Do <span className="tea-script text-[var(--tea-accent)] text-[1.04em] align-middle">processo</span> à entrega, com direção.
+              Do <span className="tea-script text-[var(--tea-accent)]">processo</span> à entrega, com direção.
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-[var(--tea-brown-soft)]">
               Cada marca tem seu método. Nosso trabalho é conduzir cada etapa com escuta e precisão, para que

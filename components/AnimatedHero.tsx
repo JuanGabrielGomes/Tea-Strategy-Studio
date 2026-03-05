@@ -95,7 +95,7 @@ export default function AnimatedHero({ locale = "pt" }: AnimatedHeroProps) {
         >
           <span className="hero-line">{content.lineOne}</span>
           <span className="hero-line">{content.lineTwo}</span>
-          <span className="hero-line tea-script text-[1.08em] text-[var(--tea-cream)]">{content.impact}</span>
+          <span className="hero-line tea-script text-[var(--tea-cream)]">{content.impact}</span>
         </motion.h1>
 
         <motion.div

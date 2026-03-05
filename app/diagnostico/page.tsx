@@ -3,14 +3,14 @@ import type { Metadata } from "next"
 import DiagnosticForm from "@/components/DiagnosticForm"
 
 export const metadata: Metadata = {
-  title: "Diagnóstico",
-  description: "Diagnóstico de conteúdo estratégico da Tea Strategy Studio.",
+  title: "Conversa Inicial",
+  description: "Toda grande marca começa com uma boa conversa.",
 }
 
 const outcomes = [
-  "Leitura das lacunas entre posicionamento e conteúdo atual.",
-  "Direção editorial inicial por objetivo de negócio.",
-  "Prioridades práticas para os próximos 90 dias.",
+  "Analisamos suas respostas com atenção.",
+  "Entramos em contato para agendar nossa primeira conversa.",
+  "Você recebe uma direção clara para os próximos passos.",
 ]
 
 export default function Diagnostico() {
@@ -21,23 +21,30 @@ export default function Diagnostico() {
 
         <div className="relative grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           <div className="lg:col-span-5">
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-4">Diagnóstico Tea</p>
+            <div className="tea-mini-cup-wrap" aria-hidden="true">
+              <span className="tea-mini-steam s1" />
+              <span className="tea-mini-steam s2" />
+              <span className="tea-mini-cup" />
+              <span className="tea-mini-plate" />
+            </div>
+
+            <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-4">O início de tudo.</p>
             <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.95] text-[var(--tea-brown)] mb-6">
-              Diagnóstico{" "}
-              <span className="tea-script text-[var(--tea-accent)] text-[1.08em] align-middle">estratégico</span>
-              <br />
-              para marcas em crescimento.
+              Toda grande marca começa com uma{" "}
+              <span className="tea-script text-[var(--tea-accent)]">boa conversa</span>.
             </h1>
 
-            <p className="text-sm uppercase tracking-[0.22em] text-[var(--tea-accent)] mb-6">
-              Direção antes de presença.
-            </p>
-
             <p className="text-lg leading-relaxed text-[var(--tea-brown-soft)] mb-6">
-              Esta é a conversa inicial para transformar presença solta em posicionamento claro: com estratégia,
-              consistência e intenção comercial.
+              Este é o momento em que paramos, escutamos e entendemos o que a sua marca realmente precisa. Não é um
+              formulário, é o primeiro gole.
             </p>
 
+            <p className="text-base leading-relaxed text-[var(--tea-brown-soft)] mb-6">
+              Preencha com cuidado. Cada resposta nos ajuda a entender onde você está e para onde sua marca pode ir. A
+              partir daqui, cuidamos do resto.
+            </p>
+
+            <p className="text-sm uppercase tracking-[0.2em] text-[var(--tea-accent)] mb-3">O que acontece depois:</p>
             <ul className="space-y-3 mb-6">
               {outcomes.map((outcome) => (
                 <li key={outcome} className="flex items-start gap-3 text-[var(--tea-brown)] leading-relaxed">
