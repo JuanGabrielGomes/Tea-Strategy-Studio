@@ -294,6 +294,9 @@ h4 {
 .diagnostic-action {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 0.6rem;
   padding-top: 0.45rem;
 }
@@ -402,8 +405,9 @@ h4 {
   }
 
   .diagnostic-action {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .diagnostic-submit {

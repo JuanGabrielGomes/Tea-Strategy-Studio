@@ -39,8 +39,8 @@ export default function Home() {
       <AnimatedSection className="py-20 md:py-32 section-padding bg-[var(--tea-surface)] relative overflow-hidden">
         <div className="absolute inset-0 bg-[var(--tea-green)] opacity-[0.04]" />
 
-        <div className="relative grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-          <div className="lg:col-span-6 xl:col-span-7">
+        <div className="relative grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+          <div className="lg:col-span-6 xl:col-span-7 h-full">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-8">Nossa história</p>
 
             <h2 className="text-2xl sm:text-4xl md:text-6xl leading-[1.03] font-semibold mb-8 text-[var(--tea-brown)]">
@@ -62,11 +62,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="lg:col-span-6 xl:col-span-5 lg:justify-self-end w-full">
-            <div className="tea-cup-stage">
+          <div className="lg:col-span-6 xl:col-span-5 lg:justify-self-end w-full h-full">
+            <div className="tea-cup-stage h-full min-h-[420px] md:min-h-[460px]">
               <div className="tea-cup-quote">
                 <p>&quot;Assim como o chá, cada marca precisa passar pelo seu processo: de preparação, de infusão, de entrega.&quot;</p>
-                <span>Manifesto Tea Strategy Studio</span>
+                <span>Tea Strategy Studio</span>
               </div>
 
               <div className="tea-cup-stats" aria-label="Indicadores da Tea Strategy Studio">

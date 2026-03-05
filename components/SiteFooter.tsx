@@ -29,7 +29,7 @@ export default function SiteFooter() {
 
         <div className="flex w-full sm:w-auto flex-wrap max-[430px]:flex-col items-stretch sm:items-center gap-2 sm:gap-3 md:gap-4">
           <Link
-            href="https://www.instagram.com/teastudiocriativo"
+            href="https://www.instagram.com/teastudio.co/"
             target="_blank"
             rel="noreferrer"
             className="text-xs md:text-sm uppercase tracking-[0.14em] border border-[var(--tea-cream)]/55 px-3 py-2 text-center max-[430px]:w-full hover:bg-[var(--tea-cream)] hover:text-[var(--tea-green)] transition-colors"
