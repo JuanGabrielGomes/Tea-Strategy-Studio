@@ -11,6 +11,11 @@ type DiagnosticFormProps = {
 
 const copy = {
   pt: {
+    intro: {
+      step: "Etapa 01",
+      title: "Conte o cenário da sua marca",
+      subtitle: "Com essas respostas, montamos uma direção estratégica inicial para os próximos movimentos.",
+    },
     labels: {
       name: "Nome",
       email: "E-mail",
@@ -46,11 +51,16 @@ const copy = {
       fallbackError: "Falha no envio. Tente novamente em alguns minutos.",
     },
     button: {
-      idle: "Iniciar diagnóstico estratégico",
+      idle: "Quero meu diagnóstico estratégico",
       loading: "Enviando diagnóstico...",
     },
   },
   en: {
+    intro: {
+      step: "Step 01",
+      title: "Tell us your brand context",
+      subtitle: "With these answers, we build an initial strategic direction for your next moves.",
+    },
     labels: {
       name: "Name",
       email: "E-mail",
@@ -86,7 +96,7 @@ const copy = {
       fallbackError: "Submission failed. Try again in a few minutes.",
     },
     button: {
-      idle: "Start strategic diagnostic",
+      idle: "I want my strategic diagnostic",
       loading: "Sending diagnostic...",
     },
   },
@@ -144,89 +154,100 @@ export default function DiagnosticForm({ locale = "pt" }: DiagnosticFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-4 tea-card rounded-2xl p-5 md:p-6">
-      <label className="diagnostic-label">
-        {content.labels.name}
-        <input
-          name="name"
-          required
-          placeholder={content.placeholders.name}
-          className="diagnostic-input"
-        />
-      </label>
+    <form onSubmit={handleSubmit} className="diagnostic-shell">
+      <div className="diagnostic-head">
+        <p className="diagnostic-step">{content.intro.step}</p>
+        <h2 className="diagnostic-title">
+          {content.intro.title.split(" ").slice(0, -1).join(" ")}{" "}
+          <span className="tea-script text-[var(--tea-accent)]">{content.intro.title.split(" ").slice(-1)[0]}</span>
+        </h2>
+        <p className="diagnostic-subtitle">{content.intro.subtitle}</p>
+      </div>
 
-      <label className="diagnostic-label">
-        {content.labels.email}
-        <input
-          type="email"
-          name="email"
-          required
-          placeholder={content.placeholders.email}
-          className="diagnostic-input"
-        />
-      </label>
+      <div className="diagnostic-grid">
+        <label className="diagnostic-label">
+          {content.labels.name}
+          <input
+            name="name"
+            required
+            placeholder={content.placeholders.name}
+            className="diagnostic-input"
+          />
+        </label>
 
-      <label className="diagnostic-label">
-        {content.labels.company}
-        <input
-          name="company"
-          required
-          placeholder={content.placeholders.company}
-          className="diagnostic-input"
-        />
-      </label>
+        <label className="diagnostic-label">
+          {content.labels.email}
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder={content.placeholders.email}
+            className="diagnostic-input"
+          />
+        </label>
 
-      <label className="diagnostic-label">
-        {content.labels.website}
-        <input
-          name="website"
-          placeholder={content.placeholders.website}
-          className="diagnostic-input"
-        />
-      </label>
+        <label className="diagnostic-label">
+          {content.labels.company}
+          <input
+            name="company"
+            required
+            placeholder={content.placeholders.company}
+            className="diagnostic-input"
+          />
+        </label>
 
-      <label className="diagnostic-label md:col-span-2">
-        {content.labels.challenge}
-        <textarea
-          name="challenge"
-          required
-          rows={3}
-          placeholder={content.placeholders.challenge}
-          className="diagnostic-input"
-        />
-      </label>
+        <label className="diagnostic-label">
+          {content.labels.website}
+          <input
+            name="website"
+            placeholder={content.placeholders.website}
+            className="diagnostic-input"
+          />
+        </label>
 
-      <label className="diagnostic-label md:col-span-2">
-        {content.labels.objective}
-        <textarea
-          name="objective"
-          required
-          rows={2}
-          placeholder={content.placeholders.objective}
-          className="diagnostic-input"
-        />
-      </label>
+        <label className="diagnostic-label md:col-span-2">
+          {content.labels.challenge}
+          <textarea
+            name="challenge"
+            required
+            rows={3}
+            placeholder={content.placeholders.challenge}
+            className="diagnostic-input"
+          />
+        </label>
 
-      <label className="diagnostic-label">
-        {content.labels.urgency}
-        <select name="urgency" required className="diagnostic-input">
-          <option value="">{content.options.select}</option>
-          <option value="imediata">{content.options.urgencyImmediate}</option>
-          <option value="curto-prazo">{content.options.urgencyShort}</option>
-          <option value="medio-prazo">{content.options.urgencyMedium}</option>
-        </select>
-      </label>
+        <label className="diagnostic-label md:col-span-2">
+          {content.labels.objective}
+          <textarea
+            name="objective"
+            required
+            rows={2}
+            placeholder={content.placeholders.objective}
+            className="diagnostic-input"
+          />
+        </label>
 
-      <label className="diagnostic-label">
-        {content.labels.budget}
-        <select name="budget" required className="diagnostic-input">
-          <option value="">{content.options.select}</option>
-          <option value="ate-5k">{content.options.budgetA}</option>
-          <option value="5k-15k">{content.options.budgetB}</option>
-          <option value="15k-30k">{content.options.budgetC}</option>
-          <option value="30k-plus">{content.options.budgetD}</option>
-        </select>
-      </label>
+        <label className="diagnostic-label">
+          {content.labels.urgency}
+          <select name="urgency" required className="diagnostic-input">
+            <option value="">{content.options.select}</option>
+            <option value="imediata">{content.options.urgencyImmediate}</option>
+            <option value="curto-prazo">{content.options.urgencyShort}</option>
+            <option value="medio-prazo">{content.options.urgencyMedium}</option>
+          </select>
+        </label>
+
+        <label className="diagnostic-label">
+          {content.labels.budget}
+          <select name="budget" required className="diagnostic-input">
+            <option value="">{content.options.select}</option>
+            <option value="ate-5k">{content.options.budgetA}</option>
+            <option value="5k-15k">{content.options.budgetB}</option>
+            <option value="15k-30k">{content.options.budgetC}</option>
+            <option value="30k-plus">{content.options.budgetD}</option>
+          </select>
+        </label>
+      </div>
 
       <div className="hidden" aria-hidden="true">
         <label>
@@ -235,16 +256,16 @@ export default function DiagnosticForm({ locale = "pt" }: DiagnosticFormProps) {
         </label>
       </div>
 
-      <div className="md:col-span-2 flex flex-col md:flex-row items-start md:items-center gap-3 pt-2">
+      <div className="diagnostic-action">
         <button
           type="submit"
           disabled={status === "loading"}
-          className="bg-[var(--tea-green)] text-[var(--tea-cream)] border border-[var(--tea-green)] px-6 py-3 text-xs uppercase tracking-[0.14em] hover:bg-transparent hover:text-[var(--tea-green)] transition-colors disabled:opacity-60"
+          className="diagnostic-submit"
         >
           {status === "loading" ? content.button.loading : content.button.idle}
         </button>
 
-        <p className={`text-sm ${status === "error" ? "text-red-700" : "text-[var(--tea-brown-soft)]"}`} aria-live="polite">
+        <p className={`diagnostic-note ${status === "error" ? "text-red-700" : "text-[var(--tea-brown-soft)]"}`} aria-live="polite">
           {message}
         </p>
       </div>

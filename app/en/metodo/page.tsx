@@ -34,7 +34,7 @@ export default function MethodEn() {
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-5">Tea Method</p>
             <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-6">
-              From process to delivery, with direction.
+              From <span className="tea-script text-[var(--tea-accent)] text-[1.04em] align-middle">process</span> to delivery, with direction.
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-[var(--tea-brown-soft)]">
               Every brand has its method. Our work is to guide each step with listening and precision, so that
@@ -60,7 +60,7 @@ export default function MethodEn() {
             width={1200}
             height={1200}
             sizes="(min-width: 1024px) 38vw, 100vw"
-            className="rounded-2xl object-cover w-full h-full min-h-[360px] md:min-h-[560px] lg:min-h-[720px]"
+            className="rounded-2xl object-cover object-[50%_72%] w-full aspect-[5/4] md:aspect-[4/5] lg:aspect-[3/4]"
           />
         </div>
       </div>

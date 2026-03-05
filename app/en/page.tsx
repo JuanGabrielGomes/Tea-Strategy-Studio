@@ -52,7 +52,7 @@ export default function EnglishHome() {
             <h2 className="text-2xl sm:text-4xl md:text-6xl leading-[1.03] font-semibold mb-8 text-[var(--tea-brown)]">
               Born from an
               <br />
-              intentional process.
+              <span className="tea-script text-[var(--tea-accent)] text-[1.04em] align-middle">intentional process.</span>
             </h2>
 
             <div className="max-w-2xl text-lg leading-relaxed text-[var(--tea-brown-soft)] space-y-6">
@@ -118,7 +118,7 @@ export default function EnglishHome() {
           <div className="lg:col-span-7 space-y-6">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">What we do</p>
             <h2 className="text-2xl sm:text-4xl md:text-5xl leading-tight text-[var(--tea-brown)] mb-6">
-              Four fronts, one direction.
+              <span className="tea-script text-[var(--tea-accent)] text-[1.05em] align-middle">Four fronts</span>, one direction.
             </h2>
             <p className="text-lg text-[var(--tea-brown-soft)] leading-relaxed max-w-2xl">
               We take care of your brand&apos;s presence from process to delivery, integrating strategy, creativity and
@@ -142,7 +142,7 @@ export default function EnglishHome() {
               width={1400}
               height={900}
               sizes="(min-width: 1024px) 38vw, 100vw"
-              className="w-full rounded-2xl object-cover min-h-[220px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[380px]"
+              className="w-full rounded-2xl object-cover object-[50%_72%] aspect-[4/3] lg:aspect-[5/4]"
             />
           </div>
         </div>
@@ -151,11 +151,12 @@ export default function EnglishHome() {
       <AnimatedSection className="section-padding pt-8 pb-16 md:pt-10 md:pb-20 lg:pt-12 lg:pb-24">
         <div className="rounded-2xl overflow-hidden relative">
           <div className="absolute inset-0 tea-grid-texture opacity-30" />
-          <div className="relative bg-[var(--tea-green)] px-8 py-10 md:px-12 md:py-14 grid lg:grid-cols-12 gap-10 items-center">
+          <div className="relative bg-[var(--tea-green)] px-6 py-7 md:px-9 md:py-9 grid lg:grid-cols-12 gap-7 lg:gap-8 items-center">
             <div className="lg:col-span-7">
               <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-cream)]/70 mb-5">Let&apos;s begin</p>
               <h2 className="text-xl sm:text-3xl md:text-5xl leading-[1.03] text-[var(--tea-cream)] mb-6">
-                Is your brand ready to infuse?
+                Is your brand ready to{" "}
+                <span className="tea-script text-[1.05em] align-middle">infuse</span>?
               </h2>
               <p className="text-[var(--tea-cream)]/85 max-w-2xl leading-relaxed mb-8">
                 Every brand has its time. Our job is to ensure that when the moment comes, it arrives with strength,
@@ -172,12 +173,12 @@ export default function EnglishHome() {
 
             <div className="lg:col-span-5 w-full">
               <Image
-              src={visuals.laptopLight}
-              alt="Teapot and cups on a cozy table"
+                src={visuals.laptopLight}
+                alt="Teapot and cups on a cozy table"
                 width={1200}
                 height={1500}
                 sizes="(min-width: 1024px) 34vw, 100vw"
-                className="w-full rounded-xl object-cover"
+                className="w-full rounded-xl object-cover object-[50%_68%] aspect-[4/3] lg:aspect-[5/4] max-h-[360px]"
               />
             </div>
           </div>

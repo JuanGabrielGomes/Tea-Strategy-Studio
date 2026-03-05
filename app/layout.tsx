@@ -1,9 +1,16 @@
 import "./globals.css"
 import type { Metadata } from "next"
+import { Caveat } from "next/font/google"
 import Header from "@/components/Header"
 import SiteFooter from "@/components/SiteFooter"
 import CustomCursor from "@/components/CustomCursor"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-script",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://teastrategystudio.com"),
@@ -40,7 +47,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="tea-body">
+      <body className={`tea-body ${caveat.variable}`}>
         <CustomCursor />
         <Header />
         <div className="pt-20 pb-28 md:pb-32">{children}</div>

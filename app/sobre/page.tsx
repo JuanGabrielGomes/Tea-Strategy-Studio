@@ -33,7 +33,7 @@ export default function Sobre() {
         <div className="lg:col-span-7">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">Nossa história</p>
           <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-8">
-            Nascemos de um processo intencional.
+            Nascemos de um <span className="tea-script text-[var(--tea-accent)] text-[1.04em] align-middle">processo intencional</span>.
           </h1>
 
           <div className="space-y-6 text-lg leading-relaxed text-[var(--tea-brown-soft)]">
@@ -70,7 +70,7 @@ export default function Sobre() {
             width={1100}
             height={1400}
             sizes="(min-width: 1024px) 38vw, 100vw"
-            className="rounded-2xl object-cover object-bottom w-full h-full min-h-[360px] md:min-h-[620px] lg:min-h-[860px]"
+            className="rounded-2xl object-cover object-[50%_72%] w-full aspect-[4/3] md:aspect-[4/5] lg:aspect-[3/4]"
           />
         </div>
       </div>
