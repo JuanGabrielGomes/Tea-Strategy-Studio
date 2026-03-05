@@ -54,14 +54,15 @@ export default function Metodo() {
         </div>
 
         <div className="lg:col-span-5 w-full">
-          <Image
-            src="/images/tea/workspace-lampada.jpg"
-            alt="Mesa de trabalho criativa com iluminação aconchegante"
-            width={1200}
-            height={1200}
-            sizes="(min-width: 1024px) 38vw, 100vw"
-            className="rounded-2xl object-cover object-[50%_86%] w-full min-h-[340px] md:min-h-[420px] lg:min-h-0 lg:h-full"
-          />
+          <div className="relative w-full overflow-hidden rounded-2xl min-h-[340px] md:min-h-[420px] lg:min-h-0 lg:h-full">
+            <Image
+              src="/images/tea/workspace-lampada.jpg"
+              alt="Mesa de trabalho criativa com iluminação aconchegante"
+              fill
+              sizes="(min-width: 1024px) 38vw, 100vw"
+              className="object-cover object-[50%_88%]"
+            />
+          </div>
         </div>
       </div>
     </main>

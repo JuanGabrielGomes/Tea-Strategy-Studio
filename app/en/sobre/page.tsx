@@ -65,14 +65,15 @@ export default function AboutEn() {
         </div>
 
         <div className="lg:col-span-5 w-full">
-          <Image
-            src="/images/tea/nossa-historia.jpg"
-            alt="Tea moment in a cozy setting"
-            width={1100}
-            height={1400}
-            sizes="(min-width: 1024px) 38vw, 100vw"
-            className="rounded-2xl object-cover object-[50%_86%] w-full min-h-[340px] md:min-h-[420px] lg:min-h-0 lg:h-full"
-          />
+          <div className="relative w-full overflow-hidden rounded-2xl min-h-[340px] md:min-h-[420px] lg:min-h-0 lg:h-full">
+            <Image
+              src="/images/tea/nossa-historia.jpg"
+              alt="Tea moment in a cozy setting"
+              fill
+              sizes="(min-width: 1024px) 38vw, 100vw"
+              className="object-cover object-[50%_88%]"
+            />
+          </div>
         </div>
       </div>
     </main>
