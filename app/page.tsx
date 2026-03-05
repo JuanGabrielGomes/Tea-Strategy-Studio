@@ -10,11 +10,18 @@ const services = [
   "Tráfego Pago com campanhas orientadas por intenção e resultado.",
 ]
 
+const marqueePhrases = [
+  "Cada xícara, uma história diferente",
+  "Infusão lenta, resultado duradouro",
+  "Servido no tempo certo",
+  "Proximidade que transforma",
+  "Estratégia que começa pela escuta",
+]
+const marqueeText = marqueePhrases.join("\u00A0\u00A0\u00A0·\u00A0\u00A0\u00A0")
+
 const visuals = {
-  laptopLight:
-    "https://images.pexels.com/photos/4492126/pexels-photo-4492126.jpeg?auto=compress&cs=tinysrgb&w=1400",
-  notesDesk:
-    "https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?cs=srgb&dl=pexels-pixabay-261662.jpg&fm=jpg",
+  laptopLight: "/images/tea/vamos-comecar.jpg",
+  notesDesk: "/images/tea/workspace-claro.jpg",
 }
 
 export default function Home() {
@@ -22,10 +29,10 @@ export default function Home() {
     <main>
       <AnimatedHero locale="pt" />
 
-      <div className="tea-marquee-bar" role="region" aria-label="Faixa de valores da Tea Studio">
+      <div className="tea-marquee-bar" role="region" aria-label="Faixa de valores da Tea Strategy Studio">
         <div className="tea-marquee-track">
-          <span className="tea-marquee-item">Cada xícara, uma história diferente · Infusão lenta, resultado duradouro · Servido no tempo certo · Proximidade que transforma · Estratégia que começa pela escuta</span>
-          <span className="tea-marquee-item">Cada xícara, uma história diferente · Infusão lenta, resultado duradouro · Servido no tempo certo · Proximidade que transforma · Estratégia que começa pela escuta</span>
+          <span className="tea-marquee-item">{marqueeText}</span>
+          <span className="tea-marquee-item">{marqueeText}</span>
         </div>
       </div>
 
@@ -44,11 +51,11 @@ export default function Home() {
 
             <div className="max-w-2xl text-lg leading-relaxed text-[var(--tea-brown-soft)] space-y-6">
               <p>
-                A Tea Studio não surgiu do acaso. Nasceu de uma jornada de construção - moldada no tempo certo, com o
+                A Tea Strategy Studio não surgiu do acaso. Nasceu de uma jornada de construção, moldada no tempo certo, com o
                 propósito certo. Como toda boa história, foi preciso passar pelo processo antes de chegar à entrega.
               </p>
               <p>
-                Acreditamos que assim como o chá tem suas etapas - colheita, infusão, entrega - toda marca também tem
+                Acreditamos que assim como o chá tem suas etapas: colheita, infusão, entrega, toda marca também tem
                 seu método. Nós somos esse processo: guiamos sua marca do início ao florescimento, com estratégia e
                 atenção a cada detalhe.
               </p>
@@ -58,11 +65,11 @@ export default function Home() {
           <div className="lg:col-span-6 xl:col-span-5 lg:justify-self-end w-full">
             <div className="tea-cup-stage">
               <div className="tea-cup-quote">
-                <p>&quot;Assim como o chá, cada marca precisa passar pelo seu processo - de preparação, de infusão, de entrega.&quot;</p>
-                <span>Manifesto Tea Studio</span>
+                <p>&quot;Assim como o chá, cada marca precisa passar pelo seu processo: de preparação, de infusão, de entrega.&quot;</p>
+                <span>Manifesto Tea Strategy Studio</span>
               </div>
 
-              <div className="tea-cup-stats" aria-label="Indicadores da Tea Studio">
+              <div className="tea-cup-stats" aria-label="Indicadores da Tea Strategy Studio">
                 <div className="tea-cup-stat">
                   <p className="tea-cup-stat-number">100%</p>
                   <p className="tea-cup-stat-label">Estratégia personalizada</p>
@@ -74,6 +81,10 @@ export default function Home() {
                 <div className="tea-cup-stat">
                   <p className="tea-cup-stat-number">&infin;</p>
                   <p className="tea-cup-stat-label">Possibilidades criativas</p>
+                </div>
+                <div className="tea-cup-stat">
+                  <p className="tea-cup-stat-number">1</p>
+                  <p className="tea-cup-stat-label">Padrão: excelência</p>
                 </div>
               </div>
 
@@ -107,7 +118,7 @@ export default function Home() {
               para gerar consistência, conexão e resultado.
             </p>
 
-            <ol className="tea-service-list" aria-label="Frentes de serviço da Tea Studio">
+            <ol className="tea-service-list" aria-label="Frentes de serviço da Tea Strategy Studio">
               {services.map((service, index) => (
                 <li key={service} className="tea-service-item">
                   <span className="tea-service-number">{String(index + 1).padStart(2, "0")}</span>
@@ -120,7 +131,7 @@ export default function Home() {
           <div className="lg:col-span-5 w-full">
             <Image
               src={visuals.notesDesk}
-              alt="Mesa com planejamento criativo e anotações"
+              alt="Espaço de trabalho acolhedor com mesa de madeira e objetos criativos"
               width={1400}
               height={900}
               sizes="(min-width: 1024px) 38vw, 100vw"
@@ -154,8 +165,8 @@ export default function Home() {
 
             <div className="lg:col-span-5 w-full">
               <Image
-                src={visuals.laptopLight}
-                alt="Profissional trabalhando no processo de criação"
+              src={visuals.laptopLight}
+              alt="Bule e xícaras em mesa aconchegante"
                 width={1200}
                 height={1500}
                 sizes="(min-width: 1024px) 34vw, 100vw"

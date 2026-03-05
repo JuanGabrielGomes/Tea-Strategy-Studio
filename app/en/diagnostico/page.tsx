@@ -4,7 +4,7 @@ import DiagnosticForm from "@/components/DiagnosticForm"
 
 export const metadata: Metadata = {
   title: "Diagnostic",
-  description: "Tea Studio strategic content diagnostic.",
+  description: "Tea Strategy Studio strategic content diagnostic.",
 }
 
 const outcomes = [
@@ -38,8 +38,8 @@ export default function DiagnosticEn() {
           </ul>
 
           <Image
-            src="https://images.unsplash.com/photo-1582848891135-32b749439ad4?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1600"
-            alt="Professional in a work session"
+            src="/images/tea/mesa-criativa.jpg"
+            alt="Creative table setup with laptop and references"
             width={1000}
             height={1200}
             sizes="(min-width: 1024px) 34vw, 100vw"

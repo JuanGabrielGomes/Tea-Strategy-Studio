@@ -16,7 +16,7 @@ const navLabels = {
     diagnostic: "Iniciar processo",
     mobileDiagnostic: "Iniciar o processo",
     menu: "Menu",
-    logoAria: "Ir para a página inicial da Tea Studio Criativo",
+    logoAria: "Ir para a página inicial da Tea Strategy Studio",
     themeAria: "Alternar entre modo claro e escuro",
   },
   en: {
@@ -26,7 +26,7 @@ const navLabels = {
     diagnostic: "Start process",
     mobileDiagnostic: "Start the process",
     menu: "Menu",
-    logoAria: "Go to Tea Studio Criativo homepage",
+    logoAria: "Go to Tea Strategy Studio homepage",
     themeAria: "Toggle light and dark mode",
   },
 } as const
@@ -142,13 +142,13 @@ export default function Header() {
 
       <div className="relative section-padding flex items-center justify-between h-20 border-b border-[var(--tea-brown)]/15">
         <Link href={homeHref} className="flex items-center" aria-label={labels.logoAria}>
-          <div className="relative h-12 w-12 md:h-14 md:w-14 shrink-0">
+          <div className="relative h-14 w-14 md:h-16 md:w-16 shrink-0">
             <Image
               src="/logo-tea-monograma.png"
-              alt="Tea Studio Criativo"
+              alt="Tea Strategy Studio"
               fill
               priority
-              sizes="(max-width: 768px) 48px, 56px"
+              sizes="(max-width: 768px) 56px, 64px"
               className="object-contain"
             />
           </div>

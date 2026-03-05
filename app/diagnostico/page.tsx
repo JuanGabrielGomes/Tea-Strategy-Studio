@@ -4,7 +4,7 @@ import DiagnosticForm from "@/components/DiagnosticForm"
 
 export const metadata: Metadata = {
   title: "Diagnóstico",
-  description: "Diagnóstico de conteúdo estratégico da Tea Studio.",
+  description: "Diagnóstico de conteúdo estratégico da Tea Strategy Studio.",
 }
 
 const outcomes = [
@@ -38,8 +38,8 @@ export default function Diagnostico() {
           </ul>
 
           <Image
-            src="https://images.unsplash.com/photo-1582848891135-32b749439ad4?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1600"
-            alt="Profissional em sessão de trabalho"
+            src="/images/tea/mesa-criativa.jpg"
+            alt="Mesa criativa com notebook e referências visuais"
             width={1000}
             height={1200}
             sizes="(min-width: 1024px) 34vw, 100vw"

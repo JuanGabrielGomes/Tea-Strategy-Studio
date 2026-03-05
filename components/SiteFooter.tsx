@@ -9,12 +9,12 @@ export default function SiteFooter() {
 
   const copy = isEnglish
     ? {
-        brand: "Tea Studio Criativo 2026",
+        brand: "Tea Strategy Studio",
         instagramLabel: "Our Instagram",
         email: "contato@teastudio.com.br",
       }
     : {
-        brand: "Tea Studio Criativo 2026",
+        brand: "Tea Strategy Studio",
         instagramLabel: "Nosso Instagram",
         email: "contato@teastudio.com.br",
       }

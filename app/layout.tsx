@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: "Tea Strategy Studio",
     template: "%s | Tea Strategy Studio",
   },
-  description: "Tea Studio Criativo: branding e estratégia do processo à entrega.",
+  description: "Tea Strategy Studio: branding e estratégia do processo à entrega.",
   icons: {
     icon: [{ url: "/favicon-tea.png", type: "image/png" }],
     shortcut: ["/favicon-tea.png"],
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Tea Strategy Studio",
-    description: "Tea Studio Criativo: branding e estratégia do processo à entrega.",
+    description: "Tea Strategy Studio: branding e estratégia do processo à entrega.",
     type: "website",
     locale: "pt_BR",
   },

@@ -8,21 +8,21 @@ export const metadata: Metadata = {
 
 const teaSteps = [
   {
-    title: "01 - Colheita - Imersão",
+    title: "01: Colheita, Imersão",
     description: "Entendemos sua marca, seu público e seus objetivos com profundidade.",
   },
   {
-    title: "02 - Infusão - Estratégia",
+    title: "02: Infusão, Estratégia",
     description: "Desenvolvemos o plano criativo e estratégico para o que a sua marca realmente é.",
   },
   {
-    title: "03 - À Mesa - Entrega",
+    title: "03: À Mesa, Entrega",
     description: "Sua marca chega ao cliente final com consistência, beleza e resultado.",
   },
   {
-    title: "04 - O Chá Preferido - Lembrança",
+    title: "04: O Chá Preferido, Lembrança",
     description:
-      "A entrega é o começo da lembrança. Marcas que ficam são as que foram construídas para ser sentidas. Como um chá preferido, a sua marca passa a ser a primeira escolha - não por acaso, mas por construção.",
+      "A entrega é o começo da lembrança. Marcas que ficam são as que foram construídas para ser sentidas. Como um chá preferido, a sua marca passa a ser a primeira escolha, não por acaso, mas por construção.",
   },
 ]
 
@@ -38,34 +38,35 @@ export default function Sobre() {
 
           <div className="space-y-6 text-lg leading-relaxed text-[var(--tea-brown-soft)]">
             <p>
-              A Tea Studio não surgiu do acaso. Nasceu de uma jornada de construção - moldada no tempo certo, com o
+              A Tea Strategy Studio não surgiu do acaso. Nasceu de uma jornada de construção, moldada no tempo certo, com o
               propósito certo. Como toda boa história, foi preciso passar pelo processo antes de chegar à entrega.
             </p>
             <p>
-              Acreditamos que assim como o chá tem suas etapas - colheita, infusão, entrega - toda marca também tem
+              Acreditamos que assim como o chá tem suas etapas: colheita, infusão, entrega, toda marca também tem
               seu método. Nós somos esse processo: guiamos sua marca do início ao florescimento, com estratégia e
               atenção a cada detalhe.
             </p>
             <p>
-              Cada decisão criativa é tomada com escuta e precisão - para que a sua marca chegue ao público com
+              Cada decisão criativa é tomada com escuta e precisão, para que a sua marca chegue ao público com
               consistência, identidade e resultado.
             </p>
           </div>
 
-          <div className="tea-card p-6 space-y-4 mt-8 w-full">
+          <div className="tea-flow-list" aria-label="Etapas da nossa história">
             {teaSteps.map((step) => (
-              <div key={step.title}>
-                <p className="text-sm uppercase tracking-[0.24em] text-[var(--tea-accent)] mb-1">{step.title}</p>
+              <section key={step.title} className="tea-flow-item">
+                <span className="tea-flow-dot" aria-hidden="true" />
+                <h2 className="text-sm uppercase tracking-[0.24em] text-[var(--tea-accent)] mb-1">{step.title}</h2>
                 <p className="text-[var(--tea-brown)] leading-relaxed">{step.description}</p>
-              </div>
+              </section>
             ))}
           </div>
         </div>
 
         <div className="lg:col-span-5 w-full">
           <Image
-            src="https://images.pexels.com/photos/6957754/pexels-photo-6957754.jpeg?auto=compress&cs=tinysrgb&w=1400"
-            alt="Preparação de chá em bule de vidro"
+            src="/images/tea/nossa-historia.jpg"
+            alt="Momento de chá em ambiente acolhedor"
             width={1100}
             height={1400}
             sizes="(min-width: 1024px) 38vw, 100vw"
