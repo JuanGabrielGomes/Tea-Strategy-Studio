@@ -70,7 +70,7 @@ export default function Sobre() {
             width={1100}
             height={1400}
             sizes="(min-width: 1024px) 38vw, 100vw"
-            className="rounded-2xl object-cover object-[50%_72%] w-full aspect-[4/3] md:aspect-[4/5] lg:aspect-[3/4]"
+            className="rounded-2xl object-cover object-[50%_72%] w-full h-full min-h-[360px] md:min-h-[620px] lg:min-h-[860px]"
           />
         </div>
       </div>

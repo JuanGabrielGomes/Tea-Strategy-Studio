@@ -110,7 +110,7 @@ export default function Projetos() {
       <section className="mb-14">
         <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-5">Portfólio</p>
         <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-6">
-          Marcas que floresceram.
+          Marcas que floresceram
         </h1>
         <p className="text-lg leading-relaxed text-[var(--tea-brown-soft)] max-w-3xl">
           Cada projeto nasce de um processo intencional. Do posicionamento à presença editorial, estruturamos marcas

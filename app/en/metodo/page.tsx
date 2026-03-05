@@ -60,7 +60,7 @@ export default function MethodEn() {
             width={1200}
             height={1200}
             sizes="(min-width: 1024px) 38vw, 100vw"
-            className="rounded-2xl object-cover object-[50%_72%] w-full aspect-[5/4] md:aspect-[4/5] lg:aspect-[3/4]"
+            className="rounded-2xl object-cover object-[50%_72%] w-full h-full min-h-[360px] md:min-h-[560px] lg:min-h-[720px]"
           />
         </div>
       </div>
