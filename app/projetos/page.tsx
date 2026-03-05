@@ -10,11 +10,12 @@ type CasePalette = {
 }
 
 type Case = {
-  id: "delivery" | "sirley" | "donna"
+  id: "delivery" | "pacco" | "sirley" | "donna"
   brand: string
   category: string
   headline: string
   body: string
+  instagram?: string
   palette: CasePalette
 }
 
@@ -33,6 +34,23 @@ const cases: Case[] = [
       bodyText: "text-[var(--tea-cream)]",
       accent: "text-[var(--tea-cream)]/80",
       border: "border-[#b06a30]",
+    },
+  },
+  {
+    id: "pacco",
+    brand: "Pacco Café",
+    category: "Conteúdo + Gestão de Instagram",
+    headline: "Presença digital acolhedora, consistente e com linguagem autoral.",
+    body:
+      "Estruturamos a criação de conteúdo e o gerenciamento do Instagram para transformar o perfil em uma vitrine viva da marca. A direção editorial equilibra estética, rotina e proximidade, fortalecendo relacionamento e percepção de valor.",
+    instagram: "https://www.instagram.com/paccohomedecorecaffe/",
+    palette: {
+      panelBg: "bg-[#5f7568]",
+      panelText: "text-[#f6f1e9]",
+      bodyBg: "bg-[#ece5da]",
+      bodyText: "text-[#3f3024]",
+      accent: "text-[#7f7568]",
+      border: "border-[#cdbfaa]",
     },
   },
   {
@@ -85,6 +103,15 @@ function CaseLogo({ id }: { id: Case["id"] }) {
     )
   }
 
+  if (id === "pacco") {
+    return (
+      <div className="text-center">
+        <p className="text-6xl md:text-7xl leading-[0.9] tracking-[0.02em]">PACCO</p>
+        <p className="mt-2 tea-script text-2xl md:text-3xl normal-case tracking-[0.02em]">home decor e caffè</p>
+      </div>
+    )
+  }
+
   if (id === "sirley") {
     return (
       <div className="text-center">
@@ -118,7 +145,7 @@ export default function Projetos() {
         </p>
       </section>
 
-      <section className="grid lg:grid-cols-3 gap-6 items-stretch">
+      <section className="grid md:grid-cols-2 gap-6 items-stretch">
         {cases.map((item) => (
           <article key={item.brand} className={`rounded-2xl overflow-hidden border ${item.palette.border} h-full flex flex-col`}>
             <div className={`h-[320px] md:h-[360px] px-6 md:px-8 flex items-center justify-center ${item.palette.panelBg} ${item.palette.panelText}`}>
@@ -130,6 +157,16 @@ export default function Projetos() {
               <p className={`text-xs uppercase tracking-[0.22em] mb-4 ${item.palette.accent}`}>{item.brand}</p>
               <h2 className="text-xl sm:text-2xl md:text-3xl leading-tight mb-6">{item.headline}</h2>
               <p className="text-base sm:text-lg leading-relaxed">{item.body}</p>
+              {item.instagram ? (
+                <a
+                  href={item.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-block border border-[var(--tea-brown)]/35 px-4 py-2 text-xs uppercase tracking-[0.18em] hover:border-[var(--tea-hover)] hover:text-[var(--tea-hover)] transition-colors"
+                >
+                  Ver Instagram
+                </a>
+              ) : null}
             </div>
           </article>
         ))}

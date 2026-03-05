@@ -12,7 +12,6 @@ type DiagnosticFormProps = {
 const copy = {
   pt: {
     intro: {
-      step: "Primeiro gole.",
       title: "Agora é com você.",
       subtitle:
         "Preencha com cuidado. Cada resposta nos ajuda a entender onde você está e para onde sua marca pode ir.",
@@ -58,7 +57,6 @@ const copy = {
   },
   en: {
     intro: {
-      step: "First sip.",
       title: "Now it is your turn.",
       subtitle: "Fill this in with care. Each answer helps us understand where you are and where your brand can go.",
     },
@@ -157,7 +155,6 @@ export default function DiagnosticForm({ locale = "pt" }: DiagnosticFormProps) {
   return (
     <form onSubmit={handleSubmit} className="diagnostic-shell">
       <div className="diagnostic-head">
-        <p className="diagnostic-step">{content.intro.step}</p>
         <h2 className="diagnostic-title">{content.intro.title}</h2>
         <p className="diagnostic-subtitle">{content.intro.subtitle}</p>
       </div>
