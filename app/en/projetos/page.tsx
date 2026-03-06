@@ -22,7 +22,7 @@ type Case = {
 const cases: Case[] = [
   {
     id: "delivery",
-    brand: "Delivery Much",
+    brand: "Delivery Much, Carlos Barbosa and Garibaldi",
     category: "Social Media",
     headline: "A community built with language, rhythm and presence.",
     body:
@@ -39,7 +39,7 @@ const cases: Case[] = [
   {
     id: "pacco",
     brand: "Pacco Café",
-    category: "Content + Instagram Management",
+    category: "Branding + Social Media",
     headline: "A warm, consistent digital presence with an authorial voice.",
     body:
       "We lead content creation and Instagram management to turn the profile into a living storefront for the brand. The editorial direction balances aesthetics, routine and proximity, strengthening relationships and perceived value.",

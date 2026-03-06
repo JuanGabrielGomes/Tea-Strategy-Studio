@@ -20,6 +20,34 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Lead Form Forwarding
+
+The diagnostic form API (`/api/diagnostico`) can forward submissions to webhook and email (SMTP).
+
+Configure in `.env.local`:
+
+```bash
+# Optional local lead persistence (NDJSON in /data)
+TEA_PERSIST_LOCAL_LEADS=false
+
+# Optional webhook forwarding
+TEA_LEADS_WEBHOOK_URL=
+
+# Email forwarding via SMTP (Gmail example)
+TEA_SMTP_HOST="smtp.gmail.com"
+TEA_SMTP_PORT="465"
+TEA_SMTP_SECURE="true"
+TEA_SMTP_USER="your-email@gmail.com"
+TEA_SMTP_PASS="your-gmail-app-password"
+TEA_LEADS_EMAIL_FROM="Tea Strategy Studio <your-email@gmail.com>"
+TEA_LEADS_EMAIL_TO="you@company.com,another@company.com"
+```
+
+Notes:
+- If webhook URL is not set, webhook forwarding is skipped.
+- If SMTP variables are not set, email forwarding is skipped.
+- For Gmail, use an App Password (not your normal account password).
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

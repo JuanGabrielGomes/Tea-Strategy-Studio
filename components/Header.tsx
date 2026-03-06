@@ -172,6 +172,7 @@ export default function Header() {
             type="button"
             onClick={handleThemeToggle}
             aria-label={labels.themeAria}
+            suppressHydrationWarning
             className="border border-[var(--tea-brown)]/35 px-3 py-2 text-xs uppercase tracking-[0.14em] hover:border-[var(--tea-hover)] hover:text-[var(--tea-hover)] transition-colors"
           >
             {theme.toUpperCase()}
@@ -215,6 +216,7 @@ export default function Header() {
               type="button"
               onClick={handleThemeToggle}
               aria-label={labels.themeAria}
+              suppressHydrationWarning
               className="block w-full text-left border border-[var(--tea-brown)]/35 px-4 py-3 text-sm uppercase tracking-[0.16em]"
             >
               {theme.toUpperCase()}
