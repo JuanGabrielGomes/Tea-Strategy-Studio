@@ -43,9 +43,9 @@ const cases: Case[] = [
   {
     id: "pacco",
     brand: "Pacco Café",
-    headline: "Presença digital acolhedora, consistente e com linguagem autoral.",
+    headline: "Posicionamento e consistência para uma presença digital com afeto.",
     body:
-      "Estruturamos a criação de conteúdo e o gerenciamento do Instagram para transformar o perfil em uma vitrine viva da marca. A direção editorial equilibra estética, rotina e proximidade, fortalecendo relacionamento e percepção de valor.",
+      "Estruturamos a presença digital da Pacco com foco em posicionamento e consistência de linguagem. A direção editorial conecta estética, rotina e proximidade para transformar a comunicação da marca em uma experiência de afeto, relação e pertencimento.",
     instagram: "https://www.instagram.com/paccohomedecorecaffe/",
     logoSrc: "/images/portfolio/pacco-cafe.png",
     logoAlt: "Logo da Pacco Café",
