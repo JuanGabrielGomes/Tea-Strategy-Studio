@@ -18,6 +18,7 @@ type Case = {
   instagram: string
   logoSrc: string
   logoAlt: string
+  logoClassName?: string
   palette: CasePalette
 }
 
@@ -52,11 +53,12 @@ const cases: Case[] = [
     palette: {
       panelBg: "bg-white",
       panelText: "text-[#3f3024]",
-      bodyBg: "bg-[#ece5da]",
+      bodyBg: "bg-white",
       bodyText: "text-[#3f3024]",
       accent: "text-[#7f7568]",
-      border: "border-[#cdbfaa]",
+      border: "border-[#e9dfd1]",
     },
+    logoClassName: "object-contain scale-[0.82]",
   },
   {
     id: "sirley",
@@ -86,13 +88,14 @@ const cases: Case[] = [
     logoSrc: "/images/portfolio/donna-k.png",
     logoAlt: "Logo da Donna K",
     palette: {
-      panelBg: "bg-[#f0ebe2]",
+      panelBg: "bg-white",
       panelText: "text-[#3f3024]",
-      bodyBg: "bg-[#efe8de]",
+      bodyBg: "bg-white",
       bodyText: "text-[#3f3024]",
       accent: "text-[#7f7568]",
-      border: "border-[#ddd2c3]",
+      border: "border-[#e9dfd1]",
     },
+    logoClassName: "object-cover scale-[1.22]",
   },
 ]
 
@@ -109,7 +112,7 @@ function CaseLogo({ item }: { item: Case }) {
         alt={item.logoAlt}
         fill
         sizes="(min-width: 768px) 40vw, 100vw"
-        className="object-contain"
+        className={item.logoClassName || "object-contain"}
       />
     </div>
   )
