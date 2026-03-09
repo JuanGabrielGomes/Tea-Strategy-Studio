@@ -67,8 +67,8 @@ export default function AboutEn() {
         <div className="lg:col-span-5 w-full">
           <div className="relative w-full overflow-hidden rounded-2xl min-h-[340px] md:min-h-[420px] lg:min-h-0 lg:h-full">
             <Image
-              src="/images/tea/nossa-historia.jpg"
-              alt="Tea moment in a cozy setting"
+              src="/images/tea/nossa-historia-nova.jpeg"
+              alt="Light armchair with blanket and coffee cup in a cozy composition"
               fill
               sizes="(min-width: 1024px) 38vw, 100vw"
               className="object-cover object-[50%_88%]"

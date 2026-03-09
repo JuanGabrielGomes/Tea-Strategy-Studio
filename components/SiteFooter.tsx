@@ -11,12 +11,14 @@ export default function SiteFooter() {
     ? {
         brand: "Tea Strategy Studio",
         instagramLabel: "Our Instagram",
-        email: "contato@teastudio.com.br",
+        contactLabel: "Contact",
+        email: "teastudio.contact@gmail.com",
       }
     : {
         brand: "Tea Strategy Studio",
         instagramLabel: "Nosso Instagram",
-        email: "contato@teastudio.com.br",
+        contactLabel: "Contato",
+        email: "teastudio.contact@gmail.com",
       }
 
   return (
@@ -42,6 +44,15 @@ export default function SiteFooter() {
             className="text-xs md:text-sm border border-[var(--tea-cream)]/35 px-3 py-2 text-center break-all max-[430px]:w-full hover:bg-[var(--tea-cream)] hover:text-[var(--tea-green)] transition-colors"
           >
             {copy.email}
+          </Link>
+
+          <Link
+            href="https://wa.me/555496492500"
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs md:text-sm uppercase tracking-[0.14em] border border-[var(--tea-cream)]/55 px-3 py-2 text-center max-[430px]:w-full hover:bg-[var(--tea-cream)] hover:text-[var(--tea-green)] transition-colors"
+          >
+            {copy.contactLabel}
           </Link>
         </div>
       </div>

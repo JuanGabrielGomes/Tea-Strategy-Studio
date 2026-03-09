@@ -66,8 +66,8 @@ export default function Sobre() {
         <div className="lg:col-span-5 w-full">
           <div className="relative w-full overflow-hidden rounded-2xl min-h-[340px] md:min-h-[420px] lg:min-h-0 lg:h-full">
             <Image
-              src="/images/tea/nossa-historia.jpg"
-              alt="Momento de chá em ambiente acolhedor"
+              src="/images/tea/nossa-historia-nova.jpeg"
+              alt="Poltrona clara com manta e xícara de café em composição aconchegante"
               fill
               sizes="(min-width: 1024px) 38vw, 100vw"
               className="object-cover object-[50%_88%]"
