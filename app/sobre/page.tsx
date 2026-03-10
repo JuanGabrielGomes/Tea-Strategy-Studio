@@ -43,7 +43,7 @@ export default function Sobre() {
               alt="Poltrona clara com manta e xícara de café em composição aconchegante"
               fill
               sizes="(min-width: 1024px) 38vw, 100vw"
-              className="object-cover object-[50%_88%]"
+              className="object-cover object-[50%_42%]"
             />
           </div>
         </div>

@@ -43,7 +43,7 @@ export default function AboutEn() {
               alt="Light armchair with blanket and coffee cup in a cozy composition"
               fill
               sizes="(min-width: 1024px) 38vw, 100vw"
-              className="object-cover object-[50%_88%]"
+              className="object-cover object-[50%_42%]"
             />
           </div>
         </div>
