@@ -15,27 +15,24 @@ export default function AboutEn() {
           <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-8">Our story</h1>
 
           <div className="space-y-6 text-lg leading-relaxed text-[var(--tea-brown-soft)]">
-            <p>Tea began with a restlessness that became clearer over time.</p>
             <p>
-              After years of working with brands and communication, one thing started to stand out: many people were
-              creating content, but very few brands were actually being built.
-            </p>
-            <p>There were posts, trends, beautiful aesthetics... but no direction.</p>
-            <p>
-              That is how Tea began to take shape.
+              Tea began with a restlessness that became clearer over time. After years of working with brands and
+              communication, one thing started to stand out: many people were creating content, but very few brands
+              were actually being built. There were posts, trends, beautiful aesthetics... but no direction.
             </p>
             <p>
-              Not as an agency focused only on execution, but as a studio that steps in before that, organizing the
-              foundation of the brand.
+              That is how Tea began to take shape. Not as an agency focused only on execution, but as a studio that
+              steps in before that, organizing the foundation of the brand. Understanding the business, structuring the
+              positioning and bringing clarity to how that company should present itself and grow.
             </p>
             <p>
-              Understanding the business, structuring the positioning and bringing clarity to how that company should
-              present itself and grow.
+              The name Tea represents exactly this way of working. Just like a good tea needs time and preparation,
+              brands also need process.
             </p>
-            <p>The name Tea represents exactly this way of working.</p>
-            <p>Just like a good tea needs time and preparation, brands also need process.</p>
-            <p>And that is exactly where Tea comes in.</p>
-            <p>Helping companies build brands with more clarity, consistency and direction.</p>
+            <p>
+              And that is exactly where Tea comes in: helping companies build brands with more clarity, consistency and
+              direction.
+            </p>
           </div>
         </div>
 

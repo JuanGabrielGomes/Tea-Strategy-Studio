@@ -15,27 +15,24 @@ export default function Sobre() {
           <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-8">Nossa história</h1>
 
           <div className="space-y-6 text-lg leading-relaxed text-[var(--tea-brown-soft)]">
-            <p>A Tea surgiu de uma inquietação que foi ficando clara com o tempo.</p>
             <p>
-              Depois de anos trabalhando com marcas e comunicação, uma coisa começou a chamar atenção: muita gente
-              estava produzindo conteúdo, mas poucas marcas estavam realmente sendo construídas.
-            </p>
-            <p>Era postagem, tendência, estética bonita... mas sem direção.</p>
-            <p>
-              Foi assim que a Tea começou a tomar forma.
+              A Tea surgiu de uma inquietação que foi ficando clara com o tempo. Depois de anos trabalhando com marcas
+              e comunicação, uma coisa começou a chamar atenção: muita gente estava produzindo conteúdo, mas poucas
+              marcas estavam realmente sendo construídas. Era postagem, tendência, estética bonita... mas sem direção.
             </p>
             <p>
-              Não como uma agência focada apenas em execução, mas como um estúdio que entra antes disso, organizando a
-              base da marca.
+              Foi assim que a Tea começou a tomar forma. Não como uma agência focada apenas em execução, mas como um
+              estúdio que entra antes disso, organizando a base da marca. Entendendo o negócio, estruturando o
+              posicionamento e trazendo clareza sobre como aquela empresa deve se apresentar e crescer.
             </p>
             <p>
-              Entendendo o negócio, estruturando o posicionamento e trazendo clareza sobre como aquela empresa deve se
-              apresentar e crescer.
+              O nome Tea representa exatamente essa forma de trabalhar. Assim como um bom chá precisa de tempo e
+              preparo, marcas também precisam de processo.
             </p>
-            <p>O nome Tea representa exatamente essa forma de trabalhar.</p>
-            <p>Assim como um bom chá precisa de tempo e preparo, marcas também precisam de processo.</p>
-            <p>E é exatamente nisso que a Tea atua.</p>
-            <p>Ajudando empresas a construírem marcas com mais clareza, consistência e direção.</p>
+            <p>
+              E é exatamente nisso que a Tea atua: ajudando empresas a construírem marcas com mais clareza,
+              consistência e direção.
+            </p>
           </div>
         </div>
 
