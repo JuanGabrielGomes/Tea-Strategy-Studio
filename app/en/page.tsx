@@ -57,14 +57,13 @@ export default function EnglishHome() {
 
             <div className="max-w-2xl text-lg leading-relaxed text-[var(--tea-brown-soft)] space-y-6">
               <p>
-                Tea Strategy Studio didn&apos;t come from chance. It was born from a journey of construction, shaped at the right
-                time, with the right purpose. Like every good story, it took going through the process before arriving
-                at the delivery.
+                Tea Strategy Studio was born from a journey of construction, shaped at the right time, with the right
+                purpose. Like every good story, it took going through the process before arriving at the delivery.
               </p>
               <p>
                 We believe that just like tea has its stages: harvest, infusion, serving, every brand has its own
-                method. We are that process: guiding your brand from inception to full bloom, with strategy and care
-                for every detail.
+                method. We are that process: guiding your brand from inception to full bloom, with care and attention
+                to every detail.
               </p>
             </div>
           </div>

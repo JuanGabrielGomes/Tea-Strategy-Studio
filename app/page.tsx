@@ -51,12 +51,12 @@ export default function Home() {
 
             <div className="max-w-2xl text-lg leading-relaxed text-[var(--tea-brown-soft)] space-y-6">
               <p>
-                A Tea Strategy Studio não surgiu do acaso. Nasceu de uma jornada de construção, moldada no tempo certo, com o
-                propósito certo. Como toda boa história, foi preciso passar pelo processo antes de chegar à entrega.
+                A Tea Strategy Studio nasceu de uma jornada de construção, moldada no tempo certo, com o propósito
+                certo. Como toda boa história, foi preciso passar pelo processo antes de chegar à entrega.
               </p>
               <p>
                 Acreditamos que assim como o chá tem suas etapas: colheita, infusão, entrega, toda marca também tem
-                seu método. Nós somos esse processo: guiamos sua marca do início ao florescimento, com estratégia e
+                seu método. Nós somos esse processo: guiamos sua marca do início ao florescimento, com cuidado e
                 atenção a cada detalhe.
               </p>
             </div>

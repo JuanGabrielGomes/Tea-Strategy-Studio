@@ -6,60 +6,36 @@ export const metadata: Metadata = {
   description: "Nossa história: construção intencional, do processo à entrega.",
 }
 
-const teaSteps = [
-  {
-    title: "01: Colheita, Imersão",
-    description: "Entendemos sua marca, seu público e seus objetivos com profundidade.",
-  },
-  {
-    title: "02: Infusão, Estratégia",
-    description: "Desenvolvemos o plano criativo e estratégico para o que a sua marca realmente é.",
-  },
-  {
-    title: "03: À Mesa, Entrega",
-    description: "Sua marca chega ao cliente final com consistência, beleza e resultado.",
-  },
-  {
-    title: "04: O Chá Preferido, Lembrança",
-    description:
-      "A entrega é o começo da lembrança. Marcas que ficam são as que foram construídas para ser sentidas. Como um chá preferido, a sua marca passa a ser a primeira escolha, não por acaso, mas por construção.",
-  },
-]
-
 export default function Sobre() {
   return (
     <main className="section-padding py-24 md:py-28">
       <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
         <div className="lg:col-span-7">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">Nossa história</p>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-8">
-            Nascemos de um <span className="tea-script text-[var(--tea-accent)]">processo intencional</span>.
-          </h1>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-8">Nossa história</h1>
 
           <div className="space-y-6 text-lg leading-relaxed text-[var(--tea-brown-soft)]">
+            <p>A Tea surgiu de uma inquietação que foi ficando clara com o tempo.</p>
             <p>
-              A Tea Strategy Studio não surgiu do acaso. Nasceu de uma jornada de construção, moldada no tempo certo, com o
-              propósito certo. Como toda boa história, foi preciso passar pelo processo antes de chegar à entrega.
+              Depois de anos trabalhando com marcas e comunicação, uma coisa começou a chamar atenção: muita gente
+              estava produzindo conteúdo, mas poucas marcas estavam realmente sendo construídas.
+            </p>
+            <p>Era postagem, tendência, estética bonita... mas sem direção.</p>
+            <p>
+              Foi assim que a Tea começou a tomar forma.
             </p>
             <p>
-              Acreditamos que assim como o chá tem suas etapas: colheita, infusão, entrega, toda marca também tem
-              seu método. Nós somos esse processo: guiamos sua marca do início ao florescimento, com estratégia e
-              atenção a cada detalhe.
+              Não como uma agência focada apenas em execução, mas como um estúdio que entra antes disso, organizando a
+              base da marca.
             </p>
             <p>
-              Cada decisão criativa é tomada com escuta e precisão, para que a sua marca chegue ao público com
-              consistência, identidade e resultado.
+              Entendendo o negócio, estruturando o posicionamento e trazendo clareza sobre como aquela empresa deve se
+              apresentar e crescer.
             </p>
-          </div>
-
-          <div className="tea-flow-list" aria-label="Etapas da nossa história">
-            {teaSteps.map((step) => (
-              <section key={step.title} className="tea-flow-item">
-                <span className="tea-flow-dot" aria-hidden="true" />
-                <h2 className="text-sm uppercase tracking-[0.24em] text-[var(--tea-accent)] mb-1">{step.title}</h2>
-                <p className="text-[var(--tea-brown)] leading-relaxed">{step.description}</p>
-              </section>
-            ))}
+            <p>O nome Tea representa exatamente essa forma de trabalhar.</p>
+            <p>Assim como um bom chá precisa de tempo e preparo, marcas também precisam de processo.</p>
+            <p>E é exatamente nisso que a Tea atua.</p>
+            <p>Ajudando empresas a construírem marcas com mais clareza, consistência e direção.</p>
           </div>
         </div>
 

@@ -6,61 +6,36 @@ export const metadata: Metadata = {
   description: "Our story: intentional construction, from process to delivery.",
 }
 
-const teaSteps = [
-  {
-    title: "01: Harvest, Immersion",
-    description: "We deeply understand your brand, your audience and your goals.",
-  },
-  {
-    title: "02: Infusion, Strategy",
-    description: "We develop the creative and strategic plan for what your brand truly is.",
-  },
-  {
-    title: "03: Served, Delivery",
-    description: "Your brand reaches the end client with consistency, beauty and results.",
-  },
-  {
-    title: "04: Favorite Tea, Remembrance",
-    description:
-      "Delivery is the beginning of remembrance. Brands that last are those built to be felt. Like a favorite tea, your brand becomes the first choice, not by chance, but by design.",
-  },
-]
-
 export default function AboutEn() {
   return (
     <main className="section-padding py-24 md:py-28">
       <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
         <div className="lg:col-span-7">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--tea-muted)] mb-6">Our story</p>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-8">
-            Born from an <span className="tea-script text-[var(--tea-accent)]">intentional process</span>.
-          </h1>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl leading-[0.96] text-[var(--tea-brown)] mb-8">Our story</h1>
 
           <div className="space-y-6 text-lg leading-relaxed text-[var(--tea-brown-soft)]">
+            <p>Tea began with a restlessness that became clearer over time.</p>
             <p>
-              Tea Strategy Studio didn&apos;t come from chance. It was born from a journey of construction, shaped at the right
-              time, with the right purpose. Like every good story, it took going through the process before arriving at
-              the delivery.
+              After years of working with brands and communication, one thing started to stand out: many people were
+              creating content, but very few brands were actually being built.
+            </p>
+            <p>There were posts, trends, beautiful aesthetics... but no direction.</p>
+            <p>
+              That is how Tea began to take shape.
             </p>
             <p>
-              We believe that just like tea has its stages: harvest, infusion, serving, every brand has its own
-              method. We are that process: guiding your brand from inception to full bloom, with strategy and care for
-              every detail.
+              Not as an agency focused only on execution, but as a studio that steps in before that, organizing the
+              foundation of the brand.
             </p>
             <p>
-              Every creative decision is made with listening and precision, so that your brand reaches the audience
-              with consistency, identity and results.
+              Understanding the business, structuring the positioning and bringing clarity to how that company should
+              present itself and grow.
             </p>
-          </div>
-
-          <div className="tea-flow-list" aria-label="Our story steps">
-            {teaSteps.map((step) => (
-              <section key={step.title} className="tea-flow-item">
-                <span className="tea-flow-dot" aria-hidden="true" />
-                <h2 className="text-sm uppercase tracking-[0.24em] text-[var(--tea-accent)] mb-1">{step.title}</h2>
-                <p className="text-[var(--tea-brown)] leading-relaxed">{step.description}</p>
-              </section>
-            ))}
+            <p>The name Tea represents exactly this way of working.</p>
+            <p>Just like a good tea needs time and preparation, brands also need process.</p>
+            <p>And that is exactly where Tea comes in.</p>
+            <p>Helping companies build brands with more clarity, consistency and direction.</p>
           </div>
         </div>
 
