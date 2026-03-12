@@ -40,7 +40,7 @@ const messages = {
     invalidEmail: "Informe um email válido.",
     missingCompany: "Informe a marca ou empresa.",
     weakChallenge: "Descreva melhor o desafio principal.",
-    weakObjective: "Descreva o objetivo estratégico.",
+    weakObjective: "Selecione o tipo de projeto.",
     missingUrgency: "Selecione a urgência.",
     missingBudget: "Selecione a faixa de investimento.",
     successShort: "Aplicação enviada com sucesso.",
@@ -54,7 +54,7 @@ const messages = {
     invalidEmail: "Please enter a valid email.",
     missingCompany: "Please enter your company or brand.",
     weakChallenge: "Please describe your main challenge with more detail.",
-    weakObjective: "Please describe your strategic objective.",
+    weakObjective: "Please select the project type.",
     missingUrgency: "Please select an urgency level.",
     missingBudget: "Please select an investment range.",
     successShort: "Application submitted successfully.",
@@ -84,7 +84,7 @@ function validate(payload: LeadPayload, locale: Locale) {
   if (!EMAIL_REGEX.test(payload.email)) return t.invalidEmail
   if (!payload.company || payload.company.length < 2) return t.missingCompany
   if (!payload.challenge || payload.challenge.length < 10) return t.weakChallenge
-  if (!payload.objective || payload.objective.length < 10) return t.weakObjective
+  if (!payload.objective || payload.objective.length < 3) return t.weakObjective
   if (!payload.urgency) return t.missingUrgency
   if (!payload.budget) return t.missingBudget
   return null
@@ -106,7 +106,7 @@ function buildLeadEmailText(lead: LeadRecord, locale: Locale) {
       "",
       "Brand Context",
       `Main challenge: ${lead.challenge}`,
-      `Objective: ${lead.objective}`,
+      `Project type: ${lead.objective}`,
       `Urgency: ${lead.urgency}`,
       `Budget range: ${lead.budget}`,
     ].join("\n")
@@ -126,7 +126,7 @@ function buildLeadEmailText(lead: LeadRecord, locale: Locale) {
     "",
     "Contexto da marca",
     `Principal desafio: ${lead.challenge}`,
-    `Objetivo: ${lead.objective}`,
+    `Tipo de projeto: ${lead.objective}`,
     `Urgencia: ${lead.urgency}`,
     `Faixa de investimento: ${lead.budget}`,
   ].join("\n")

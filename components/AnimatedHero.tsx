@@ -113,7 +113,7 @@ export default function AnimatedHero({ locale = "pt" }: AnimatedHeroProps) {
           <div className="lg:col-span-4 lg:justify-self-end w-full lg:w-auto">
             <Link
               href={content.ctaHref}
-              className="inline-block w-full lg:w-auto bg-[var(--tea-cream)] text-[var(--tea-green)] border border-[var(--tea-cream)] px-7 py-4 text-sm tracking-[0.08em] text-center hover:bg-transparent hover:text-[var(--tea-cream)] transition-colors"
+              className="inline-block w-full lg:w-auto rounded-[0.65rem] bg-[var(--tea-cream)] text-[var(--tea-green)] border border-[var(--tea-cream)] px-7 py-4 text-sm tracking-[0.08em] text-center hover:bg-transparent hover:text-[var(--tea-cream)] transition-colors"
             >
               {content.cta}
             </Link>

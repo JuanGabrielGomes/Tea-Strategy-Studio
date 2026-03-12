@@ -22,9 +22,9 @@ const copy = {
       company: "Empresa",
       website: "Site ou Instagram",
       challenge: "O que mais tem desafiado sua marca hoje?",
-      objective: "Para onde você quer levar sua marca nos próximos meses?",
+      objective: "Qual tipo de projeto você busca?",
       urgency: "Quando você quer começar?",
-      budget: "Faixa de investimento mensal",
+      budget: "Qual faixa de investimento você imagina para este projeto?",
       trap: "Não preencha",
     },
     placeholders: {
@@ -33,17 +33,21 @@ const copy = {
       company: "Nome da empresa",
       website: "https://...",
       challenge: "Ex.: conteúdos desconectados, falta de linha editorial, baixa consistência de presença...",
-      objective: "Ex.: fortalecer autoridade, organizar operação de conteúdo, aumentar conversão dos canais...",
     },
     options: {
       select: "Selecione",
+      objectiveA: "Diagnóstico e direcionamento estratégico",
+      objectiveB: "Estruturação de marca e posicionamento",
+      objectiveC: "Estratégia + execução de conteúdo",
+      objectiveD: "Gestão estratégica completa",
       urgencyImmediate: "Imediata (0 a 30 dias)",
       urgencyShort: "Curto prazo (1 a 3 meses)",
       urgencyMedium: "Médio prazo (3 a 6 meses)",
-      budgetA: "Até R$ 5k",
-      budgetB: "R$ 5k a R$ 15k",
-      budgetC: "R$ 15k a R$ 30k",
-      budgetD: "Acima de R$ 30k",
+      budgetA: "Entre R$ 5.000 e R$ 10.000",
+      budgetB: "Entre R$ 10.000 e R$ 20.000",
+      budgetC: "Entre R$ 20.000 e R$ 40.000",
+      budgetD: "Acima de R$ 40.000",
+      budgetE: "Prefiro entender primeiro o escopo",
     },
     status: {
       loading: "Preparando seu primeiro passo...",
@@ -51,7 +55,7 @@ const copy = {
       fallbackError: "Falha no envio. Tente novamente em alguns minutos.",
     },
     button: {
-      idle: "Quero iniciar minha jornada \u2192",
+      idle: "Quero iniciar minha jornada ->",
       loading: "Enviando...",
     },
   },
@@ -66,9 +70,9 @@ const copy = {
       company: "Company",
       website: "Website or Instagram",
       challenge: "What has been your brand's biggest challenge lately?",
-      objective: "Where do you want your brand to go in the next months?",
+      objective: "What type of project are you looking for?",
       urgency: "When would you like to start?",
-      budget: "Monthly investment range",
+      budget: "What investment range do you have in mind for this project?",
       trap: "Do not fill in",
     },
     placeholders: {
@@ -77,17 +81,21 @@ const copy = {
       company: "Company name",
       website: "https://...",
       challenge: "Ex.: disconnected content, no editorial line, low publishing consistency...",
-      objective: "Ex.: strengthen authority, organize content operation, increase conversion across channels...",
     },
     options: {
       select: "Select",
+      objectiveA: "Strategic diagnosis and direction",
+      objectiveB: "Brand structuring and positioning",
+      objectiveC: "Strategy + content execution",
+      objectiveD: "Complete strategic management",
       urgencyImmediate: "Immediate (0 to 30 days)",
       urgencyShort: "Short term (1 to 3 months)",
       urgencyMedium: "Medium term (3 to 6 months)",
-      budgetA: "Up to R$ 5k",
-      budgetB: "R$ 5k to R$ 15k",
-      budgetC: "R$ 15k to R$ 30k",
-      budgetD: "Above R$ 30k",
+      budgetA: "Between R$ 5,000 and R$ 10,000",
+      budgetB: "Between R$ 10,000 and R$ 20,000",
+      budgetC: "Between R$ 20,000 and R$ 40,000",
+      budgetD: "Above R$ 40,000",
+      budgetE: "I prefer to understand the scope first",
     },
     status: {
       loading: "Preparing your first step...",
@@ -95,7 +103,7 @@ const copy = {
       fallbackError: "Submission failed. Try again in a few minutes.",
     },
     button: {
-      idle: "I want to begin my journey \u2192",
+      idle: "I want to begin my journey ->",
       loading: "Sending...",
     },
   },
@@ -213,18 +221,18 @@ export default function DiagnosticForm({ locale = "pt" }: DiagnosticFormProps) {
 
         <label className="diagnostic-label md:col-span-2">
           {content.labels.objective}
-          <textarea
-            name="objective"
-            required
-            rows={2}
-            placeholder={content.placeholders.objective}
-            className="diagnostic-input"
-          />
+          <select name="objective" required className="diagnostic-input" defaultValue="">
+            <option value="">{content.options.select}</option>
+            <option value="diagnostico-direcionamento">{content.options.objectiveA}</option>
+            <option value="marca-posicionamento">{content.options.objectiveB}</option>
+            <option value="estrategia-conteudo">{content.options.objectiveC}</option>
+            <option value="gestao-estrategica">{content.options.objectiveD}</option>
+          </select>
         </label>
 
         <label className="diagnostic-label">
           {content.labels.urgency}
-          <select name="urgency" required className="diagnostic-input">
+          <select name="urgency" required className="diagnostic-input" defaultValue="">
             <option value="">{content.options.select}</option>
             <option value="imediata">{content.options.urgencyImmediate}</option>
             <option value="curto-prazo">{content.options.urgencyShort}</option>
@@ -234,12 +242,13 @@ export default function DiagnosticForm({ locale = "pt" }: DiagnosticFormProps) {
 
         <label className="diagnostic-label">
           {content.labels.budget}
-          <select name="budget" required className="diagnostic-input">
+          <select name="budget" required className="diagnostic-input" defaultValue="">
             <option value="">{content.options.select}</option>
-            <option value="ate-5k">{content.options.budgetA}</option>
-            <option value="5k-15k">{content.options.budgetB}</option>
-            <option value="15k-30k">{content.options.budgetC}</option>
-            <option value="30k-plus">{content.options.budgetD}</option>
+            <option value="5k-10k">{content.options.budgetA}</option>
+            <option value="10k-20k">{content.options.budgetB}</option>
+            <option value="20k-40k">{content.options.budgetC}</option>
+            <option value="40k-plus">{content.options.budgetD}</option>
+            <option value="scope-first">{content.options.budgetE}</option>
           </select>
         </label>
       </div>
