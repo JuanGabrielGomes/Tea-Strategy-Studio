@@ -163,7 +163,7 @@ export default function Header() {
 
           <Link
             href={diagnosticHref}
-            className="rounded-[0.65rem] bg-[var(--tea-green)] text-[var(--tea-cream)] border border-[var(--tea-green)] px-4 py-2 text-sm tracking-[0.08em] hover:bg-transparent hover:border-[var(--tea-hover)] hover:text-[var(--tea-hover)] transition-colors"
+            className="rounded-[0.85rem] bg-[var(--tea-green)] text-[var(--tea-cream)] border border-[var(--tea-green)] px-4 py-2 text-sm tracking-[0.08em] hover:bg-transparent hover:border-[var(--tea-hover)] hover:text-[var(--tea-hover)] transition-colors"
           >
             {labels.diagnostic}
           </Link>
@@ -173,14 +173,14 @@ export default function Header() {
             onClick={handleThemeToggle}
             aria-label={labels.themeAria}
             suppressHydrationWarning
-            className="rounded-[0.65rem] border border-[var(--tea-brown)]/35 px-3 py-2 text-xs uppercase tracking-[0.14em] hover:border-[var(--tea-hover)] hover:text-[var(--tea-hover)] transition-colors"
+            className="rounded-[0.85rem] border border-[var(--tea-brown)]/35 px-3 py-2 text-xs uppercase tracking-[0.14em] hover:border-[var(--tea-hover)] hover:text-[var(--tea-hover)] transition-colors"
           >
             {theme.toUpperCase()}
           </button>
 
           <Link
             href={toggleHref}
-            className="rounded-[0.65rem] border border-[var(--tea-brown)]/35 px-3 py-2 text-xs uppercase tracking-[0.14em] hover:border-[var(--tea-hover)] hover:text-[var(--tea-hover)] transition-colors"
+            className="rounded-[0.85rem] border border-[var(--tea-brown)]/35 px-3 py-2 text-xs uppercase tracking-[0.14em] hover:border-[var(--tea-hover)] hover:text-[var(--tea-hover)] transition-colors"
           >
             {toggleLabel}
           </Link>
@@ -188,7 +188,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="md:hidden rounded-[0.65rem] border border-[var(--tea-brown)]/40 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[var(--tea-brown)]"
+          className="md:hidden rounded-[0.85rem] border border-[var(--tea-brown)]/40 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[var(--tea-brown)]"
           onClick={() => setMenuOpen((prev) => !prev)}
           aria-expanded={menuOpen}
           aria-controls="mobile-nav"
@@ -208,7 +208,7 @@ export default function Header() {
             <Link
               href={diagnosticHref}
               onClick={() => setMenuOpen(false)}
-              className="mt-2 block w-full rounded-[0.65rem] bg-[var(--tea-green)] text-[var(--tea-cream)] px-4 py-3 text-base tracking-[0.05em] text-left"
+              className="mt-2 block w-full rounded-[0.85rem] bg-[var(--tea-green)] text-[var(--tea-cream)] px-4 py-3 text-base tracking-[0.05em] text-left"
             >
               {labels.mobileDiagnostic}
             </Link>
@@ -217,14 +217,14 @@ export default function Header() {
               onClick={handleThemeToggle}
               aria-label={labels.themeAria}
               suppressHydrationWarning
-              className="block w-full rounded-[0.65rem] text-left border border-[var(--tea-brown)]/35 px-4 py-3 text-sm uppercase tracking-[0.16em]"
+              className="block w-full rounded-[0.85rem] text-left border border-[var(--tea-brown)]/35 px-4 py-3 text-sm uppercase tracking-[0.16em]"
             >
               {theme.toUpperCase()}
             </button>
             <Link
               href={toggleHref}
               onClick={() => setMenuOpen(false)}
-              className="block w-full rounded-[0.65rem] border border-[var(--tea-brown)]/35 px-4 py-3 text-sm uppercase tracking-[0.16em] text-left"
+              className="block w-full rounded-[0.85rem] border border-[var(--tea-brown)]/35 px-4 py-3 text-sm uppercase tracking-[0.16em] text-left"
             >
               {toggleLabel}
             </Link>

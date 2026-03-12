@@ -61,8 +61,8 @@ const copy = {
   },
   en: {
     intro: {
-      title: "Now it is your turn.",
-      subtitle: "Fill this in with care. Each answer helps us understand where you are and where your brand can go.",
+      title: "This is where we begin.",
+      subtitle: "Share a few thoughtful details. This first step helps us understand your moment and the kind of direction your brand needs.",
     },
     labels: {
       name: "Name",
@@ -99,11 +99,11 @@ const copy = {
     },
     status: {
       loading: "Preparing your first step...",
-      success: "We received your answers. We will soon schedule our first conversation.",
+      success: "We received your answers. We will be in touch soon to schedule our first conversation.",
       fallbackError: "Submission failed. Try again in a few minutes.",
     },
     button: {
-      idle: "I want to begin my journey ->",
+      idle: "I would like to begin this conversation ->",
       loading: "Sending...",
     },
   },

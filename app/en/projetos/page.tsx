@@ -151,7 +151,7 @@ export default function ProjectsEn() {
                 href={item.instagram}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-6 inline-block rounded-[0.65rem] border border-[var(--tea-brown)]/35 px-4 py-2 text-xs uppercase tracking-[0.18em] hover:border-[var(--tea-hover)] hover:text-[var(--tea-hover)] transition-colors"
+                className="mt-6 inline-block rounded-[0.85rem] border border-[var(--tea-brown)]/35 px-4 py-2 text-xs uppercase tracking-[0.18em] hover:border-[var(--tea-hover)] hover:text-[var(--tea-hover)] transition-colors"
               >
                 View Instagram
               </a>

@@ -168,7 +168,7 @@ export default function EnglishHome() {
 
               <Link
                 href="/en/diagnostico"
-                className="inline-block rounded-[0.65rem] text-center border border-[var(--tea-cream)]/70 text-[var(--tea-cream)] px-6 py-3 text-sm uppercase tracking-[0.14em] hover:bg-[var(--tea-cream)] hover:text-[var(--tea-green)] transition-colors"
+                className="inline-block rounded-[0.85rem] text-center border border-[var(--tea-cream)]/70 text-[var(--tea-cream)] px-6 py-3 text-sm uppercase tracking-[0.14em] hover:bg-[var(--tea-cream)] hover:text-[var(--tea-green)] transition-colors"
               >
                 Start the process
               </Link>
