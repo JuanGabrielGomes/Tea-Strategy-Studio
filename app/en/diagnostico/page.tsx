@@ -1,10 +1,14 @@
 import type { Metadata } from "next"
+import { buildMetadata } from "@/lib/seo"
 import DiagnosticForm from "@/components/DiagnosticForm"
 
-export const metadata: Metadata = {
-  title: "First Conversation",
-  description: "Every great brand starts with a good conversation.",
-}
+export const metadata: Metadata = buildMetadata({
+  title: "Brand diagnosis and first conversation",
+  description:
+    "Start the first conversation with Tea Strategy Studio and receive strategic direction for your brand, content and positioning.",
+  path: "/en/diagnostico",
+  locale: "en",
+})
 
 const outcomes = [
   "We review your answers carefully.",

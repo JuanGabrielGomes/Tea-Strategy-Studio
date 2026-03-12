@@ -1,10 +1,14 @@
 import Image from "next/image"
 import type { Metadata } from "next"
+import { buildMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "About",
-  description: "Our story: intentional construction, from process to delivery.",
-}
+export const metadata: Metadata = buildMetadata({
+  title: "About the studio and our positioning",
+  description:
+    "Learn how Tea Strategy Studio builds brands through strategic clarity, intentional positioning and consistent communication.",
+  path: "/en/sobre",
+  locale: "en",
+})
 
 export default function AboutEn() {
   return (

@@ -1,7 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
+import type { Metadata } from "next"
 import AnimatedHero from "@/components/AnimatedHero"
 import AnimatedSection from "@/components/AnimatedSection"
+import { buildMetadata } from "@/lib/seo"
 
 const services = [
   "Gestão de Redes Sociais com planejamento, produção e publicação.",
@@ -23,6 +25,14 @@ const visuals = {
   laptopLight: "/images/tea/vamos-comecar.jpg",
   notesDesk: "/images/tea/workspace-claro.jpg",
 }
+
+export const metadata: Metadata = buildMetadata({
+  title: "Branding, Conteudo e Estrategia de Marca",
+  description:
+    "Estudio de branding e estrategia com identidade visual, conteudo, redes sociais e trafego pago para marcas que querem crescer com direcao.",
+  path: "/",
+  locale: "pt-BR",
+})
 
 export default function Home() {
   return (

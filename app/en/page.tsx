@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { buildMetadata } from "@/lib/seo"
 import AnimatedHero from "@/components/AnimatedHero"
 import AnimatedSection from "@/components/AnimatedSection"
 
@@ -25,10 +26,13 @@ const visuals = {
   notesDesk: "/images/tea/workspace-claro.jpg",
 }
 
-export const metadata: Metadata = {
-  title: "Home",
-  description: "Tea Strategy Studio: branding and strategy from process to delivery.",
-}
+export const metadata: Metadata = buildMetadata({
+  title: "Branding, Content and Brand Strategy",
+  description:
+    "Brand and strategy studio offering visual identity, content strategy, social media management and paid traffic for intentional brands.",
+  path: "/en",
+  locale: "en",
+})
 
 export default function EnglishHome() {
   return (

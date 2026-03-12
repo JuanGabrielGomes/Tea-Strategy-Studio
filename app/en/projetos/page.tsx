@@ -1,5 +1,6 @@
 import Image from "next/image"
 import type { Metadata } from "next"
+import { buildMetadata } from "@/lib/seo"
 
 type CasePalette = {
   panelBg: string
@@ -99,10 +100,13 @@ const cases: Case[] = [
   },
 ]
 
-export const metadata: Metadata = {
-  title: "Projects",
-  description: "Brands that bloomed.",
-}
+export const metadata: Metadata = buildMetadata({
+  title: "Branding and strategy portfolio",
+  description:
+    "Explore branding, positioning and digital presence projects developed by Tea Strategy Studio.",
+  path: "/en/projetos",
+  locale: "en",
+})
 
 function CaseLogo({ item }: { item: Case }) {
   return (

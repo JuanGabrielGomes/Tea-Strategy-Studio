@@ -1,5 +1,6 @@
 import Image from "next/image"
 import type { Metadata } from "next"
+import { buildMetadata } from "@/lib/seo"
 
 const pillars = [
   {
@@ -21,10 +22,13 @@ const pillars = [
   },
 ]
 
-export const metadata: Metadata = {
-  title: "Method",
-  description: "From process to delivery, with direction and strategic method.",
-}
+export const metadata: Metadata = buildMetadata({
+  title: "Brand strategy and positioning method",
+  description:
+    "See the Tea Strategy Studio method for building brands through research, strategy, creative direction and delivery.",
+  path: "/en/metodo",
+  locale: "en",
+})
 
 export default function MethodEn() {
   return (
