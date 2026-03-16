@@ -6,7 +6,7 @@ export const siteConfig = {
   email: "otteastudio@gmail.com",
   instagram: "https://www.instagram.com/otteastudio/",
   whatsapp: "https://wa.me/555496492500",
-  ogImage: "/logo-tea2.PNG",
+  ogImage: "/logo-ottea.png",
   descriptionPt:
     "Estudio de branding e estrategia para marcas que precisam de posicionamento, identidade visual, conteudo e direcao.",
   descriptionEn:

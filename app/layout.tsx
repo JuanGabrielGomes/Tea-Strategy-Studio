@@ -31,9 +31,9 @@ export const metadata: Metadata = {
       }
     : undefined,
   icons: {
-    icon: [{ url: "/favicon-tea.png", type: "image/png" }],
-    shortcut: ["/favicon-tea.png"],
-    apple: [{ url: "/favicon-tea.png" }],
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    shortcut: ["/icon.png"],
+    apple: [{ url: "/icon.png" }],
   },
   robots: {
     index: true,
