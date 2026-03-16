@@ -39,7 +39,7 @@ export default function EnglishHome() {
     <main>
       <AnimatedHero locale="en" />
 
-      <div className="tea-marquee-bar" role="region" aria-label="Tea Strategy Studio values marquee">
+      <div className="tea-marquee-bar" role="region" aria-label="Ottea Studio values marquee">
         <div className="tea-marquee-track">
           <span className="tea-marquee-item">{marqueeText}</span>
           <span className="tea-marquee-item">{marqueeText}</span>
@@ -61,7 +61,7 @@ export default function EnglishHome() {
 
             <div className="max-w-2xl text-lg leading-relaxed text-[var(--tea-brown-soft)] space-y-6">
               <p>
-                Tea Strategy Studio was born from a journey of construction, shaped at the right time, with the right
+                Ottea Studio was born from a journey of construction, shaped at the right time, with the right
                 purpose. Like every good story, it took going through the process before arriving at the delivery.
               </p>
               <p>
@@ -76,10 +76,10 @@ export default function EnglishHome() {
             <div className="tea-cup-stage h-full min-h-[420px] md:min-h-[460px]">
               <div className="tea-cup-quote">
                 <p>&quot;Just like tea, every brand needs to go through its process: of preparation, of infusion, of delivery.&quot;</p>
-                <span>Tea Strategy Studio</span>
+                <span>Ottea Studio</span>
               </div>
 
-              <div className="tea-cup-stats" aria-label="Tea Strategy Studio indicators">
+              <div className="tea-cup-stats" aria-label="Ottea Studio indicators">
                 <div className="tea-cup-stat">
                   <p className="tea-cup-stat-number">100%</p>
                   <p className="tea-cup-stat-label">Custom strategy</p>
@@ -128,7 +128,7 @@ export default function EnglishHome() {
               execution to generate consistency, connection and results.
             </p>
 
-            <ol className="tea-service-list" aria-label="Tea Strategy Studio service fronts">
+            <ol className="tea-service-list" aria-label="Ottea Studio service fronts">
               {services.map((service, index) => (
                 <li key={service} className="tea-service-item">
                   <span className="tea-service-number">{String(index + 1).padStart(2, "0")}</span>

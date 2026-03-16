@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 
 export const siteConfig = {
-  name: "Tea Strategy Studio",
+  name: "Ottea Studio",
   url: "https://teastrategystudio.com",
   email: "teastudio.contact@gmail.com",
-  instagram: "https://www.instagram.com/teastudio.co/",
+  instagram: "https://www.instagram.com/otteastudio/",
   whatsapp: "https://wa.me/555496492500",
   ogImage: "/logo-tea2.PNG",
   descriptionPt:
@@ -100,7 +100,7 @@ export const organizationJsonLd = {
   "@type": "ProfessionalService",
   name: siteConfig.name,
   url: siteConfig.url,
-  logo: getAbsoluteUrl("/logo-tea-monograma.png"),
+  logo: getAbsoluteUrl("/logo-ottea.png"),
   image: getAbsoluteUrl(siteConfig.ogImage),
   description: siteConfig.descriptionPt,
   email: siteConfig.email,

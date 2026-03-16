@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   applicationName: siteConfig.name,
   title: {
-    default: "Tea Strategy Studio",
-    template: "%s | Tea Strategy Studio",
+    default: "Ottea Studio",
+    template: "%s | Ottea Studio",
   },
   description: siteConfig.descriptionPt,
   authors: [{ name: siteConfig.name, url: siteConfig.url }],

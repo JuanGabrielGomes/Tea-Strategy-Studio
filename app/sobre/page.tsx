@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/seo"
 export const metadata: Metadata = buildMetadata({
   title: "Nossa historia e posicionamento",
   description:
-    "Conheca a Tea Strategy Studio, um estudio de branding e estrategia que constroi marcas com clareza, consistencia e direcao.",
+    "Conheca a Ottea Studio, um estudio de branding e estrategia que constroi marcas com clareza, consistencia e direcao.",
   path: "/sobre",
   locale: "pt-BR",
 })
@@ -20,21 +20,22 @@ export default function Sobre() {
 
           <div className="space-y-6 text-lg leading-relaxed text-[var(--tea-brown-soft)]">
             <p>
-              A Tea surgiu de uma inquietação que foi ficando clara com o tempo. Depois de anos trabalhando com marcas
+              A Ottea Studio surgiu de uma inquietação que foi ficando clara com o tempo. Depois de anos trabalhando
+              com marcas
               e comunicação, uma coisa começou a chamar atenção: muita gente estava produzindo conteúdo, mas poucas
               marcas estavam realmente sendo construídas. Era postagem, tendência, estética bonita... mas sem direção.
             </p>
             <p>
-              Foi assim que a Tea começou a tomar forma. Não como uma agência focada apenas em execução, mas como um
-              estúdio que entra antes disso, organizando a base da marca. Entendendo o negócio, estruturando o
+              Foi assim que a Ottea Studio começou a tomar forma. Não como uma agência focada apenas em execução, mas
+              como um estúdio que entra antes disso, organizando a base da marca. Entendendo o negócio, estruturando o
               posicionamento e trazendo clareza sobre como aquela empresa deve se apresentar e crescer.
             </p>
             <p>
-              O nome Tea representa exatamente essa forma de trabalhar. Assim como um bom chá precisa de tempo e
+              O nome Ottea representa exatamente essa forma de trabalhar. Assim como um bom chá precisa de tempo e
               preparo, marcas também precisam de processo.
             </p>
             <p>
-              E é exatamente nisso que a Tea atua: ajudando empresas a construírem marcas com mais clareza,
+              E é exatamente nisso que a Ottea Studio atua: ajudando empresas a construírem marcas com mais clareza,
               consistência e direção.
             </p>
           </div>

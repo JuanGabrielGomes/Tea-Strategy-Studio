@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/seo"
 export const metadata: Metadata = buildMetadata({
   title: "About the studio and our positioning",
   description:
-    "Learn how Tea Strategy Studio builds brands through strategic clarity, intentional positioning and consistent communication.",
+    "Learn how Ottea Studio builds brands through strategic clarity, intentional positioning and consistent communication.",
   path: "/en/sobre",
   locale: "en",
 })
@@ -20,22 +20,24 @@ export default function AboutEn() {
 
           <div className="space-y-6 text-lg leading-relaxed text-[var(--tea-brown-soft)]">
             <p>
-              Tea began with a restlessness that became clearer over time. After years of working with brands and
+              Ottea Studio began with a restlessness that became clearer over time. After years of working with brands
+              and
               communication, one thing started to stand out: many people were creating content, but very few brands
               were actually being built. There were posts, trends, beautiful aesthetics... but no direction.
             </p>
             <p>
-              That is how Tea began to take shape. Not as an agency focused only on execution, but as a studio that
-              steps in before that, organizing the foundation of the brand. Understanding the business, structuring the
+              That is how Ottea Studio began to take shape. Not as an agency focused only on execution, but as a studio
+              that steps in before that, organizing the foundation of the brand. Understanding the business,
+              structuring the
               positioning and bringing clarity to how that company should present itself and grow.
             </p>
             <p>
-              The name Tea represents exactly this way of working. Just like a good tea needs time and preparation,
+              The name Ottea represents exactly this way of working. Just like a good tea needs time and preparation,
               brands also need process.
             </p>
             <p>
-              And that is exactly where Tea comes in: helping companies build brands with more clarity, consistency and
-              direction.
+              And that is exactly where Ottea Studio comes in: helping companies build brands with more clarity,
+              consistency and direction.
             </p>
           </div>
         </div>

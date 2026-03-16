@@ -16,7 +16,7 @@ const navLabels = {
     diagnostic: "Iniciar processo",
     mobileDiagnostic: "Iniciar o processo",
     menu: "Menu",
-    logoAria: "Ir para a página inicial da Tea Strategy Studio",
+    logoAria: "Ir para a página inicial da Ottea Studio",
     themeAria: "Alternar entre modo claro e escuro",
   },
   en: {
@@ -26,7 +26,7 @@ const navLabels = {
     diagnostic: "Start process",
     mobileDiagnostic: "Start the process",
     menu: "Menu",
-    logoAria: "Go to Tea Strategy Studio homepage",
+    logoAria: "Go to Ottea Studio homepage",
     themeAria: "Toggle light and dark mode",
   },
 } as const
@@ -142,14 +142,14 @@ export default function Header() {
 
       <div className="relative section-padding flex items-center justify-between h-20 border-b border-[var(--tea-brown)]/15">
         <Link href={homeHref} className="flex items-center" aria-label={labels.logoAria}>
-          <div className="relative h-16 w-16 md:h-20 md:w-20 shrink-0">
+          <div className="relative h-14 w-[128px] md:h-16 md:w-[156px] shrink-0">
             <Image
-              src="/logo-tea-monograma.png"
-              alt="Tea Strategy Studio"
+              src="/logo-ottea.png"
+              alt="Ottea Studio"
               fill
               priority
-              sizes="(max-width: 768px) 64px, 80px"
-              className="object-contain"
+              sizes="(max-width: 768px) 128px, 156px"
+              className="object-contain object-left"
             />
           </div>
         </Link>

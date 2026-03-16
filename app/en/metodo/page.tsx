@@ -25,7 +25,7 @@ const pillars = [
 export const metadata: Metadata = buildMetadata({
   title: "Brand strategy and positioning method",
   description:
-    "See the Tea Strategy Studio method for building brands through research, strategy, creative direction and delivery.",
+    "See Ottea Studio's Tea Method for building brands through research, strategy, creative direction and delivery.",
   path: "/en/metodo",
   locale: "en",
 })
@@ -46,7 +46,7 @@ export default function MethodEn() {
             </p>
           </div>
 
-          <div className="tea-flow-list" aria-label="Tea Strategy Studio method steps">
+          <div className="tea-flow-list" aria-label="Tea Method steps">
             {pillars.map((pillar) => (
               <section key={pillar.title} className="tea-flow-item">
                 <span className="tea-flow-dot" aria-hidden="true" />

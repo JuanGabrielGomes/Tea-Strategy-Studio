@@ -25,7 +25,7 @@ const pillars = [
 export const metadata: Metadata = buildMetadata({
   title: "Metodo de branding e posicionamento",
   description:
-    "Entenda o metodo da Tea Strategy Studio para construir marcas com pesquisa, estrategia, direcao criativa e entrega.",
+    "Entenda o Método Tea da Ottea Studio para construir marcas com pesquisa, estrategia, direcao criativa e entrega.",
   path: "/metodo",
   locale: "pt-BR",
 })
@@ -42,11 +42,11 @@ export default function Metodo() {
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-[var(--tea-brown-soft)]">
               Cada marca tem seu método. Nosso trabalho é conduzir cada etapa com escuta e precisão, para que
-              estratégia, criatividade e execução avancem no mesmo ritmo, para o que a sua marca realmente é.
+              estratégia, criatividade e execução avancem no mesmo ritmo, traduzindo o que a sua marca realmente é.
             </p>
           </div>
 
-          <div className="tea-flow-list" aria-label="Etapas do método da Tea Strategy Studio">
+          <div className="tea-flow-list" aria-label="Etapas do Método Tea">
             {pillars.map((pillar) => (
               <section key={pillar.title} className="tea-flow-item">
                 <span className="tea-flow-dot" aria-hidden="true" />

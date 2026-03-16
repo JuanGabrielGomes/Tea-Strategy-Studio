@@ -5,7 +5,7 @@ import DiagnosticForm from "@/components/DiagnosticForm"
 export const metadata: Metadata = buildMetadata({
   title: "Diagnostico de marca",
   description:
-    "Inicie a conversa com a Tea Strategy Studio e receba uma direcao estrategica para posicionamento, conteudo e marca.",
+    "Inicie a conversa com a Ottea Studio e receba uma direcao estrategica para posicionamento, conteudo e marca.",
   path: "/diagnostico",
   locale: "pt-BR",
 })

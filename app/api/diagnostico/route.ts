@@ -93,7 +93,7 @@ function validate(payload: LeadPayload, locale: Locale) {
 function buildLeadEmailText(lead: LeadRecord, locale: Locale) {
   if (locale === "en") {
     return [
-      "New lead received from Tea Strategy Studio website",
+      "New lead received from Ottea Studio website",
       "",
       `Date: ${lead.createdAt}`,
       `Source: ${lead.source}`,
@@ -113,7 +113,7 @@ function buildLeadEmailText(lead: LeadRecord, locale: Locale) {
   }
 
   return [
-    "Novo lead recebido pelo site da Tea Strategy Studio",
+    "Novo lead recebido pelo site da Ottea Studio",
     "",
     `Data: ${lead.createdAt}`,
     `Origem: ${lead.source}`,
@@ -177,7 +177,7 @@ async function forwardToEmail(lead: LeadRecord, locale: Locale): Promise<Forward
   const smtpSecureValue = process.env.TEA_SMTP_SECURE?.trim().toLowerCase()
   const smtpSecure = smtpSecureValue ? smtpSecureValue === "true" : smtpPort === 465
 
-  const from = process.env.TEA_LEADS_EMAIL_FROM?.trim() || (smtpUser ? `Tea Strategy Studio <${smtpUser}>` : "")
+  const from = process.env.TEA_LEADS_EMAIL_FROM?.trim() || (smtpUser ? `Ottea Studio <${smtpUser}>` : "")
   const toList = (process.env.TEA_LEADS_EMAIL_TO || "")
     .split(",")
     .map((value) => value.trim())
@@ -189,8 +189,8 @@ async function forwardToEmail(lead: LeadRecord, locale: Locale): Promise<Forward
 
   const subject =
     locale === "en"
-      ? `New Tea lead, ${lead.company}`
-      : `Novo lead Tea, ${lead.company}`
+      ? `New Ottea lead, ${lead.company}`
+      : `Novo lead Ottea, ${lead.company}`
 
   try {
     const transporter = nodemailer.createTransport({

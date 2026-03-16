@@ -39,7 +39,7 @@ export default function Home() {
     <main>
       <AnimatedHero locale="pt" />
 
-      <div className="tea-marquee-bar" role="region" aria-label="Faixa de valores da Tea Strategy Studio">
+      <div className="tea-marquee-bar" role="region" aria-label="Faixa de valores da Ottea Studio">
         <div className="tea-marquee-track">
           <span className="tea-marquee-item">{marqueeText}</span>
           <span className="tea-marquee-item">{marqueeText}</span>
@@ -61,7 +61,7 @@ export default function Home() {
 
             <div className="max-w-2xl text-lg leading-relaxed text-[var(--tea-brown-soft)] space-y-6">
               <p>
-                A Tea Strategy Studio nasceu de uma jornada de construção, moldada no tempo certo, com o propósito
+                A Ottea Studio nasceu de uma jornada de construção, moldada no tempo certo, com o propósito
                 certo. Como toda boa história, foi preciso passar pelo processo antes de chegar à entrega.
               </p>
               <p>
@@ -76,10 +76,10 @@ export default function Home() {
             <div className="tea-cup-stage h-full min-h-[420px] md:min-h-[460px]">
               <div className="tea-cup-quote">
                 <p>&quot;Assim como o chá, cada marca precisa passar pelo seu processo: de preparação, de infusão, de entrega.&quot;</p>
-                <span>Tea Strategy Studio</span>
+                <span>Ottea Studio</span>
               </div>
 
-              <div className="tea-cup-stats" aria-label="Indicadores da Tea Strategy Studio">
+              <div className="tea-cup-stats" aria-label="Indicadores da Ottea Studio">
                 <div className="tea-cup-stat">
                   <p className="tea-cup-stat-number">100%</p>
                   <p className="tea-cup-stat-label">Estratégia personalizada</p>
@@ -128,7 +128,7 @@ export default function Home() {
               para gerar consistência, conexão e resultado.
             </p>
 
-            <ol className="tea-service-list" aria-label="Frentes de serviço da Tea Strategy Studio">
+            <ol className="tea-service-list" aria-label="Frentes de serviço da Ottea Studio">
               {services.map((service, index) => (
                 <li key={service} className="tea-service-item">
                   <span className="tea-service-number">{String(index + 1).padStart(2, "0")}</span>

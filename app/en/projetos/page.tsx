@@ -103,7 +103,7 @@ const cases: Case[] = [
 export const metadata: Metadata = buildMetadata({
   title: "Branding and strategy portfolio",
   description:
-    "Explore branding, positioning and digital presence projects developed by Tea Strategy Studio.",
+    "Explore branding, positioning and digital presence projects developed by Ottea Studio.",
   path: "/en/projetos",
   locale: "en",
 })
