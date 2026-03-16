@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const siteConfig = {
   name: "Ottea Studio",
   url: "https://teastrategystudio.com",
-  email: "teastudio.contact@gmail.com",
+  email: "otteastudio@gmail.com",
   instagram: "https://www.instagram.com/otteastudio/",
   whatsapp: "https://wa.me/555496492500",
   ogImage: "/logo-tea2.PNG",

@@ -12,13 +12,13 @@ export default function SiteFooter() {
         brand: "Ottea Studio",
         instagramLabel: "Our Instagram",
         contactLabel: "Contact",
-        email: "teastudio.contact@gmail.com",
+        email: "otteastudio@gmail.com",
       }
     : {
         brand: "Ottea Studio",
         instagramLabel: "Nosso Instagram",
         contactLabel: "Contato",
-        email: "teastudio.contact@gmail.com",
+        email: "otteastudio@gmail.com",
       }
 
   return (
