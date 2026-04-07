@@ -162,7 +162,7 @@ async function forwardToClickUp(lead: LeadRecord): Promise<ForwardResult> {
       body: JSON.stringify({
         name: `Lead: ${lead.name} — ${lead.company}`,
         description,
-        status: "Lead novo",
+        status: "NEW LEAD",
         priority: 2,
       }),
     })
