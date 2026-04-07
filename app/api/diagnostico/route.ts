@@ -132,6 +132,62 @@ function buildLeadEmailText(lead: LeadRecord, locale: Locale) {
   ].join("\n")
 }
 
+async function forwardToClickUp(lead: LeadRecord): Promise<ForwardResult> {
+  const apiToken = process.env.CLICKUP_API_TOKEN?.trim()
+  const listId = process.env.CLICKUP_LIST_ID?.trim()
+
+  if (!apiToken || !listId) {
+    return { channel: "webhook", enabled: false, ok: true as const }
+  }
+
+  try {
+    const description = [
+      `Email: ${lead.email}`,
+      `Empresa: ${lead.company}`,
+      `Site/Instagram: ${lead.website || "-"}`,
+      `Desafio: ${lead.challenge}`,
+      `Tipo de projeto: ${lead.objective}`,
+      `Urgência: ${lead.urgency}`,
+      `Investimento: ${lead.budget}`,
+      `Origem: ${lead.source}`,
+      `Data: ${lead.createdAt}`,
+    ].join("\n")
+
+    const response = await fetch(`https://api.clickup.com/api/v2/list/${listId}/task`, {
+      method: "POST",
+      headers: {
+        Authorization: apiToken,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: `Lead: ${lead.name} — ${lead.company}`,
+        description,
+        status: "Lead novo",
+        priority: 2,
+      }),
+    })
+
+    if (response.ok) {
+      return { channel: "webhook", enabled: true, ok: true as const }
+    }
+
+    const details = await response.text()
+    return {
+      channel: "webhook",
+      enabled: true,
+      ok: false as const,
+      details: `clickup status=${response.status} body=${details.slice(0, 400)}`,
+    }
+  } catch (error) {
+    return {
+      channel: "webhook",
+      enabled: true,
+      ok: false as const,
+      details: error instanceof Error ? error.message : "unknown clickup error",
+    }
+  }
+}
+
 async function forwardToWebhook(lead: LeadRecord): Promise<ForwardResult> {
   const webhookUrl = process.env.TEA_LEADS_WEBHOOK_URL
   if (!webhookUrl) {
@@ -273,8 +329,8 @@ export async function POST(request: Request) {
       }
     }
 
-    const [webhookResult, emailResult] = await Promise.all([forwardToWebhook(lead), forwardToEmail(lead, locale)])
-    const forwardingResults = [webhookResult, emailResult]
+    const [webhookResult, emailResult, clickUpResult] = await Promise.all([forwardToWebhook(lead), forwardToEmail(lead, locale), forwardToClickUp(lead)])
+    const forwardingResults = [webhookResult, emailResult, clickUpResult]
     const activeChannels = forwardingResults.filter((item) => item.enabled)
     const atLeastOneChannelSucceeded = activeChannels.some((item) => item.ok)
 
