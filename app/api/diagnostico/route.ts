@@ -136,7 +136,10 @@ async function forwardToClickUp(lead: LeadRecord): Promise<ForwardResult> {
   const apiToken = process.env.CLICKUP_API_TOKEN?.trim()
   const listId = process.env.CLICKUP_LIST_ID?.trim()
 
+  console.log("[clickup] token present:", !!apiToken, "listId:", listId)
+
   if (!apiToken || !listId) {
+    console.error("[clickup] missing token or listId — skipping")
     return { channel: "webhook", enabled: false, ok: true as const }
   }
 
@@ -167,11 +170,13 @@ async function forwardToClickUp(lead: LeadRecord): Promise<ForwardResult> {
       }),
     })
 
+    const details = await response.text()
+    console.log("[clickup] response status:", response.status, "body:", details.slice(0, 400))
+
     if (response.ok) {
       return { channel: "webhook", enabled: true, ok: true as const }
     }
 
-    const details = await response.text()
     return {
       channel: "webhook",
       enabled: true,
