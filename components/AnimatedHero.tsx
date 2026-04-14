@@ -1,7 +1,9 @@
 "use client"
 
 import Link from "next/link"
-import { motion, useReducedMotion } from "framer-motion"
+import { LazyMotion, m, useReducedMotion } from "framer-motion"
+
+const loadFeatures = () => import("framer-motion").then((mod) => mod.domAnimation)
 import { useEffect, useState } from "react"
 
 type AnimatedHeroProps = {
@@ -64,6 +66,7 @@ export default function AnimatedHero({ locale = "pt" }: AnimatedHeroProps) {
   }, [allowVideo])
 
   return (
+    <LazyMotion features={loadFeatures} strict>
     <section className="relative min-h-[84vh] md:min-h-[92vh] flex items-center section-padding overflow-hidden">
       <div className="absolute inset-0 bg-[var(--tea-green)]" />
       <div className="absolute inset-0 hero-gradient-shift opacity-70" />
@@ -87,7 +90,7 @@ export default function AnimatedHero({ locale = "pt" }: AnimatedHeroProps) {
       <div className="absolute inset-0 hero-grain opacity-35" />
 
       <div className="relative w-full max-w-[1280px]">
-        <motion.h1
+        <m.h1
           initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
@@ -96,9 +99,9 @@ export default function AnimatedHero({ locale = "pt" }: AnimatedHeroProps) {
           <span className="hero-line">{content.lineOne}</span>
           <span className="hero-line">{content.lineTwo}</span>
           <span className="hero-line tea-script text-[var(--tea-cream)]">{content.impact}</span>
-        </motion.h1>
+        </m.h1>
 
-        <motion.div
+        <m.div
           initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.2 }}
@@ -118,8 +121,9 @@ export default function AnimatedHero({ locale = "pt" }: AnimatedHeroProps) {
               {content.cta}
             </Link>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
+    </LazyMotion>
   )
 }
